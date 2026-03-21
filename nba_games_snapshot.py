@@ -7,6 +7,8 @@ import requests
 ROOT = Path(__file__).resolve().parent
 OUT_DIR = ROOT / 'nba-daily-games' / 'data'
 SCHEDULE_URL = 'https://cdn.nba.com/static/json/staticData/scheduleLeagueV2.json'
+STANDINGS_URL = 'https://stats.nba.com/stats/leaguestandingsv3?LeagueID=00&Season=2025-26&SeasonType=Regular+Season&SeasonYear='
+ESPN_STANDINGS_URL = 'https://site.api.espn.com/apis/v2/sports/basketball/nba/standings'
 
 
 def iso_now():
@@ -15,6 +17,43 @@ def iso_now():
 
 def day_key(dt_utc):
     return dt_utc.strftime('%Y-%m-%d')
+
+
+def fetch_west_standings():
+    # Prefer ESPN standings for reliability.
+    r = requests.get(ESPN_STANDINGS_URL, timeout=30)
+    r.raise_for_status()
+    j = r.json()
+    children = j.get('children') or []
+    west = None
+    for c in children:
+        abbr = ((c.get('abbreviation') or '')).upper()
+        name = (c.get('name') or '').lower()
+        if abbr == 'W' or 'western' in name:
+            west = c
+            break
+    if not west:
+        return []
+
+    entries = west.get('standings', {}).get('entries', [])
+    out = []
+    for e in entries:
+        team = (e.get('team') or {}).get('displayName') or ''
+        stats = {s.get('name'): s.get('value') for s in (e.get('stats') or []) if s.get('name')}
+        out.append({
+            'rank': stats.get('playoffSeed') or stats.get('conferenceRank'),
+            'team': team,
+            'wins': stats.get('wins'),
+            'losses': stats.get('losses'),
+            'winPct': stats.get('winPercent'),
+        })
+    def rank_num(v):
+        try:
+            return int(float(v))
+        except Exception:
+            return 999
+    out.sort(key=lambda x: rank_num(x.get('rank')))
+    return out
 
 
 def main():
@@ -53,12 +92,18 @@ def main():
 
     picked.sort(key=lambda x: (x.get('date') or '', x.get('tipoffUtc') or ''))
 
+    try:
+        west = fetch_west_standings()
+    except Exception:
+        west = []
+
     summary = {
         'generatedAt': iso_now(),
         'today': today,
         'tomorrow': tomorrow,
         'count': len(picked),
         'games': picked,
+        'westStandings': west,
     }
 
     (OUT_DIR / 'overview.json').write_text(json.dumps(summary, indent=2), encoding='utf-8')

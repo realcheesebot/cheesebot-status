@@ -23,5 +23,19 @@ async function main(){
     }
     tb.appendChild(tr);
   }
+
+  const wb=document.getElementById('westRows');
+  if (wb) {
+    wb.innerHTML='';
+    for (const t of d.westStandings||[]) {
+      const tr=document.createElement('tr');
+      tr.innerHTML = `<td>${t.rank ?? ''}</td><td>${t.team||''}</td><td>${t.wins ?? ''}-${t.losses ?? ''}</td><td>${t.winPct ?? ''}</td>`;
+      if ((t.team||'').includes('San Antonio') || (t.team||'').includes('Portland')) {
+        tr.style.fontWeight='700';
+        tr.style.color='#d4a017';
+      }
+      wb.appendChild(tr);
+    }
+  }
 }
 main().catch(e=>{document.getElementById('updated').textContent='Failed: '+e});

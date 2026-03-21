@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T21:18:38.526325+00:00",
+  "generatedAt": "2026-03-21T21:26:40.557873+00:00",
   "today": "2026-03-21",
   "tomorrow": "2026-03-22",
   "count": 15,
@@ -108,6 +108,113 @@
       "tipoffUtc": "2026-03-23T01:00:00Z",
       "gameId": "0022501036",
       "arena": null
+    }
+  ],
+  "westStandings": [
+    {
+      "rank": 1.0,
+      "team": "Oklahoma City Thunder",
+      "wins": 55.0,
+      "losses": 15.0,
+      "winPct": 0.78571427
+    },
+    {
+      "rank": 2.0,
+      "team": "San Antonio Spurs",
+      "wins": 52.0,
+      "losses": 18.0,
+      "winPct": 0.74285716
+    },
+    {
+      "rank": 3.0,
+      "team": "Los Angeles Lakers",
+      "wins": 45.0,
+      "losses": 25.0,
+      "winPct": 0.64285713
+    },
+    {
+      "rank": 4.0,
+      "team": "Houston Rockets",
+      "wins": 42.0,
+      "losses": 27.0,
+      "winPct": 0.6086956
+    },
+    {
+      "rank": 5.0,
+      "team": "Denver Nuggets",
+      "wins": 43.0,
+      "losses": 28.0,
+      "winPct": 0.6056338
+    },
+    {
+      "rank": 6.0,
+      "team": "Minnesota Timberwolves",
+      "wins": 43.0,
+      "losses": 28.0,
+      "winPct": 0.6056338
+    },
+    {
+      "rank": 7.0,
+      "team": "Phoenix Suns",
+      "wins": 39.0,
+      "losses": 31.0,
+      "winPct": 0.55714285
+    },
+    {
+      "rank": 8.0,
+      "team": "Portland Trail Blazers",
+      "wins": 35.0,
+      "losses": 36.0,
+      "winPct": 0.49295774
+    },
+    {
+      "rank": 9.0,
+      "team": "LA Clippers",
+      "wins": 34.0,
+      "losses": 36.0,
+      "winPct": 0.4857143
+    },
+    {
+      "rank": 10.0,
+      "team": "Golden State Warriors",
+      "wins": 33.0,
+      "losses": 37.0,
+      "winPct": 0.47142857
+    },
+    {
+      "rank": 11.0,
+      "team": "New Orleans Pelicans",
+      "wins": 25.0,
+      "losses": 46.0,
+      "winPct": 0.35211268
+    },
+    {
+      "rank": 12.0,
+      "team": "Memphis Grizzlies",
+      "wins": 24.0,
+      "losses": 45.0,
+      "winPct": 0.3478261
+    },
+    {
+      "rank": 13.0,
+      "team": "Dallas Mavericks",
+      "wins": 23.0,
+      "losses": 47.0,
+      "winPct": 0.32857144
+    },
+    {
+      "rank": 14.0,
+      "team": "Utah Jazz",
+      "wins": 21.0,
+      "losses": 49.0,
+      "winPct": 0.3
+    },
+    {
+      "rank": 15.0,
+      "team": "Sacramento Kings",
+      "wins": 18.0,
+      "losses": 53.0,
+      "winPct": 0.2535211
     }
   ]
 }
