@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T23:15:40.098280+00:00",
+  "generatedAt": "2026-03-21T23:19:22.430903+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -40,7 +40,7 @@
       "emailSentTotal": 432,
       "emailSentCountSource": "email_state_repliedAt",
       "emailReceivedTotal": 827,
-      "slackSentTotal": 1139,
+      "slackSentTotal": 1140,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
