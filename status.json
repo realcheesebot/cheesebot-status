@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T19:32:43.022759+00:00",
+  "generatedAt": "2026-03-21T19:48:27.859037+00:00",
   "summary": {
     "overall": "ok",
     "enabledJobs": 9,
@@ -16,18 +16,6 @@
   },
   "jobs": [
     {
-      "name": "nba-injury-watch",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "5,35 10-20 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "nextRunAtMs": 1774121700000,
-      "lastStatus": "ok",
-      "consecutiveErrors": 0
-    },
-    {
       "name": "status-page-publisher",
       "enabled": true,
       "schedule": {
@@ -36,6 +24,18 @@
         "anchorMs": 1774120856987
       },
       "nextRunAtMs": 1774122495536,
+      "lastStatus": "ok",
+      "consecutiveErrors": 0
+    },
+    {
+      "name": "nba-injury-watch",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "5,35 10-20 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "nextRunAtMs": 1774123500000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
