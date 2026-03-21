@@ -4,4 +4,7 @@ h1{margin:0 0 8px}
 .card{background:#111827;border:1px solid #334155;border-radius:12px;padding:12px;margin:12px 0}
 table{width:100%;border-collapse:collapse;background:#111827;border:1px solid #334155}
 th,td{padding:8px;border-bottom:1px solid #1f2937;font-size:14px;text-align:left}
+a:link{color:#ffffff}
+a:visited{color:#facc15}
+a:hover,a:active{opacity:.9}
 .ok{color:#22c55e}.warning{color:#f59e0b}.critical{color:#ef4444}
