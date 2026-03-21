@@ -73,6 +73,22 @@ def count_received_emails(path: Path) -> int:
     return len(msgs) if isinstance(msgs, dict) else 0
 
 
+def count_slack_sent_via_api(limit=1000):
+    data, err = run_json([
+        "openclaw", "message", "read",
+        "--channel", "slack",
+        "--from-me",
+        "--limit", str(limit),
+        "--json",
+    ])
+    if err:
+        return None, err
+    msgs = (data or {}).get("messages")
+    if not isinstance(msgs, list):
+        return 0, None
+    return len(msgs), None
+
+
 def main():
     now = datetime.now(timezone.utc).isoformat()
     cron_data, cron_err = run_json(["openclaw", "cron", "list", "--json"])
@@ -85,7 +101,14 @@ def main():
 
     email_sent_total = count_jsonl_rows(EMAIL_SEND_LOG)
     email_received_total = count_received_emails(EMAIL_STATE)
-    slack_sent_total = count_jsonl_rows(SLACK_SEND_LOG)
+
+    slack_sent_api_total, slack_api_err = count_slack_sent_via_api(limit=1000)
+    if slack_sent_api_total is None:
+        slack_sent_total = count_jsonl_rows(SLACK_SEND_LOG)
+        slack_count_source = "jsonl_fallback"
+    else:
+        slack_sent_total = slack_sent_api_total
+        slack_count_source = "slack_api_from_me"
 
     report = {
         "generatedAt": now,
@@ -97,6 +120,7 @@ def main():
             "emailSentTotal": email_sent_total,
             "emailReceivedTotal": email_received_total,
             "slackSentTotal": slack_sent_total,
+            "slackSentCountSource": slack_count_source,
         },
         "checks": {
             "cronList": "ok" if cron_err is None else "error",
@@ -105,6 +129,7 @@ def main():
         "errors": {
             "cron": cron_err,
             "openclaw": openclaw_err if openclaw_rc != 0 else None,
+            "slackCountApi": slack_api_err,
         },
         "jobs": [
             {
