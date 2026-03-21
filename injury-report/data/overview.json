@@ -1,0 +1,62 @@
+{
+  "generatedAt": "2026-03-21T19:32:37.999706+00:00",
+  "totalReports": 16,
+  "teams": [
+    {
+      "team": "Portland Trail Blazers",
+      "slug": "por",
+      "count": 7,
+      "latest": {
+        "key": "Portland Trail Blazers|0022501001|2026-03-18T23:30:00+00:00",
+        "team": "Portland Trail Blazers",
+        "gameId": "0022501001",
+        "tipoff": "2026-03-18T23:30:00+00:00",
+        "sentAt": "2026-03-18T22:35:13.673866+00:00",
+        "matchup": "POR@IND",
+        "recipients": [
+          "jon@silverpine.com"
+        ],
+        "emailIds": [
+          "19d0316c7416bb97"
+        ]
+      }
+    },
+    {
+      "team": "San Antonio Spurs",
+      "slug": "sas",
+      "count": 9,
+      "latest": {
+        "key": "San Antonio Spurs|0022501013|2026-03-20T00:00:00+00:00",
+        "team": "San Antonio Spurs",
+        "gameId": "0022501013",
+        "tipoff": "2026-03-20T00:00:00+00:00",
+        "sentAt": "2026-03-19T23:05:21.076891+00:00",
+        "matchup": "PHX@SAS",
+        "recipients": [
+          "jon@silverpine.com",
+          "manton@manton.org"
+        ],
+        "emailIds": [
+          "19d0858b2444bae3",
+          "19d0858bb0362d30"
+        ]
+      }
+    }
+  ],
+  "latest": {
+    "key": "San Antonio Spurs|0022501013|2026-03-20T00:00:00+00:00",
+    "team": "San Antonio Spurs",
+    "gameId": "0022501013",
+    "tipoff": "2026-03-20T00:00:00+00:00",
+    "sentAt": "2026-03-19T23:05:21.076891+00:00",
+    "matchup": "PHX@SAS",
+    "recipients": [
+      "jon@silverpine.com",
+      "manton@manton.org"
+    ],
+    "emailIds": [
+      "19d0858b2444bae3",
+      "19d0858bb0362d30"
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-03-21T19:32:37.999738+00:00",
+  "team": "Portland Trail Blazers",
+  "slug": "por",
+  "count": 7,
+  "latest": {
+    "key": "Portland Trail Blazers|0022501001|2026-03-18T23:30:00+00:00",
+    "team": "Portland Trail Blazers",
+    "gameId": "0022501001",
+    "tipoff": "2026-03-18T23:30:00+00:00",
+    "sentAt": "2026-03-18T22:35:13.673866+00:00",
+    "matchup": "POR@IND",
+    "recipients": [
+      "jon@silverpine.com"
+    ],
+    "emailIds": [
+      "19d0316c7416bb97"
+    ]
+  },
+  "history": [
+    {
+      "key": "Portland Trail Blazers|0022501001|2026-03-18T23:30:00+00:00",
+      "team": "Portland Trail Blazers",
+      "gameId": "0022501001",
+      "tipoff": "2026-03-18T23:30:00+00:00",
+      "sentAt": "2026-03-18T22:35:13.673866+00:00",
+      "matchup": "POR@IND",
+      "recipients": [
+        "jon@silverpine.com"
+      ],
+      "emailIds": [
+        "19d0316c7416bb97"
+      ]
+    },
+    {
+      "key": "Portland Trail Blazers|0022500985|2026-03-16T23:30:00+00:00",
+      "team": "Portland Trail Blazers",
+      "gameId": "0022500985",
+      "tipoff": "2026-03-16T23:30:00+00:00",
+      "sentAt": "2026-03-16T22:35:15.647209+00:00",
+      "matchup": "POR@BKN",
+      "recipients": [
+        "jon@silverpine.com"
+      ],
+      "emailIds": [
+        "19cf8ca11ad4129c"
+      ]
+    },
+    {
+      "key": "Portland Trail Blazers|0022500967|2026-03-14T02:00:00+00:00",
+      "team": "Portland Trail Blazers",
+      "gameId": "0022500967",
+      "tipoff": "2026-03-14T02:00:00+00:00",
+      "sentAt": "2026-03-14T01:05:07.212492+00:00",
+      "matchup": "UTA@POR",
+      "recipients": [
+        "jon@silverpine.com"
+      ],
+      "emailIds": [
+        "19ce9e067ed5428a"
+      ]
+    },
+    {
+      "key": "Portland Trail Blazers|0022500944|2026-03-11T02:00:00+00:00",
+      "team": "Portland Trail Blazers",
+      "gameId": "0022500944",
+      "tipoff": "2026-03-11T02:00:00+00:00",
+      "sentAt": "2026-03-11T01:05:06.951143+00:00",
+      "matchup": "CHA@POR",
+      "recipients": [
+        "jon@silverpine.com"
+      ],
+      "emailIds": [
+        "19cda6d1a3176b47"
+      ]
+    },
+    {
+      "key": "Portland Trail Blazers|0022500929|2026-03-09T01:00:00+00:00",
+      "team": "Portland Trail Blazers",
+      "gameId": "0022500929",
+      "tipoff": "2026-03-09T01:00:00+00:00",
+      "sentAt": "2026-03-09T00:05:07.960496+00:00",
+      "matchup": "IND@POR",
+      "recipients": [
+        "jon@silverpine.com"
+      ],
+      "emailIds": [
+        "19ccfe9ab7e78a80"
+      ]
+    },
+    {
+      "key": "Portland Trail Blazers|0022500910|2026-03-07T01:00:00+00:00",
+      "team": "Portland Trail Blazers",
+      "gameId": "0022500910",
+      "tipoff": "2026-03-07T01:00:00+00:00",
+      "sentAt": "2026-03-07T00:05:08.397586+00:00",
+      "matchup": "POR@HOU",
+      "recipients": [
+        "jon@silverpine.com"
+      ],
+      "emailIds": [
+        "19cc59cc39996277"
+      ]
+    },
+    {
+      "key": "Portland Trail Blazers|0022500896|2026-03-05T01:00:00+00:00",
+      "team": "Portland Trail Blazers",
+      "gameId": "0022500896",
+      "tipoff": "2026-03-05T01:00:00+00:00",
+      "sentAt": "2026-03-05T00:05:07.452547+00:00",
+      "matchup": "POR@MEM",
+      "recipients": [
+        "jon@silverpine.com",
+        "manton@manton.org"
+      ],
+      "emailIds": [
+        "19cbb50067a2bba3",
+        "19cbb500c99e81b4"
+      ]
+    }
+  ]
+}
