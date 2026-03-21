@@ -6,6 +6,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "status.json"
+WORKSPACE = ROOT.parent
+EMAIL_SEND_LOG = WORKSPACE / "memory" / "email-send-log.jsonl"
+EMAIL_STATE = WORKSPACE / "memory" / "email-state.json"
+SLACK_SEND_LOG = WORKSPACE / "memory" / "slack-send-log.jsonl"
 
 
 def run_json(cmd, retries=3):
@@ -44,6 +48,31 @@ def health_from_jobs(jobs):
     return "ok"
 
 
+def count_jsonl_rows(path: Path) -> int:
+    if not path.exists():
+        return 0
+    n = 0
+    try:
+        with path.open("r", encoding="utf-8") as f:
+            for line in f:
+                if line.strip():
+                    n += 1
+    except Exception:
+        return 0
+    return n
+
+
+def count_received_emails(path: Path) -> int:
+    if not path.exists():
+        return 0
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return 0
+    msgs = (data or {}).get("messages")
+    return len(msgs) if isinstance(msgs, dict) else 0
+
+
 def main():
     now = datetime.now(timezone.utc).isoformat()
     cron_data, cron_err = run_json(["openclaw", "cron", "list", "--json"])
@@ -54,6 +83,10 @@ def main():
 
     openclaw_out, openclaw_err, openclaw_rc = run_text(["openclaw", "status"])
 
+    email_sent_total = count_jsonl_rows(EMAIL_SEND_LOG)
+    email_received_total = count_received_emails(EMAIL_STATE)
+    slack_sent_total = count_jsonl_rows(SLACK_SEND_LOG)
+
     report = {
         "generatedAt": now,
         "summary": {
@@ -61,6 +94,9 @@ def main():
             "enabledJobs": len(enabled),
             "disabledJobs": len(disabled),
             "totalJobs": len(jobs),
+            "emailSentTotal": email_sent_total,
+            "emailReceivedTotal": email_received_total,
+            "slackSentTotal": slack_sent_total,
         },
         "checks": {
             "cronList": "ok" if cron_err is None else "error",

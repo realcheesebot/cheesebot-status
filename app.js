@@ -12,6 +12,7 @@ async function main(){
   document.getElementById('summary').innerHTML = `
     <div><b>Overall:</b> <span class="${s.overall}">${s.overall.toUpperCase()}</span></div>
     <div><b>Enabled:</b> ${s.enabledJobs} &nbsp; <b>Disabled:</b> ${s.disabledJobs} &nbsp; <b>Total:</b> ${s.totalJobs}</div>
+    <div style="margin-top:6px"><b>Email sent:</b> ${s.emailSentTotal ?? 0} &nbsp; <b>Email received:</b> ${s.emailReceivedTotal ?? 0} &nbsp; <b>Slack sent:</b> ${s.slackSentTotal ?? 0}</div>
   `;
   const tbody = document.querySelector('#jobs tbody');
   tbody.innerHTML = '';
