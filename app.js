@@ -26,13 +26,5 @@ async function main(){
     <div style="margin-top:6px"><b>Email sent:</b> ${s.emailSentTotal ?? 0} &nbsp; <b>Email received:</b> ${s.emailReceivedTotal ?? 0} &nbsp; <b>Slack sent:</b> ${s.slackSentTotal ?? 0}</div>
     <div style="margin-top:4px;font-size:12px;color:#94a3b8">Counts source — Email sent: ${s.emailSentCountSource || 'unknown'}, Slack sent: ${s.slackSentCountSource || 'unknown'}</div>
   `;
-  const tbody = document.querySelector('#jobs tbody');
-  tbody.innerHTML = '';
-  for(const j of d.jobs){
-    const tr = document.createElement('tr');
-    const nextRun = j.nextRunAtMs ? localFmt.format(new Date(j.nextRunAtMs)) : '';
-    tr.innerHTML = `<td>${j.name||''}</td><td>${j.enabled?'yes':'no'}</td><td>${j.lastStatus||''}</td><td>${j.consecutiveErrors||0}</td><td>${nextRun}</td>`;
-    tbody.appendChild(tr);
-  }
 }
 main().catch(e=>{document.getElementById('updated').textContent='Failed to load status.json: '+e;});
