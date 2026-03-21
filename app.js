@@ -7,7 +7,6 @@ async function main(){
     timeZoneName: 'short'
   });
   const generatedLocal = d.generatedAt ? localFmt.format(new Date(d.generatedAt)) : 'unknown';
-  document.getElementById('updated').textContent = `Last updated: ${generatedLocal}`;
   const s = d.summary;
   const selfAuditJob = (d.jobs || []).find(j => j.name === 'daily-10am-self-audit');
   let selfAuditState = 'warn';
@@ -27,8 +26,9 @@ async function main(){
       <div>
         <div><span style="display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid #334155;font-size:12px"><b>Overall:</b> <span class="${overallClass}">${s.overall.toUpperCase()}</span></span> &nbsp; <span style="display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid #334155;font-size:12px"><b>Self-Audit:</b> <span class="${selfAuditClass}">${selfAuditLabel}</span></span></div>
         <div style="margin-top:6px"><b>Email sent:</b> ${s.emailSentTotal ?? 0} &nbsp; <b>Email received:</b> ${s.emailReceivedTotal ?? 0} &nbsp; <b>Slack sent:</b> ${s.slackSentTotal ?? 0}</div>
+        <div style="margin-top:8px;font-size:12px;color:#94a3b8">Last updated: ${generatedLocal}</div>
       </div>
     </div>
   `;
 }
-main().catch(e=>{document.getElementById('updated').textContent='Failed to load status.json: '+e;});
+main().catch(e=>{document.getElementById('summary').textContent='Failed to load status.json: '+e;});
