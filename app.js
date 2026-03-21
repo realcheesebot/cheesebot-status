@@ -9,9 +9,17 @@ async function main(){
   `;
   const tbody = document.querySelector('#jobs tbody');
   tbody.innerHTML = '';
+  const pacificFmt = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Los_Angeles',
+    year: 'numeric', month: 'short', day: '2-digit',
+    hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true,
+    timeZoneName: 'short'
+  });
+
   for(const j of d.jobs){
     const tr = document.createElement('tr');
-    tr.innerHTML = `<td>${j.name||''}</td><td>${j.enabled?'yes':'no'}</td><td>${j.lastStatus||''}</td><td>${j.consecutiveErrors||0}</td><td>${j.nextRunAtMs||''}</td>`;
+    const nextRun = j.nextRunAtMs ? pacificFmt.format(new Date(j.nextRunAtMs)) : '';
+    tr.innerHTML = `<td>${j.name||''}</td><td>${j.enabled?'yes':'no'}</td><td>${j.lastStatus||''}</td><td>${j.consecutiveErrors||0}</td><td>${nextRun}</td>`;
     tbody.appendChild(tr);
   }
 }
