@@ -19,8 +19,10 @@ async function main(){
   const selfAuditClass = selfAuditState === 'ok' ? 'ok' : (selfAuditState === 'fail' ? 'critical' : 'warning');
   const selfAuditLabel = selfAuditState === 'ok' ? 'OK' : (selfAuditState === 'fail' ? 'FAIL' : 'WARN');
 
+  const overallClass = s.overall === 'ok' ? 'ok' : (s.overall === 'critical' ? 'critical' : 'warning');
+
   document.getElementById('summary').innerHTML = `
-    <div><b>Overall:</b> <span class="${s.overall}">${s.overall.toUpperCase()}</span> &nbsp; <span style="display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid #334155;font-size:12px"><b>Self-Audit:</b> <span class="${selfAuditClass}">${selfAuditLabel}</span></span></div>
+    <div><span style="display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid #334155;font-size:12px"><b>Overall:</b> <span class="${overallClass}">${s.overall.toUpperCase()}</span></span> &nbsp; <span style="display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid #334155;font-size:12px"><b>Self-Audit:</b> <span class="${selfAuditClass}">${selfAuditLabel}</span></span></div>
     <div><b>Enabled:</b> ${s.enabledJobs} &nbsp; <b>Disabled:</b> ${s.disabledJobs} &nbsp; <b>Total:</b> ${s.totalJobs}</div>
     <div style="margin-top:6px"><b>Email sent:</b> ${s.emailSentTotal ?? 0} &nbsp; <b>Email received:</b> ${s.emailReceivedTotal ?? 0} &nbsp; <b>Slack sent:</b> ${s.slackSentTotal ?? 0}</div>
   `;
