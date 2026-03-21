@@ -25,11 +25,26 @@ async function main(){
     lastHistoryId: ${s.lastCheckedHistoryId ?? 'n/a'}
   `;
 
+  const received = d.receivedLast24h || [];
+  const rcvb = document.getElementById('receivedRows'); rcvb.innerHTML='';
+  if (!received.length) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td colspan='5'>No emails were observed in the last 24 hours.</td>`;
+    rcvb.appendChild(tr);
+  } else {
+    for (const r of received) {
+      const tr = document.createElement('tr');
+      const at = r.seenAt ? fmt.format(new Date(r.seenAt)) : '';
+      tr.innerHTML = `<td>${at}</td><td>${r.from || ''}</td><td>${r.subject || ''}</td><td>${r.status || ''}</td><td>${r.messageId || ''}</td>`;
+      rcvb.appendChild(tr);
+    }
+  }
+
   const rb = document.getElementById('repliedRows'); rb.innerHTML='';
-  const replied = d.repliedOnLastRun || [];
+  const replied = d.repliedLast24h || [];
   if (!replied.length) {
     const tr = document.createElement('tr');
-    tr.innerHTML = `<td colspan='4'>No replies were sent during the last guardrail run.</td>`;
+    tr.innerHTML = `<td colspan='4'>No replies were sent in the last 24 hours.</td>`;
     rb.appendChild(tr);
   } else {
     for (const r of replied) {

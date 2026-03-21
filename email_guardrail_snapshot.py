@@ -54,28 +54,35 @@ def parse_iso_utc(s):
         return None
 
 
-def replied_on_last_run(state, latest_run):
+def activity_last_24h(state):
     msgs = (state or {}).get('messages') or {}
-    if not isinstance(msgs, dict) or not latest_run:
-        return []
+    if not isinstance(msgs, dict):
+        return [], []
 
-    run_at_ms = latest_run.get('runAtMs') or latest_run.get('startedAtMs')
-    dur_ms = latest_run.get('durationMs') or 0
-    if not run_at_ms:
-        return []
+    now = datetime.now(timezone.utc)
+    start = now.timestamp() - 24 * 3600
 
-    start = datetime.fromtimestamp(run_at_ms / 1000, tz=timezone.utc)
-    end = datetime.fromtimestamp((run_at_ms + max(dur_ms, 0) + 120000) / 1000, tz=timezone.utc)  # +2m slack
+    received = []
+    replied = []
 
-    out = []
     for msg_id, rec in msgs.items():
         if not isinstance(rec, dict):
             continue
-        rt = parse_iso_utc(rec.get('repliedAt'))
-        if not rt:
-            continue
-        if start <= rt <= end:
-            out.append({
+
+        seen_dt = parse_iso_utc(rec.get('seenAt') or rec.get('lastSeenAt'))
+        if seen_dt and seen_dt.timestamp() >= start:
+            received.append({
+                'messageId': msg_id,
+                'seenAt': rec.get('seenAt') or rec.get('lastSeenAt'),
+                'from': rec.get('from') or rec.get('sender') or rec.get('fromRaw'),
+                'subject': rec.get('subject'),
+                'status': rec.get('status'),
+                'threadId': rec.get('threadId'),
+            })
+
+        replied_dt = parse_iso_utc(rec.get('repliedAt'))
+        if replied_dt and replied_dt.timestamp() >= start:
+            replied.append({
                 'messageId': msg_id,
                 'repliedAt': rec.get('repliedAt'),
                 'from': rec.get('from') or rec.get('sender') or rec.get('fromRaw'),
@@ -83,15 +90,16 @@ def replied_on_last_run(state, latest_run):
                 'threadId': rec.get('threadId'),
             })
 
-    out.sort(key=lambda x: x.get('repliedAt') or '', reverse=True)
-    return out
+    received.sort(key=lambda x: x.get('seenAt') or '', reverse=True)
+    replied.sort(key=lambda x: x.get('repliedAt') or '', reverse=True)
+    return received[:200], replied[:200]
 
 
 def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
 
     jobs_data, jobs_err = run_json(['openclaw', 'cron', 'list', '--json'])
-    runs_data, runs_err = run_json(['openclaw', 'cron', 'runs', '--job', JOB_ID, '--json'])
+    runs_data, runs_err = run_json(['openclaw', 'cron', 'runs', '--id', JOB_ID])
 
     job = None
     for j in (jobs_data or {}).get('jobs', []):
@@ -109,8 +117,11 @@ def main():
     entries = (runs_data or {}).get('entries', [])
     latest = entries[0] if entries else None
 
+    received_24h, replied_24h = activity_last_24h(state)
+
     payload = {
         'generatedAt': now_iso(),
+        'windowHours': 24,
         'jobId': JOB_ID,
         'job': {
             'name': (job or {}).get('name'),
@@ -123,7 +134,8 @@ def main():
         },
         'latestRun': latest,
         'recentRuns': entries[:20],
-        'repliedOnLastRun': replied_on_last_run(state, latest),
+        'receivedLast24h': received_24h,
+        'repliedLast24h': replied_24h,
         'emailStateSummary': summarize_email_state(state),
         'errors': {
             'jobs': jobs_err,

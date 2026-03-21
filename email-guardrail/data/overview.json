@@ -1,5 +1,6 @@
 {
-  "generatedAt": "2026-03-21T22:15:19.597307+00:00",
+  "generatedAt": "2026-03-21T22:20:01.685514+00:00",
+  "windowHours": 24,
   "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
   "job": {
     "name": "email-guardrail-check",
@@ -14,9 +15,1988 @@
     "nextRunAtMs": 1774131819374,
     "consecutiveErrors": 0
   },
-  "latestRun": null,
-  "recentRuns": [],
-  "repliedOnLastRun": [],
+  "latestRun": {
+    "ts": 1774130968142,
+    "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+    "action": "finished",
+    "status": "ok",
+    "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
+    "runAtMs": 1774130919374,
+    "durationMs": 48758,
+    "nextRunAtMs": 1774131819374,
+    "deliveryStatus": "not-requested"
+  },
+  "recentRuns": [
+    {
+      "ts": 1774130968142,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
+      "runAtMs": 1774130919374,
+      "durationMs": 48758,
+      "nextRunAtMs": 1774131819374,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774119380873,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Also send a concise Slack status report via centralized notifier API:\npython3 /home/ubuntu/.openclaw/workspace/scripts/slack_notify.py --title \"Email guardrail check\" --text \"<STATUS_SUMMARY>\"",
+      "runAtMs": 1774119219473,
+      "durationMs": 161395,
+      "nextRunAtMs": 1774120119473,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774118445262,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Also send a concise Slack status report via centralized notifier API:\npython3 /home/ubuntu/.openclaw/workspace/scripts/slack_notify.py --title \"Email guardrail check\" --text \"<STATUS_SUMMARY>\"",
+      "runAtMs": 1774118319463,
+      "durationMs": 125612,
+      "nextRunAtMs": 1774119219463,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774117488101,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Also send a concise Slack status report via centralized notifier API:\npython3 /home/ubuntu/.openclaw/workspace/scripts/slack_notify.py --title \"Email guardrail check\" --text \"<STATUS_SUMMARY>\"",
+      "runAtMs": 1774117419439,
+      "durationMs": 68295,
+      "nextRunAtMs": 1774118319439,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774116571028,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Also send a concise Slack status report via centralized notifier API:\npython3 /home/ubuntu/.openclaw/workspace/scripts/slack_notify.py --title \"Email guardrail check\" --text \"<STATUS_SUMMARY>\"",
+      "runAtMs": 1774116519427,
+      "durationMs": 51289,
+      "nextRunAtMs": 1774117419427,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774115690287,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Also send a concise Slack status report via centralized notifier API:\npython3 /home/ubuntu/.openclaw/workspace/scripts/slack_notify.py --title \"Email guardrail check\" --text \"<STATUS_SUMMARY>\"",
+      "runAtMs": 1774115619406,
+      "durationMs": 70644,
+      "nextRunAtMs": 1774116519406,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774114747727,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
+      "runAtMs": 1774114719384,
+      "durationMs": 28338,
+      "nextRunAtMs": 1774115619384,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774112972113,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
+      "runAtMs": 1774112921633,
+      "durationMs": 50476,
+      "nextRunAtMs": 1774113821633,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774112095685,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
+      "runAtMs": 1774112021622,
+      "durationMs": 74058,
+      "nextRunAtMs": 1774112921622,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774111196552,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
+      "runAtMs": 1774111121610,
+      "durationMs": 74938,
+      "nextRunAtMs": 1774112021610,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774110327121,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
+      "runAtMs": 1774110221582,
+      "durationMs": 103979,
+      "nextRunAtMs": 1774111121582,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774109392846,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
+      "runAtMs": 1774109321553,
+      "durationMs": 71288,
+      "nextRunAtMs": 1774110221553,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774108483319,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
+      "runAtMs": 1774108421542,
+      "durationMs": 61772,
+      "nextRunAtMs": 1774109321542,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774107609954,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
+      "runAtMs": 1774107521514,
+      "durationMs": 88198,
+      "nextRunAtMs": 1774108421514,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774106696519,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
+      "runAtMs": 1774106620815,
+      "durationMs": 75699,
+      "nextRunAtMs": 1774107520815,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774105879839,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
+      "runAtMs": 1774105720805,
+      "durationMs": 158944,
+      "nextRunAtMs": 1774106620805,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774104883588,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
+      "runAtMs": 1774104820795,
+      "durationMs": 62788,
+      "nextRunAtMs": 1774105720795,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774104003317,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
+      "runAtMs": 1774103920786,
+      "durationMs": 82440,
+      "nextRunAtMs": 1774104820786,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774103089825,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
+      "runAtMs": 1774103020772,
+      "durationMs": 69048,
+      "nextRunAtMs": 1774103920772,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774102207369,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
+      "runAtMs": 1774102120762,
+      "durationMs": 86603,
+      "nextRunAtMs": 1774103020762,
+      "deliveryStatus": "not-requested"
+    }
+  ],
+  "receivedLast24h": [
+    {
+      "messageId": "19d126711ddcca1c",
+      "seenAt": "2026-03-21T22:05:27Z",
+      "from": "manton@manton.org",
+      "subject": "Status page CSS",
+      "status": "replied",
+      "threadId": "19d126711ddcca1c"
+    },
+    {
+      "messageId": "19d126e3154c7b85",
+      "seenAt": "2026-03-21T22:05:27Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Status page CSS",
+      "status": "acted",
+      "threadId": "19d126711ddcca1c"
+    },
+    {
+      "messageId": "19d11b2ae37d1b16",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d11b2aaba90d72",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d11b2a62a12951",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d11b2a53706025",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d11b2a19565942",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d11b29ddfac63e",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d11b29aee5e6ed",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d11b29774bba57",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d11b294cc81bf2",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d11b2917452be5",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d11b28e96c7c7d",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d11b28b1333931",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d11b287f5072ea",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d11b2829e8396b",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d11b280715acdc",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d11b27c9bb8336",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d11b27b5c24839",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d11b2763a9a07b",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d11b272ad0850b",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d11b26eba17a7e",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d11a43578bce81",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d11a43165053f6",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d11a42dd0e62c2",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d11a42ae91d5ae",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d11a429d7bb87a",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d11a424a4ae3d4",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d11a423b23c9b1",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d11a41f8b9d7d5",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d11a41dec513cd",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d11a41a667bccf",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d119df15098b19",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Stock Market Morning Brief - 2026-03-21",
+      "status": "acted",
+      "threadId": "19d119df15098b19"
+    },
+    {
+      "messageId": "19d119de92b49ad9",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Stock Market Morning Brief - 2026-03-21",
+      "status": "acted",
+      "threadId": "19d119de92b49ad9"
+    },
+    {
+      "messageId": "19d1196297074aa4",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d119625875b014",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d1196239598e22",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d11961f8b3eaf0",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d11961ac904605",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d118e6fa339611",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d118e64a6cd130",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d118e5db28c71d",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d118e532d8c5ec",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d118e498786a7c",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d118e3ec14d961",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d118e32408cf0e",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d118e283e66bbc",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d118e1f53ec358",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d118e19f1ad3d4",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d1188c0aea01b7",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d1188bda89bcf0",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d1188b9568e565",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d1188b63b4f0e0",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d1188b4c561575",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d118737b888b46",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Centralized email notifier test",
+      "status": "acted",
+      "threadId": "19d118737b888b46"
+    },
+    {
+      "messageId": "19d116eb153db8a9",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d116ead1824d00",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d116ea99a4e71b",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d116ea711c2a99",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d116ea4aaadcab",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d10e9599828852",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "NBA Games Today - 2026-03-21",
+      "status": "acted",
+      "threadId": "19d10e9599828852"
+    },
+    {
+      "messageId": "19d10e9535047876",
+      "seenAt": "2026-03-21T18:55:45Z",
+      "from": "cheese@luggle.com",
+      "subject": "NBA Games Today - 2026-03-21",
+      "status": "acted",
+      "threadId": "19d10e9535047876"
+    },
+    {
+      "messageId": "19d1157346744977",
+      "seenAt": "2026-03-21T17:54:28Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d115740894729a",
+      "seenAt": "2026-03-21T17:54:27Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d1157592b41807",
+      "seenAt": "2026-03-21T17:54:26Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d11577c01747ca",
+      "seenAt": "2026-03-21T17:54:25Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d11576b3994f67",
+      "seenAt": "2026-03-21T17:54:25Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d1120961af7841",
+      "seenAt": "2026-03-21T16:23:41Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d11208dfd37d16",
+      "seenAt": "2026-03-21T16:23:41Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d112080488b768",
+      "seenAt": "2026-03-21T16:23:41Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d11207945d93fc",
+      "seenAt": "2026-03-21T16:23:41Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d11206d04b1a55",
+      "seenAt": "2026-03-21T16:23:41Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d113695769d946",
+      "seenAt": "2026-03-21T16:23:41Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d113696cab3d53",
+      "seenAt": "2026-03-21T16:23:41Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d113699fb4b5a9",
+      "seenAt": "2026-03-21T16:23:41Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d11369dc45cfd1",
+      "seenAt": "2026-03-21T16:23:41Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d11369e456b98d",
+      "seenAt": "2026-03-21T16:23:41Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d10b2dc38b66e5",
+      "seenAt": "2026-03-21T15:11:02Z",
+      "from": "lyra@micro.blog",
+      "subject": null,
+      "status": "replied",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d10b2faf227f4a",
+      "seenAt": "2026-03-21T15:11:02Z",
+      "from": "lyra@micro.blog",
+      "subject": null,
+      "status": "replied",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d10b3259a3ace0",
+      "seenAt": "2026-03-21T15:11:02Z",
+      "from": "lyra@micro.blog",
+      "subject": null,
+      "status": "replied",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d10b349c9345e1",
+      "seenAt": "2026-03-21T15:11:02Z",
+      "from": "lyra@micro.blog",
+      "subject": null,
+      "status": "replied",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d10e9499915d97",
+      "seenAt": "2026-03-21T15:11:02Z",
+      "from": "lyra@micro.blog",
+      "subject": null,
+      "status": "replied",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d10f2aeda189c9",
+      "seenAt": "2026-03-21T15:11:02Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d10f2b055aa17f",
+      "seenAt": "2026-03-21T15:11:02Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d10f2b412cc240",
+      "seenAt": "2026-03-21T15:11:02Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d10f2b723bd450",
+      "seenAt": "2026-03-21T15:11:02Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d10f2bb7cab8e0",
+      "seenAt": "2026-03-21T15:11:02Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d107c5bd49d5df",
+      "seenAt": "2026-03-21T13:40:11Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d107cde51524df",
+      "seenAt": "2026-03-21T13:40:11Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d1096f4377680b",
+      "seenAt": "2026-03-21T13:40:11Z",
+      "from": "cheese@luggle.com",
+      "subject": "Hourly Weather - 97212 - 2026-03-21",
+      "status": "acted",
+      "threadId": "19d1096f4377680b"
+    },
+    {
+      "messageId": "19d107b761261d19",
+      "seenAt": "2026-03-21T13:10:30Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d107b94b074620",
+      "seenAt": "2026-03-21T13:10:30Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d10846f9e0ce4b",
+      "seenAt": "2026-03-21T13:10:30Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d108473747c047",
+      "seenAt": "2026-03-21T13:10:30Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d0f9fcd251e012",
+      "seenAt": "2026-03-21T12:39:34Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": null
+    },
+    {
+      "messageId": "19d0f9fde465d499",
+      "seenAt": "2026-03-21T12:39:34Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": null
+    },
+    {
+      "messageId": "19d0fa099122ca85",
+      "seenAt": "2026-03-21T12:39:34Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d0fa0e4f853d50",
+      "seenAt": "2026-03-21T12:39:34Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d0fb5f12714635",
+      "seenAt": "2026-03-21T12:39:34Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0fb5f12714635"
+    },
+    {
+      "messageId": "19d0fd1490893aa3",
+      "seenAt": "2026-03-21T12:39:34Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d0fd16ded4d989",
+      "seenAt": "2026-03-21T12:39:34Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d0fd77538c0ab5",
+      "seenAt": "2026-03-21T12:39:34Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d0fd7d1249f8fd",
+      "seenAt": "2026-03-21T12:39:34Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d0fd89894e1b8d",
+      "seenAt": "2026-03-21T12:39:34Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d100e698517ca2",
+      "seenAt": "2026-03-21T12:39:34Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d100ee5431e605",
+      "seenAt": "2026-03-21T12:39:34Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d1045b66a0a788",
+      "seenAt": "2026-03-21T12:39:34Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d1047340ce04c5",
+      "seenAt": "2026-03-21T12:39:34Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d100d939265900",
+      "seenAt": "2026-03-21T12:25:20Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d100db00c9effc",
+      "seenAt": "2026-03-21T12:25:20Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d100dd926afa16",
+      "seenAt": "2026-03-21T12:25:20Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d1044b7571e23d",
+      "seenAt": "2026-03-21T12:25:20Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d1044c71707ce1",
+      "seenAt": "2026-03-21T12:25:20Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": null
+    },
+    {
+      "messageId": "19d0fd6afb75a202",
+      "seenAt": "2026-03-21T10:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0fa099122ca85"
+    },
+    {
+      "messageId": "19d0fd6d8800a629",
+      "seenAt": "2026-03-21T10:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0fa0e4f853d50"
+    },
+    {
+      "messageId": "19d0fd6f8d8280f1",
+      "seenAt": "2026-03-21T10:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0fb5f12714635"
+    },
+    {
+      "messageId": "19d0fd71722d6d73",
+      "seenAt": "2026-03-21T10:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0fd1490893aa3"
+    },
+    {
+      "messageId": "19d0fd730eb15344",
+      "seenAt": "2026-03-21T10:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
+      "status": "replied",
+      "threadId": "19d0fd16ded4d989"
+    },
+    {
+      "messageId": "19d0f68c9e328af4",
+      "seenAt": "2026-03-21T08:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0f3a30bf538c7"
+    },
+    {
+      "messageId": "19d0f68e97ef1ac8",
+      "seenAt": "2026-03-21T08:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0f32d70727fb8"
+    },
+    {
+      "messageId": "19d0f69b3ef9082c",
+      "seenAt": "2026-03-21T08:08:40Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0f69b3ef9082c"
+    },
+    {
+      "messageId": "19d0f6b8205dee50",
+      "seenAt": "2026-03-21T08:08:40Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0f6b8205dee50"
+    },
+    {
+      "messageId": "19d0f31ea6d3d544",
+      "seenAt": "2026-03-21T07:38:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0efd8f51961b1"
+    },
+    {
+      "messageId": "19d0f32d70727fb8",
+      "seenAt": "2026-03-21T07:38:40Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0f32d70727fb8"
+    },
+    {
+      "messageId": "19d0f3a30bf538c7",
+      "seenAt": "2026-03-21T07:38:40Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0f3a30bf538c7"
+    },
+    {
+      "messageId": "19d070a92dc0dd17",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "status": "replied",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d070ab342d3522",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "status": "replied",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d070ad53b0d00f",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "status": "replied",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d070b68515b5ea",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "status": "acted",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d071293081d2f5",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "status": "acted",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d071294d680eb3",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "status": "acted",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d0712997ead6aa",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "status": "acted",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d0720527f59bde",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "status": "acted",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d0720566af407b",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "status": "acted",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d0720585898fd5",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "status": "acted",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d072e15f35ab7f",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "status": "acted",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d07429447ede7a",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "status": "acted",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d07d01c28d08f6",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Decision checkpoint mini-tool (for edge cases)",
+      "status": "acted",
+      "threadId": "19d07d01c28d08f6"
+    },
+    {
+      "messageId": "19d07e6fae95d94c",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
+      "status": "acted",
+      "threadId": "19d07d01c28d08f6"
+    },
+    {
+      "messageId": "19d081de978cf5de",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
+      "status": "acted",
+      "threadId": "19d07d01c28d08f6"
+    },
+    {
+      "messageId": "19d085534cec9276",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
+      "status": "acted",
+      "threadId": "19d07d01c28d08f6"
+    },
+    {
+      "messageId": "19d0858b2444bae3",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Injury Report: PHX @ SAS (T-60m)",
+      "status": "acted",
+      "threadId": "19d0858b2444bae3"
+    },
+    {
+      "messageId": "19d0858bb0362d30",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Injury Report: PHX @ SAS (T-60m)",
+      "status": "acted",
+      "threadId": "19d0858bb0362d30"
+    },
+    {
+      "messageId": "19d08593c9f5fd73",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Injury Report: PHX @ SAS (6:00 PM CDT)",
+      "status": "acted",
+      "threadId": "19d08593c9f5fd73"
+    },
+    {
+      "messageId": "19d085962b534a36",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Injury Report: PHX @ SAS (6:00 PM CDT)",
+      "status": "acted",
+      "threadId": "19d085962b534a36"
+    },
+    {
+      "messageId": "19d08ca56e2f6be8",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
+      "status": "acted",
+      "threadId": "19d07d01c28d08f6"
+    },
+    {
+      "messageId": "19d08f9ab5626188",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
+      "status": "acted",
+      "threadId": "19d07d01c28d08f6"
+    },
+    {
+      "messageId": "19d0a63b71031bc9",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0a8fec0b8fad8",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
+      "status": "acted",
+      "threadId": "19d07d01c28d08f6"
+    },
+    {
+      "messageId": "19d0a900c56fe2d2",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0af1175ab0bfe",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0b3f8e3421ace",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0b70a78cd0bbc",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Hourly Weather - 97212 - 2026-03-20",
+      "status": "acted",
+      "threadId": "19d0b70a78cd0bbc"
+    },
+    {
+      "messageId": "19d0bc2f0740bfdd",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "NBA Games Today - 2026-03-20",
+      "status": "acted",
+      "threadId": "19d0bc2f0740bfdd"
+    },
+    {
+      "messageId": "19d0bc2f817dd555",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "NBA Games Today - 2026-03-20",
+      "status": "acted",
+      "threadId": "19d0bc2f817dd555"
+    },
+    {
+      "messageId": "19d0bda45a7294c5",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0c02fe5011712",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0c30d2c693447",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0c396fbd10c8f",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0c526f6a77887",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0c67eb46ac25c",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0c67fe146b71d",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0c708c2df0455",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0c9eb42f6ae96",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0cf96e80d5e79",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0d0c9a11b42fc",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0e0945f8e86eb",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0e958d812277d",
+      "seenAt": "2026-03-21T06:54:52Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0efaf645239e4",
+      "seenAt": "2026-03-21T06:23:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0efb1b046b614",
+      "seenAt": "2026-03-21T06:23:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0efd8f51961b1",
+      "seenAt": "2026-03-21T06:02:00Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0efd8f51961b1"
+    },
+    {
+      "messageId": "19d0eda5ff6b29b3",
+      "seenAt": "2026-03-21T05:23:40Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0ec3fcc1c6a78",
+      "seenAt": "2026-03-21T05:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0eccd3ee82848",
+      "seenAt": "2026-03-21T05:08:40Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0e5627e08c538",
+      "seenAt": "2026-03-21T04:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0e1f31971fa4e",
+      "seenAt": "2026-03-21T02:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "replied",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0e27cf535a695",
+      "seenAt": "2026-03-21T02:08:40Z",
+      "from": "cheese@luggle.com",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "status": "acted",
+      "threadId": "19d0a63b71031bc9"
+    }
+  ],
+  "repliedLast24h": [
+    {
+      "messageId": "19d126711ddcca1c",
+      "repliedAt": "2026-03-21T22:05:27Z",
+      "from": "manton@manton.org",
+      "subject": "Status page CSS",
+      "threadId": "19d126711ddcca1c"
+    },
+    {
+      "messageId": "19d1157346744977",
+      "repliedAt": "2026-03-21T17:54:28Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d115740894729a",
+      "repliedAt": "2026-03-21T17:54:27Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d1157592b41807",
+      "repliedAt": "2026-03-21T17:54:26Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d11577c01747ca",
+      "repliedAt": "2026-03-21T17:54:25Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d11576b3994f67",
+      "repliedAt": "2026-03-21T17:54:25Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d1120961af7841",
+      "repliedAt": "2026-03-21T16:23:41Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d11208dfd37d16",
+      "repliedAt": "2026-03-21T16:23:41Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d112080488b768",
+      "repliedAt": "2026-03-21T16:23:41Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d11207945d93fc",
+      "repliedAt": "2026-03-21T16:23:41Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d11206d04b1a55",
+      "repliedAt": "2026-03-21T16:23:41Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d10b2dc38b66e5",
+      "repliedAt": "2026-03-21T15:11:02Z",
+      "from": "lyra@micro.blog",
+      "subject": null,
+      "threadId": "19d107cde51524df"
+    },
+    {
+      "messageId": "19d10b2faf227f4a",
+      "repliedAt": "2026-03-21T15:11:02Z",
+      "from": "lyra@micro.blog",
+      "subject": null,
+      "threadId": "19d107c5bd49d5df"
+    },
+    {
+      "messageId": "19d10b3259a3ace0",
+      "repliedAt": "2026-03-21T15:11:02Z",
+      "from": "lyra@micro.blog",
+      "subject": null,
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d10b349c9345e1",
+      "repliedAt": "2026-03-21T15:11:02Z",
+      "from": "lyra@micro.blog",
+      "subject": null,
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d10e9499915d97",
+      "repliedAt": "2026-03-21T15:11:02Z",
+      "from": "lyra@micro.blog",
+      "subject": null,
+      "threadId": "19d10b43f523aaaf"
+    },
+    {
+      "messageId": "19d107b761261d19",
+      "repliedAt": "2026-03-21T13:10:30Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d1045b66a0a788"
+    },
+    {
+      "messageId": "19d107b94b074620",
+      "repliedAt": "2026-03-21T13:10:30Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d1047340ce04c5"
+    },
+    {
+      "messageId": "19d0fd6afb75a202",
+      "repliedAt": "2026-03-21T10:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0fa099122ca85"
+    },
+    {
+      "messageId": "19d0fd6d8800a629",
+      "repliedAt": "2026-03-21T10:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0fa0e4f853d50"
+    },
+    {
+      "messageId": "19d0fd6f8d8280f1",
+      "repliedAt": "2026-03-21T10:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0fb5f12714635"
+    },
+    {
+      "messageId": "19d0fd71722d6d73",
+      "repliedAt": "2026-03-21T10:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0fd1490893aa3"
+    },
+    {
+      "messageId": "19d0fd730eb15344",
+      "repliedAt": "2026-03-21T10:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
+      "threadId": "19d0fd16ded4d989"
+    },
+    {
+      "messageId": "19d0ab04887926ea",
+      "repliedAt": "2026-03-21T09:54:46Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
+      "threadId": "19d07d01c28d08f6"
+    },
+    {
+      "messageId": "19d0ab064bc51e32",
+      "repliedAt": "2026-03-21T09:54:46Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0ab086fca7eb3",
+      "repliedAt": "2026-03-21T09:54:46Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
+      "threadId": "19d07d01c28d08f6"
+    },
+    {
+      "messageId": "19d0ab09a542b83f",
+      "repliedAt": "2026-03-21T09:54:46Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0b1e36bd1e53f",
+      "repliedAt": "2026-03-21T09:54:46Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0c30d2c693447",
+      "repliedAt": "2026-03-21T09:54:46Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0c67eb46ac25c",
+      "repliedAt": "2026-03-21T09:54:46Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0c67fe146b71d",
+      "repliedAt": "2026-03-21T09:54:46Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0c9eb42f6ae96",
+      "repliedAt": "2026-03-21T09:54:46Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0d0c9a11b42fc",
+      "repliedAt": "2026-03-21T09:54:46Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0f9fcd251e012",
+      "repliedAt": "2026-03-21T09:23:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": null
+    },
+    {
+      "messageId": "19d0f9fde465d499",
+      "repliedAt": "2026-03-21T09:23:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": null
+    },
+    {
+      "messageId": "19d0f68c9e328af4",
+      "repliedAt": "2026-03-21T08:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0f3a30bf538c7"
+    },
+    {
+      "messageId": "19d0f68e97ef1ac8",
+      "repliedAt": "2026-03-21T08:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0f32d70727fb8"
+    },
+    {
+      "messageId": "19d0f31ea6d3d544",
+      "repliedAt": "2026-03-21T07:38:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0efd8f51961b1"
+    },
+    {
+      "messageId": "19d074179f82e18d",
+      "repliedAt": "2026-03-21T06:55:13Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d074180ef0cb84",
+      "repliedAt": "2026-03-21T06:55:13Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d07418aaf83459",
+      "repliedAt": "2026-03-21T06:55:13Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d074197f0f8d90",
+      "repliedAt": "2026-03-21T06:55:13Z",
+      "from": "lyra@micro.blog",
+      "subject": "Re: Decision-point template (ready when needed)",
+      "threadId": "19d05e1ea0c8f620"
+    },
+    {
+      "messageId": "19d0efaf645239e4",
+      "repliedAt": "2026-03-21T06:02:00Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0efb1b046b614",
+      "repliedAt": "2026-03-21T06:02:00Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0e5627e08c538",
+      "repliedAt": "2026-03-21T05:23:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0ec3fcc1c6a78",
+      "repliedAt": "2026-03-21T05:23:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0a63b71031bc9"
+    },
+    {
+      "messageId": "19d0e1f31971fa4e",
+      "repliedAt": "2026-03-21T02:08:40Z",
+      "from": "Lyra <lyra@micro.blog>",
+      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
+      "threadId": "19d0a63b71031bc9"
+    }
+  ],
   "emailStateSummary": {
     "messagesTracked": 823,
     "threadsTracked": 185,
@@ -27,6 +2007,6 @@
   },
   "errors": {
     "jobs": null,
-    "runs": "error: required option '--id <id>' not specified"
+    "runs": null
   }
 }
