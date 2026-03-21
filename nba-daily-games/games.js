@@ -53,7 +53,7 @@ async function main(){
     wb.innerHTML='';
     for (const t of d.westStandings||[]) {
       const tr=document.createElement('tr');
-      tr.innerHTML = `<td style='text-align:center'>${t.rank ?? ''}</td><td style='text-align:center'>${t.team||''}</td><td style='text-align:center'>${t.wins ?? ''}-${t.losses ?? ''}</td><td style='text-align:center'>${t.gb ?? ''}</td><td style='text-align:center'>${normalizeStreak(t.streak)}</td>`;
+      tr.innerHTML = `<td style='text-align:center'>${t.rank ?? ''}</td><td style='text-align:left'>${t.team||''}</td><td style='text-align:center'>${t.wins ?? ''}-${t.losses ?? ''}</td><td style='text-align:center'>${t.gb ?? ''}</td><td style='text-align:center'>${normalizeStreak(t.streak)}</td>`;
       if ((t.team||'').includes('San Antonio') || (t.team||'').includes('Portland')) {
         tr.style.fontWeight='700';
         tr.style.color='#d4a017';
