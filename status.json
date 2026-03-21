@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-03-21T22:46:43.358276+00:00",
+  "generatedAt": "2026-03-21T22:48:45.103405+00:00",
   "summary": {
     "overall": "ok",
     "enabledJobs": 10,
     "disabledJobs": 0,
     "totalJobs": 10,
-    "emailSentTotal": 4,
+    "emailSentTotal": 430,
+    "emailSentCountSource": "email_state_repliedAt",
     "emailReceivedTotal": 823,
     "slackSentTotal": 0,
     "slackSentCountSource": "jsonl_fallback"
