@@ -1,18 +1,14 @@
 {
-  "generatedAt": "2026-03-21T22:20:01.685514+00:00",
+  "generatedAt": "2026-03-21T22:21:10.113194+00:00",
   "windowHours": 24,
   "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
   "job": {
-    "name": "email-guardrail-check",
-    "enabled": true,
-    "schedule": {
-      "kind": "every",
-      "everyMs": 900000,
-      "anchorMs": 1772425419366
-    },
-    "lastStatus": "ok",
-    "lastRunAtMs": 1774130919374,
-    "nextRunAtMs": 1774131819374,
+    "name": null,
+    "enabled": null,
+    "schedule": null,
+    "lastStatus": null,
+    "lastRunAtMs": null,
+    "nextRunAtMs": null,
     "consecutiveErrors": 0
   },
   "latestRun": {
@@ -2006,7 +2002,7 @@
     "lastCheckedHistoryId": "53976"
   },
   "errors": {
-    "jobs": null,
+    "jobs": "gateway connect failed: Error: gateway not connected\nError: gateway closed (1000 normal closure): no close reason\nGateway target: ws://127.0.0.1:18789\nSource: local loopback\nConfig: /home/ubuntu/.openclaw/openclaw.json\nBind: loopback",
     "runs": null
   }
 }
