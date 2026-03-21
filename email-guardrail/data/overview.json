@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-03-21T22:12:19.536726+00:00",
+  "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+  "job": {
+    "name": "email-guardrail-check",
+    "enabled": true,
+    "schedule": {
+      "kind": "every",
+      "everyMs": 900000,
+      "anchorMs": 1772425419366
+    },
+    "lastStatus": "ok",
+    "lastRunAtMs": 1774130919374,
+    "nextRunAtMs": 1774131819374,
+    "consecutiveErrors": 0
+  },
+  "latestRun": null,
+  "recentRuns": [],
+  "emailStateSummary": {
+    "messagesTracked": 823,
+    "threadsTracked": 185,
+    "seenCount": 747,
+    "actedCount": 777,
+    "repliedCount": 430,
+    "lastCheckedHistoryId": "53976"
+  },
+  "errors": {
+    "jobs": null,
+    "runs": "error: required option '--id <id>' not specified"
+  }
+}
