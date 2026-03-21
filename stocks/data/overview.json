@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-03-21T19:48:10.426070+00:00",
+  "count": 2,
+  "latest": {
+    "ts": 1774117055,
+    "recipients": [
+      "ron.hays1@gmail.com"
+    ],
+    "subject": "Stock Market Morning Brief - 2026-03-21",
+    "dry_run": false,
+    "result": "sent",
+    "sent": [
+      {
+        "to": "ron.hays1@gmail.com",
+        "id": "19d119df15098b19"
+      }
+    ]
+  },
+  "recent": [
+    {
+      "ts": 1774117055,
+      "recipients": [
+        "ron.hays1@gmail.com"
+      ],
+      "subject": "Stock Market Morning Brief - 2026-03-21",
+      "dry_run": false,
+      "result": "sent",
+      "sent": [
+        {
+          "to": "ron.hays1@gmail.com",
+          "id": "19d119df15098b19"
+        }
+      ]
+    },
+    {
+      "ts": 1774117053,
+      "recipients": [
+        "jon@silverpine.com"
+      ],
+      "subject": "Stock Market Morning Brief - 2026-03-21",
+      "dry_run": false,
+      "result": "sent",
+      "sent": [
+        {
+          "to": "jon@silverpine.com",
+          "id": "19d119de92b49ad9"
+        }
+      ]
+    }
+  ]
+}
