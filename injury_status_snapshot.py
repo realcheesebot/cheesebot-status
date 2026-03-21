@@ -28,6 +28,7 @@ def main():
 
     data = json.loads(STATE.read_text(encoding='utf-8')) if STATE.exists() else {'sent': {}}
     sent = data.get('sent') or {}
+    latest_report = data.get('latestReport')
 
     rows = []
     by_team = defaultdict(list)
@@ -56,6 +57,7 @@ def main():
         'totalReports': len(rows),
         'teams': [],
         'latest': rows[0] if rows else None,
+        'latestReport': latest_report,
     }
 
     for team, items in sorted(by_team.items()):
