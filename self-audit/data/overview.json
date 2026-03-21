@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T22:51:21.860393+00:00",
+  "generatedAt": "2026-03-21T23:01:33.268226+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -37,11 +37,11 @@
       "enabledJobs": 10,
       "disabledJobs": 0,
       "totalJobs": 10,
-      "emailSentTotal": 430,
+      "emailSentTotal": 431,
       "emailSentCountSource": "email_state_repliedAt",
-      "emailReceivedTotal": 823,
-      "slackSentTotal": 0,
-      "slackSentCountSource": "jsonl_fallback"
+      "emailReceivedTotal": 825,
+      "slackSentTotal": 1117,
+      "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
   "checksPerformed": [
@@ -257,32 +257,6 @@
   ],
   "allJobs": [
     {
-      "name": "status-page-publisher",
-      "enabled": true,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 1800000,
-        "anchorMs": 1774120856987
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774131495629,
-      "nextRunAtMs": 1774133295629
-    },
-    {
-      "name": "email-guardrail-check",
-      "enabled": true,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 900000,
-        "anchorMs": 1772425419366
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774132719401,
-      "nextRunAtMs": 1774133619401
-    },
-    {
       "name": "nba-injury-watch",
       "enabled": true,
       "schedule": {
@@ -294,6 +268,32 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774132500120,
       "nextRunAtMs": 1774134300000
+    },
+    {
+      "name": "email-guardrail-check",
+      "enabled": true,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 900000,
+        "anchorMs": 1772425419366
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774133619425,
+      "nextRunAtMs": 1774134519425
+    },
+    {
+      "name": "status-page-publisher",
+      "enabled": true,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 1800000,
+        "anchorMs": 1774120856987
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774133295644,
+      "nextRunAtMs": 1774135095644
     },
     {
       "name": "daily-5pm-activity-summary",
