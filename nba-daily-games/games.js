@@ -1,3 +1,17 @@
+function normalizeStreak(v){
+  if (v === null || v === undefined) return '';
+  const s = String(v).trim();
+  if (!s) return '';
+  // Already in compact form
+  if (/^[WwLl]\d+$/.test(s)) return s.toUpperCase();
+  // Common forms: "W 3", "L-2", "Won 4", "Lost 1"
+  let m = s.match(/\b([WwLl])\s*[-:]?\s*(\d+)\b/);
+  if (m) return `${m[1].toUpperCase()}${m[2]}`;
+  m = s.match(/\b(Won|Lost)\s*(\d+)\b/i);
+  if (m) return `${m[1].toLowerCase().startsWith('w') ? 'W' : 'L'}${m[2]}`;
+  return s;
+}
+
 async function main(){
   const fmt = new Intl.DateTimeFormat(undefined,{year:'numeric',month:'short',day:'2-digit',hour:'numeric',minute:'2-digit',timeZoneName:'short'});
   const r = await fetch('data/overview.json?ts='+Date.now());
@@ -29,7 +43,7 @@ async function main(){
     wb.innerHTML='';
     for (const t of d.westStandings||[]) {
       const tr=document.createElement('tr');
-      tr.innerHTML = `<td>${t.rank ?? ''}</td><td>${t.team||''}</td><td>${t.wins ?? ''}-${t.losses ?? ''}</td><td>${t.gb ?? ''}</td><td>${t.streak ?? ''}</td>`;
+      tr.innerHTML = `<td>${t.rank ?? ''}</td><td>${t.team||''}</td><td>${t.wins ?? ''}-${t.losses ?? ''}</td><td>${t.gb ?? ''}</td><td>${normalizeStreak(t.streak)}</td>`;
       if ((t.team||'').includes('San Antonio') || (t.team||'').includes('Portland')) {
         tr.style.fontWeight='700';
         tr.style.color='#d4a017';
