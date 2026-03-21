@@ -58,6 +58,33 @@ def fetch_report_text(message_id):
     return html.unescape(body).strip()
 
 
+def gmail_search_latest_weather():
+    tok = gmail_token()
+    if not tok:
+        return None
+    q = 'subject:"Hourly Weather"'
+    url = 'https://gmail.googleapis.com/gmail/v1/users/me/messages'
+    r = requests.get(url, headers={'Authorization': f'Bearer {tok}', 'X-Goog-User-Project': QUOTA_PROJECT}, params={'q': q, 'maxResults': 1}, timeout=30)
+    if r.status_code >= 300:
+        return None
+    msgs = (r.json().get('messages') or [])
+    if not msgs:
+        return None
+    mid = msgs[0].get('id')
+    if not mid:
+        return None
+    r2 = requests.get(f'https://gmail.googleapis.com/gmail/v1/users/me/messages/{mid}?format=metadata', headers={'Authorization': f'Bearer {tok}', 'X-Goog-User-Project': QUOTA_PROJECT}, timeout=30)
+    if r2.status_code >= 300:
+        return {'id': mid}
+    meta = r2.json()
+    headers = {h.get('name','').lower(): h.get('value','') for h in (meta.get('payload') or {}).get('headers', [])}
+    return {
+        'id': mid,
+        'subject': headers.get('subject'),
+        'internalDateMs': meta.get('internalDate'),
+    }
+
+
 def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     rows = []
@@ -81,6 +108,26 @@ def main():
         sent = latest.get('sent') or []
         msg_id = (sent[0] or {}).get('id') if sent else None
         latest_report_text = fetch_report_text(msg_id)
+
+    # Backfill from Gmail search when notifier log has no weather rows yet.
+    if not latest:
+        g = gmail_search_latest_weather()
+        if g and g.get('id'):
+            latest_report_text = fetch_report_text(g['id'])
+            ts = None
+            if g.get('internalDateMs'):
+                try:
+                    ts = int(g['internalDateMs']) // 1000
+                except Exception:
+                    ts = None
+            latest = {
+                'subject': g.get('subject') or 'Hourly Weather',
+                'recipients': ['jon@silverpine.com'],
+                'ts': ts,
+                'sent': [{'id': g['id']}],
+                'source': 'gmail-backfill',
+            }
+            rows = [latest]
 
     payload = {
         'generatedAt': now_iso(),
