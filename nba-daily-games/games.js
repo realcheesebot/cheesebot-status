@@ -15,7 +15,9 @@ async function main(){
   for(const g of games){
     const tr=document.createElement('tr');
     const tip = g.tipoffUtc ? fmt.format(new Date(g.tipoffUtc)) : '';
+    const fav = /(^|@)(SAS|POR)($|@)/.test(g.matchup||'');
     tr.innerHTML = `<td>${g.date||''}</td><td>${g.matchup||''}</td><td>${tip}</td><td>${g.arena||''}</td>`;
+    if (fav) tr.style.fontWeight = '700';
     tb.appendChild(tr);
   }
 }
