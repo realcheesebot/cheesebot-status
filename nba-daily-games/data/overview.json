@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T21:26:40.557873+00:00",
+  "generatedAt": "2026-03-21T21:42:23.348604+00:00",
   "today": "2026-03-21",
   "tomorrow": "2026-03-22",
   "count": 15,
@@ -116,105 +116,120 @@
       "team": "Oklahoma City Thunder",
       "wins": 55.0,
       "losses": 15.0,
-      "winPct": 0.78571427
+      "gb": 0.0,
+      "streak": 10.0
     },
     {
       "rank": 2.0,
       "team": "San Antonio Spurs",
       "wins": 52.0,
       "losses": 18.0,
-      "winPct": 0.74285716
+      "gb": 3.0,
+      "streak": 4.0
     },
     {
       "rank": 3.0,
       "team": "Los Angeles Lakers",
       "wins": 45.0,
       "losses": 25.0,
-      "winPct": 0.64285713
+      "gb": 10.0,
+      "streak": 8.0
     },
     {
       "rank": 4.0,
       "team": "Houston Rockets",
       "wins": 42.0,
       "losses": 27.0,
-      "winPct": 0.6086956
+      "gb": 12.5,
+      "streak": 1.0
     },
     {
       "rank": 5.0,
       "team": "Denver Nuggets",
       "wins": 43.0,
       "losses": 28.0,
-      "winPct": 0.6056338
+      "gb": 12.5,
+      "streak": 1.0
     },
     {
       "rank": 6.0,
       "team": "Minnesota Timberwolves",
       "wins": 43.0,
       "losses": 28.0,
-      "winPct": 0.6056338
+      "gb": 12.5,
+      "streak": -1.0
     },
     {
       "rank": 7.0,
       "team": "Phoenix Suns",
       "wins": 39.0,
       "losses": 31.0,
-      "winPct": 0.55714285
+      "gb": 16.0,
+      "streak": -4.0
     },
     {
       "rank": 8.0,
       "team": "Portland Trail Blazers",
       "wins": 35.0,
       "losses": 36.0,
-      "winPct": 0.49295774
+      "gb": 20.5,
+      "streak": 3.0
     },
     {
       "rank": 9.0,
       "team": "LA Clippers",
       "wins": 34.0,
       "losses": 36.0,
-      "winPct": 0.4857143
+      "gb": 21.0,
+      "streak": -4.0
     },
     {
       "rank": 10.0,
       "team": "Golden State Warriors",
       "wins": 33.0,
       "losses": 37.0,
-      "winPct": 0.47142857
+      "gb": 22.0,
+      "streak": -2.0
     },
     {
       "rank": 11.0,
       "team": "New Orleans Pelicans",
       "wins": 25.0,
       "losses": 46.0,
-      "winPct": 0.35211268
+      "gb": 30.5,
+      "streak": 3.0
     },
     {
       "rank": 12.0,
       "team": "Memphis Grizzlies",
       "wins": 24.0,
       "losses": 45.0,
-      "winPct": 0.3478261
+      "gb": 30.5,
+      "streak": -1.0
     },
     {
       "rank": 13.0,
       "team": "Dallas Mavericks",
       "wins": 23.0,
       "losses": 47.0,
-      "winPct": 0.32857144
+      "gb": 32.0,
+      "streak": -2.0
     },
     {
       "rank": 14.0,
       "team": "Utah Jazz",
       "wins": 21.0,
       "losses": 49.0,
-      "winPct": 0.3
+      "gb": 34.0,
+      "streak": 1.0
     },
     {
       "rank": 15.0,
       "team": "Sacramento Kings",
       "wins": 18.0,
       "losses": 53.0,
-      "winPct": 0.2535211
+      "gb": 37.5,
+      "streak": -2.0
     }
   ]
 }

@@ -16,7 +16,7 @@ async function main(){
     const tr=document.createElement('tr');
     const tip = g.tipoffUtc ? fmt.format(new Date(g.tipoffUtc)) : '';
     const fav = /(^|@)(SAS|POR)($|@)/.test(g.matchup||'');
-    tr.innerHTML = `<td>${g.date||''}</td><td>${g.matchup||''}</td><td>${tip}</td><td>${g.arena||''}</td>`;
+    tr.innerHTML = `<td>${g.date||''}</td><td>${g.matchup||''}</td><td>${tip}</td>`;
     if (fav) {
       tr.style.fontWeight = '700';
       tr.style.color = '#d4a017'; // dark yellow/gold
@@ -29,7 +29,7 @@ async function main(){
     wb.innerHTML='';
     for (const t of d.westStandings||[]) {
       const tr=document.createElement('tr');
-      tr.innerHTML = `<td>${t.rank ?? ''}</td><td>${t.team||''}</td><td>${t.wins ?? ''}-${t.losses ?? ''}</td><td>${t.winPct ?? ''}</td>`;
+      tr.innerHTML = `<td>${t.rank ?? ''}</td><td>${t.team||''}</td><td>${t.wins ?? ''}-${t.losses ?? ''}</td><td>${t.gb ?? ''}</td><td>${t.streak ?? ''}</td>`;
       if ((t.team||'').includes('San Antonio') || (t.team||'').includes('Portland')) {
         tr.style.fontWeight='700';
         tr.style.color='#d4a017';

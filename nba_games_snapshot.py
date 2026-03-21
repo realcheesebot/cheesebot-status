@@ -45,7 +45,8 @@ def fetch_west_standings():
             'team': team,
             'wins': stats.get('wins'),
             'losses': stats.get('losses'),
-            'winPct': stats.get('winPercent'),
+            'gb': stats.get('gamesBehind') if stats.get('gamesBehind') is not None else stats.get('playoffGamesBack'),
+            'streak': stats.get('streak') or stats.get('lastTenGames'),
         })
     def rank_num(v):
         try:
