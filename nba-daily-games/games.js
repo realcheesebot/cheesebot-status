@@ -2,13 +2,23 @@ function normalizeStreak(v){
   if (v === null || v === undefined) return '';
   const s = String(v).trim();
   if (!s) return '';
+
+  // Numeric form from feed: +3 / 3 means W3, -5 means L5
+  if (/^[+-]?\d+$/.test(s)) {
+    const n = parseInt(s, 10);
+    if (Number.isNaN(n) || n === 0) return 'W0';
+    return `${n > 0 ? 'W' : 'L'}${Math.abs(n)}`;
+  }
+
   // Already in compact form
   if (/^[WwLl]\d+$/.test(s)) return s.toUpperCase();
+
   // Common forms: "W 3", "L-2", "Won 4", "Lost 1"
   let m = s.match(/\b([WwLl])\s*[-:]?\s*(\d+)\b/);
   if (m) return `${m[1].toUpperCase()}${m[2]}`;
   m = s.match(/\b(Won|Lost)\s*(\d+)\b/i);
   if (m) return `${m[1].toLowerCase().startsWith('w') ? 'W' : 'L'}${m[2]}`;
+
   return s;
 }
 
