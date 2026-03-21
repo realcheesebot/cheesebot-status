@@ -31,7 +31,12 @@ def main():
 
     picked = []
     for gd in games:
-        d = (gd.get('gameDate') or '')[:10]
+        raw = (gd.get('gameDate') or '').strip()
+        # schedule uses MM/DD/YYYY HH:MM:SS
+        try:
+            d = datetime.strptime(raw.split()[0], '%m/%d/%Y').strftime('%Y-%m-%d')
+        except Exception:
+            continue
         if d not in (today, tomorrow):
             continue
         for g in gd.get('games') or []:
