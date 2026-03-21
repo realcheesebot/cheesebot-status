@@ -7,7 +7,7 @@ async function main(){
     timeZoneName: 'short'
   });
   const generatedLocal = d.generatedAt ? localFmt.format(new Date(d.generatedAt)) : 'unknown';
-  document.getElementById('updated').textContent = `Last updated (your local time): ${generatedLocal}`;
+  document.getElementById('updated').textContent = `Last updated: ${generatedLocal}`;
   const s = d.summary;
   const selfAuditJob = (d.jobs || []).find(j => j.name === 'daily-10am-self-audit');
   let selfAuditState = 'warn';
