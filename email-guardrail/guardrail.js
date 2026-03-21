@@ -25,6 +25,21 @@ async function main(){
     lastHistoryId: ${s.lastCheckedHistoryId ?? 'n/a'}
   `;
 
+  const rb = document.getElementById('repliedRows'); rb.innerHTML='';
+  const replied = d.repliedOnLastRun || [];
+  if (!replied.length) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td colspan='4'>No replies were sent during the last guardrail run.</td>`;
+    rb.appendChild(tr);
+  } else {
+    for (const r of replied) {
+      const tr = document.createElement('tr');
+      const at = r.repliedAt ? fmt.format(new Date(r.repliedAt)) : '';
+      tr.innerHTML = `<td>${at}</td><td>${r.from || ''}</td><td>${r.subject || ''}</td><td>${r.messageId || ''}</td>`;
+      rb.appendChild(tr);
+    }
+  }
+
   const tb = document.getElementById('runs'); tb.innerHTML='';
   for (const e of d.recentRuns||[]) {
     const tr=document.createElement('tr');

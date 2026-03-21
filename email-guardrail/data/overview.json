@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T22:12:19.536726+00:00",
+  "generatedAt": "2026-03-21T22:15:19.597307+00:00",
   "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
   "job": {
     "name": "email-guardrail-check",
@@ -16,6 +16,7 @@
   },
   "latestRun": null,
   "recentRuns": [],
+  "repliedOnLastRun": [],
   "emailStateSummary": {
     "messagesTracked": 823,
     "threadsTracked": 185,

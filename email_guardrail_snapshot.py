@@ -40,6 +40,53 @@ def summarize_email_state(state):
     }
 
 
+def parse_iso_utc(s):
+    if not s:
+        return None
+    try:
+        if isinstance(s, str) and s.endswith('Z'):
+            s = s[:-1] + '+00:00'
+        dt = datetime.fromisoformat(s)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+    except Exception:
+        return None
+
+
+def replied_on_last_run(state, latest_run):
+    msgs = (state or {}).get('messages') or {}
+    if not isinstance(msgs, dict) or not latest_run:
+        return []
+
+    run_at_ms = latest_run.get('runAtMs') or latest_run.get('startedAtMs')
+    dur_ms = latest_run.get('durationMs') or 0
+    if not run_at_ms:
+        return []
+
+    start = datetime.fromtimestamp(run_at_ms / 1000, tz=timezone.utc)
+    end = datetime.fromtimestamp((run_at_ms + max(dur_ms, 0) + 120000) / 1000, tz=timezone.utc)  # +2m slack
+
+    out = []
+    for msg_id, rec in msgs.items():
+        if not isinstance(rec, dict):
+            continue
+        rt = parse_iso_utc(rec.get('repliedAt'))
+        if not rt:
+            continue
+        if start <= rt <= end:
+            out.append({
+                'messageId': msg_id,
+                'repliedAt': rec.get('repliedAt'),
+                'from': rec.get('from') or rec.get('sender') or rec.get('fromRaw'),
+                'subject': rec.get('subject'),
+                'threadId': rec.get('threadId'),
+            })
+
+    out.sort(key=lambda x: x.get('repliedAt') or '', reverse=True)
+    return out
+
+
 def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
 
@@ -76,6 +123,7 @@ def main():
         },
         'latestRun': latest,
         'recentRuns': entries[:20],
+        'repliedOnLastRun': replied_on_last_run(state, latest),
         'emailStateSummary': summarize_email_state(state),
         'errors': {
             'jobs': jobs_err,
