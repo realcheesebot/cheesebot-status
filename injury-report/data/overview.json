@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-21T23:00:59.411714+00:00",
-  "totalReports": 16,
+  "generatedAt": "2026-03-21T23:15:08.121685+00:00",
+  "totalReports": 17,
   "teams": [
     {
       "team": "Portland Trail Blazers",
@@ -24,50 +24,49 @@
     {
       "team": "San Antonio Spurs",
       "slug": "sas",
-      "count": 9,
+      "count": 10,
       "latest": {
-        "key": "San Antonio Spurs|0022501013|2026-03-20T00:00:00+00:00",
+        "key": "San Antonio Spurs|0022501028|2026-03-22T00:00:00+00:00",
         "team": "San Antonio Spurs",
-        "gameId": "0022501013",
-        "tipoff": "2026-03-20T00:00:00+00:00",
-        "sentAt": "2026-03-19T23:05:21.076891+00:00",
-        "matchup": "PHX@SAS",
+        "gameId": "0022501028",
+        "tipoff": "2026-03-22T00:00:00+00:00",
+        "sentAt": "2026-03-21T23:05:23.812523+00:00",
+        "matchup": "IND@SAS",
         "recipients": [
           "jon@silverpine.com",
           "manton@manton.org"
         ],
         "emailIds": [
-          "19d0858b2444bae3",
-          "19d0858bb0362d30"
+          "19d12a57503c19bf",
+          "19d12a57e11e5769"
         ]
       }
     }
   ],
   "latest": {
-    "key": "San Antonio Spurs|0022501013|2026-03-20T00:00:00+00:00",
+    "key": "San Antonio Spurs|0022501028|2026-03-22T00:00:00+00:00",
     "team": "San Antonio Spurs",
-    "gameId": "0022501013",
-    "tipoff": "2026-03-20T00:00:00+00:00",
-    "sentAt": "2026-03-19T23:05:21.076891+00:00",
-    "matchup": "PHX@SAS",
+    "gameId": "0022501028",
+    "tipoff": "2026-03-22T00:00:00+00:00",
+    "sentAt": "2026-03-21T23:05:23.812523+00:00",
+    "matchup": "IND@SAS",
     "recipients": [
       "jon@silverpine.com",
       "manton@manton.org"
     ],
     "emailIds": [
-      "19d0858b2444bae3",
-      "19d0858bb0362d30"
+      "19d12a57503c19bf",
+      "19d12a57e11e5769"
     ]
   },
   "latestReport": {
-    "sentAt": "2026-03-19T23:05:21.076891+00:00",
-    "matchup": "PHX@SAS",
-    "subject": "Injury Report",
-    "reportText": "NBA INJURY REPORT WATCH\nMatchup       : PHX @ SAS\nTipoff (CDT) : 2026-03-19 07:00 PM CDT\nGenerated (CDT) : 2026-03-19 06:05:21 PM CDT\nReport Time (CDT) : 2026-03-19 06:00 PM CDT\n----------------------------------------------------------------------------------------\nPLAYERS LISTED IN REPORT (TEAM + OPPONENT)\n----------------------------------------------------------------------------------------\n[PHX]\n* Grayson Allen - OUT - Injury/Illness-LeftKnee;Soreness\n* Dillon Brooks - OUT - Injury/Illness-LeftHand;Fracture Injury/Illness-RightKnee;Injury\n* Haywood Highsmith - OUT - Management\n* Royce O'Neale - OUT - Injury/Illness-LeftKnee;Soreness Injury/Illness-LeftFootThird\n* Mark Williams - OUT - Metatarsal;StressReaction\n\n[SAS]\n* Stephon Castle - OUT - Injury/Illness-RightHip;Tightness\n* Harrison Ingram - OUT - G League - Two-Way\n* David Jones Garcia - OUT - G League - Two-Way\n* Emanuel Miller - OUT - G League - Two-Way\n----------------------------------------------------------------------------------------\nSource: https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-03-19_07_00PM.pdf",
+    "sentAt": "2026-03-21T23:05:23.812523+00:00",
+    "matchup": "IND@SAS",
+    "subject": "Injury Report: IND @ SAS (T-60m)",
+    "reportText": "NBA INJURY REPORT WATCH\nMatchup       : IND @ SAS\nTipoff (CDT) : 2026-03-21 07:00 PM CDT\nGenerated (CDT) : 2026-03-21 06:05:24 PM CDT\nReport Time (CDT) : 2026-03-21 06:00 PM CDT\n----------------------------------------------------------------------------------------\nPLAYERS LISTED IN REPORT (TEAM + OPPONENT)\n----------------------------------------------------------------------------------------\n[IND]\n* Johnny Furphy - OUT - Injury/Illness-RightACL;Tear Injury/Illness-RightAchillesTendon\n* Tyrese Haliburton - OUT - Tear\n* Quenton Jackson - Questionable - Injury/Illness-RightCalf;Strain Injury/Illness-RightHamstring\n* T.J. Mc Connell - Questionable - Soreness\n* Andrew Nembhard - Questionable - Injury/Illness-RightCalf;Contusion Injury/Illness-RightAnkle;Injury\n* Aaron Nesmith - Questionable - Management\n* Taelon Peter - OUT - G League - Two-Way\n* Micah Potter - Questionable - Injury/Illness-RightTriceps;Strain\n* Ben Sheppard - Questionable - Injury/Illness-LeftAnkle;Sprain\n* Pascal Siakam - Questionable - Injury/Illness-RightKnee;Sprain\n* Jalen Slawson - OUT - G League - Two-Way\n* Ethan Thompson - OUT - G League - Two-Way Injury/Illness-RightFoot;Injury\n* Obi Toppin - Questionable - Management\n* Ivica Zubac - OUT - Injury/Illness-Rib;Fracture\n\n[SAS]\n* Stephon Castle - OUT - Injury/Illness-RightHip;Tightness\n* Harrison Ingram - OUT - G League - Two-Way\n* David Jones Garcia - OUT - G League - Two-Way\n* Emanuel Miller - OUT - G League - Two-Way\n* Victor Wembanyama - Questionable - Injury/Illness-RightAnkle;Soreness\n----------------------------------------------------------------------------------------\nSource: https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-03-21_07_00PM.pdf",
     "recipients": [
       "jon@silverpine.com",
       "manton@manton.org"
-    ],
-    "sourceEmailId": "19d0858b2444bae3"
+    ]
   }
 }

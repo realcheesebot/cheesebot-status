@@ -1,6 +1,22 @@
 {
-  "generatedAt": "2026-03-21T23:00:59.412395+00:00",
+  "generatedAt": "2026-03-21T23:15:08.122418+00:00",
   "rows": [
+    {
+      "key": "San Antonio Spurs|0022501028|2026-03-22T00:00:00+00:00",
+      "team": "San Antonio Spurs",
+      "gameId": "0022501028",
+      "tipoff": "2026-03-22T00:00:00+00:00",
+      "sentAt": "2026-03-21T23:05:23.812523+00:00",
+      "matchup": "IND@SAS",
+      "recipients": [
+        "jon@silverpine.com",
+        "manton@manton.org"
+      ],
+      "emailIds": [
+        "19d12a57503c19bf",
+        "19d12a57e11e5769"
+      ]
+    },
     {
       "key": "San Antonio Spurs|0022501013|2026-03-20T00:00:00+00:00",
       "team": "San Antonio Spurs",
