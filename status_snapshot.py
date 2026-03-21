@@ -73,6 +73,19 @@ def count_received_emails(path: Path) -> int:
     return len(msgs) if isinstance(msgs, dict) else 0
 
 
+def count_sent_emails_from_state(path: Path):
+    if not path.exists():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    msgs = (data or {}).get("messages")
+    if not isinstance(msgs, dict):
+        return None
+    return sum(1 for m in msgs.values() if isinstance(m, dict) and m.get("repliedAt"))
+
+
 def count_slack_sent_via_api(limit=1000):
     data, err = run_json([
         "openclaw", "message", "read",
@@ -99,7 +112,14 @@ def main():
 
     openclaw_out, openclaw_err, openclaw_rc = run_text(["openclaw", "status"])
 
-    email_sent_total = count_jsonl_rows(EMAIL_SEND_LOG)
+    email_sent_from_state = count_sent_emails_from_state(EMAIL_STATE)
+    if email_sent_from_state is None:
+        email_sent_total = count_jsonl_rows(EMAIL_SEND_LOG)
+        email_sent_source = "jsonl_fallback"
+    else:
+        email_sent_total = email_sent_from_state
+        email_sent_source = "email_state_repliedAt"
+
     email_received_total = count_received_emails(EMAIL_STATE)
 
     slack_sent_api_total, slack_api_err = count_slack_sent_via_api(limit=1000)
@@ -118,6 +138,7 @@ def main():
             "disabledJobs": len(disabled),
             "totalJobs": len(jobs),
             "emailSentTotal": email_sent_total,
+            "emailSentCountSource": email_sent_source,
             "emailReceivedTotal": email_received_total,
             "slackSentTotal": slack_sent_total,
             "slackSentCountSource": slack_count_source,
