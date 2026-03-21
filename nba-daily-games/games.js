@@ -17,7 +17,10 @@ async function main(){
     const tip = g.tipoffUtc ? fmt.format(new Date(g.tipoffUtc)) : '';
     const fav = /(^|@)(SAS|POR)($|@)/.test(g.matchup||'');
     tr.innerHTML = `<td>${g.date||''}</td><td>${g.matchup||''}</td><td>${tip}</td><td>${g.arena||''}</td>`;
-    if (fav) tr.style.fontWeight = '700';
+    if (fav) {
+      tr.style.fontWeight = '700';
+      tr.style.color = '#d4a017'; // dark yellow/gold
+    }
     tb.appendChild(tr);
   }
 }
