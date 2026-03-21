@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T22:27:58.310095+00:00",
+  "generatedAt": "2026-03-21T22:34:23.233051+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -14,6 +14,73 @@
     "nextRunAtMs": 1774198800000,
     "consecutiveErrors": 0
   },
+  "health": {
+    "overall": "ok",
+    "checks": {
+      "pass": 8,
+      "warn": 0,
+      "fail": 0,
+      "total": 8
+    },
+    "issuesFound": 2,
+    "actionsPending": 0,
+    "actionsTaken": 9,
+    "cron": {
+      "overall": "ok",
+      "enabledJobs": 10,
+      "totalJobs": 10,
+      "jobsWithConsecutiveErrors": [],
+      "jobsWithLastError": []
+    },
+    "statusSnapshotSummary": {
+      "overall": "ok",
+      "enabledJobs": 10,
+      "disabledJobs": 0,
+      "totalJobs": 10
+    }
+  },
+  "checksPerformed": [
+    {
+      "name": "Self-audit job exists",
+      "status": "pass",
+      "detail": "Found by name in cron list"
+    },
+    {
+      "name": "Self-audit job enabled",
+      "status": "pass",
+      "detail": "enabled=True"
+    },
+    {
+      "name": "Last run status",
+      "status": "pass",
+      "detail": "lastStatus=ok"
+    },
+    {
+      "name": "Consecutive errors",
+      "status": "pass",
+      "detail": "consecutiveErrors=0"
+    },
+    {
+      "name": "Recent run reliability (last 7)",
+      "status": "pass",
+      "detail": "okRuns=7/7"
+    },
+    {
+      "name": "Slack-only hard stop present",
+      "status": "pass",
+      "detail": "Latest run summary includes Slack delivery constraint"
+    },
+    {
+      "name": "Email blocked in self-audit",
+      "status": "pass",
+      "detail": "Latest run summary contains explicit email prohibition"
+    },
+    {
+      "name": "No critical cron degradation",
+      "status": "pass",
+      "detail": "No enabled jobs with >=3 consecutive errors"
+    }
+  ],
   "latestRun": {
     "ts": 1774116794407,
     "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
@@ -24,6 +91,33 @@
     "durationMs": 51070,
     "nextRunAtMs": 1774198800000,
     "deliveryStatus": "not-requested"
+  },
+  "latestRunSummary": {
+    "text": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:\npython3 /home/ubuntu/.openclaw/workspace/scripts/slack_notify.py --title \"Daily self-audit\" --text \"<AUDIT_TEXT>\"\nNever NO_REPLY.",
+    "findings": [
+      {
+        "text": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:",
+        "severity": "critical"
+      },
+      {
+        "text": "Never NO_REPLY.",
+        "severity": "info"
+      }
+    ],
+    "checksMentioned": [
+      "cron status",
+      "permanent rules/guardrails",
+      "system health snapshot",
+      "drift/contradictions",
+      "corrective actions",
+      "email blocked in this job"
+    ],
+    "constraints": [
+      "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:"
+    ],
+    "actions": [
+      "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:"
+    ]
   },
   "recentRuns": [
     {
@@ -132,9 +226,166 @@
     "other": 0,
     "total": 9
   },
+  "driftAndContradictions": [
+    {
+      "text": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:",
+      "severity": "critical"
+    },
+    {
+      "text": "Never NO_REPLY.",
+      "severity": "info"
+    }
+  ],
+  "correctiveActions": [
+    {
+      "type": "automated",
+      "detail": "Daily self-audit cron job is scheduled and active."
+    },
+    {
+      "type": "automated",
+      "detail": "Run health trend captured from recent executions."
+    },
+    {
+      "type": "recommended",
+      "detail": "Investigate any WARN/FAIL checks listed above and remediate drift."
+    }
+  ],
+  "allJobs": [
+    {
+      "name": "nba-injury-watch",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "5,35 10-20 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774128900057,
+      "nextRunAtMs": 1774132500000
+    },
+    {
+      "name": "email-guardrail-check",
+      "enabled": true,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 900000,
+        "anchorMs": 1772425419366
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774131819388,
+      "nextRunAtMs": 1774132719388
+    },
+    {
+      "name": "status-page-publisher",
+      "enabled": true,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 1800000,
+        "anchorMs": 1774120856987
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774131495629,
+      "nextRunAtMs": 1774133295629
+    },
+    {
+      "name": "daily-5pm-activity-summary",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 17 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774116813612,
+      "nextRunAtMs": 1774137600000
+    },
+    {
+      "name": "stock-morning-445am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 19 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774117002532,
+      "nextRunAtMs": 1774144800000
+    },
+    {
+      "name": "calendar-evening-preview-9pm",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 21 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774118566757,
+      "nextRunAtMs": 1774152000000
+    },
+    {
+      "name": "weather-hourly-630am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 6 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774099800091,
+      "nextRunAtMs": 1774186200000
+    },
+    {
+      "name": "nba-injury-eta-745am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "45 7 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774104300070,
+      "nextRunAtMs": 1774190700000
+    },
+    {
+      "name": "nba-games-daily-8am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774105200086,
+      "nextRunAtMs": 1774191600000
+    },
+    {
+      "name": "daily-10am-self-audit",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774116743336,
+      "nextRunAtMs": 1774198800000
+    }
+  ],
   "errors": {
     "jobs": null,
     "runs": null,
-    "jobNotFound": null
+    "jobNotFound": null,
+    "statusJson": null
   }
 }
