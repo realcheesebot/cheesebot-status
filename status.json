@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T21:18:24.358844+00:00",
+  "generatedAt": "2026-03-21T21:48:53.432014+00:00",
   "summary": {
     "overall": "ok",
     "enabledJobs": 9,
@@ -23,7 +23,7 @@
         "everyMs": 1800000,
         "anchorMs": 1774120856987
       },
-      "nextRunAtMs": 1774127895589,
+      "nextRunAtMs": 1774129695600,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -35,7 +35,7 @@
         "expr": "5,35 10-20 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774128900000,
+      "nextRunAtMs": 1774130700000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
