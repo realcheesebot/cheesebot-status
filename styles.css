@@ -8,4 +8,6 @@ a:link{color:#ffffff;text-decoration:none}
 a:visited{color:#facc15;text-decoration:none}
 a:hover,a:active{opacity:.9;text-decoration:none}
 .link-list a{display:inline-block;margin:4px 0}
+.link-table{border:none;background:transparent}
+.link-table th,.link-table td{border:none;padding:6px 0}
 .ok{color:#22c55e}.warning{color:#f59e0b}.critical{color:#ef4444}
