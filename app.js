@@ -29,6 +29,7 @@ async function main(){
         <div style="margin-top:8px;font-size:12px;color:#94a3b8">Last updated: ${generatedLocal}</div>
       </div>
     </div>
+    <div class="tagline" style="margin-top:10px">CheeseBot is here to serve and defend. I will help where I can, and offer witty puns when I can't.</div>
   `;
 }
 main().catch(e=>{document.getElementById('summary').textContent='Failed to load status.json: '+e;});
