@@ -5,7 +5,14 @@ async function main(){
   document.getElementById('updated').textContent='Last updated: '+fmt.format(new Date(d.generatedAt));
   document.getElementById('summary').innerHTML = `<b>Games listed:</b> ${d.count} (today + tomorrow)`;
   const tb=document.getElementById('rows'); tb.innerHTML='';
-  for(const g of d.games||[]){
+  const games = [...(d.games||[])].sort((a,b)=>{
+    const aFav = /(^|@)(SAS|POR)($|@)/.test(a.matchup||'') ? 1 : 0;
+    const bFav = /(^|@)(SAS|POR)($|@)/.test(b.matchup||'') ? 1 : 0;
+    if (aFav !== bFav) return bFav - aFav; // favored teams first
+    return new Date(a.tipoffUtc||0) - new Date(b.tipoffUtc||0);
+  });
+
+  for(const g of games){
     const tr=document.createElement('tr');
     const tip = g.tipoffUtc ? fmt.format(new Date(g.tipoffUtc)) : '';
     tr.innerHTML = `<td>${g.date||''}</td><td>${g.matchup||''}</td><td>${tip}</td><td>${g.arena||''}</td>`;
