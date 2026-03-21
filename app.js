@@ -24,6 +24,7 @@ async function main(){
   document.getElementById('summary').innerHTML = `
     <div><span style="display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid #334155;font-size:12px"><b>Overall:</b> <span class="${overallClass}">${s.overall.toUpperCase()}</span></span> &nbsp; <span style="display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid #334155;font-size:12px"><b>Self-Audit:</b> <span class="${selfAuditClass}">${selfAuditLabel}</span></span></div>
     <div style="margin-top:6px"><b>Email sent:</b> ${s.emailSentTotal ?? 0} &nbsp; <b>Email received:</b> ${s.emailReceivedTotal ?? 0} &nbsp; <b>Slack sent:</b> ${s.slackSentTotal ?? 0}</div>
+    <div style="margin-top:4px;font-size:12px;color:#94a3b8">Counts source — Email sent: ${s.emailSentCountSource || 'unknown'}, Slack sent: ${s.slackSentCountSource || 'unknown'}</div>
   `;
   const tbody = document.querySelector('#jobs tbody');
   tbody.innerHTML = '';
