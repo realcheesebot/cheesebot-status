@@ -1,28 +1,54 @@
 {
-  "generatedAt": "2026-03-22T01:22:11.314364+00:00",
+  "generatedAt": "2026-03-22T01:51:42.732224+00:00",
   "windowHours": 24,
   "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
   "job": {
-    "name": null,
-    "enabled": null,
-    "schedule": null,
-    "lastStatus": null,
-    "lastRunAtMs": null,
-    "nextRunAtMs": null,
+    "name": "email-guardrail-check",
+    "enabled": true,
+    "schedule": {
+      "kind": "every",
+      "everyMs": 900000,
+      "anchorMs": 1772425419366
+    },
+    "lastStatus": "ok",
+    "lastRunAtMs": 1774143520322,
+    "nextRunAtMs": 1774144420322,
     "consecutiveErrors": 0
   },
   "latestRun": {
-    "ts": 1774141747456,
+    "ts": 1774143550543,
     "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
     "action": "finished",
     "status": "ok",
     "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
-    "runAtMs": 1774141720299,
-    "durationMs": 27151,
-    "nextRunAtMs": 1774142620299,
+    "runAtMs": 1774143520322,
+    "durationMs": 30216,
+    "nextRunAtMs": 1774144420322,
     "deliveryStatus": "not-requested"
   },
   "recentRuns": [
+    {
+      "ts": 1774143550543,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
+      "runAtMs": 1774143520322,
+      "durationMs": 30216,
+      "nextRunAtMs": 1774144420322,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774142652987,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
+      "runAtMs": 1774142620308,
+      "durationMs": 32674,
+      "nextRunAtMs": 1774143520308,
+      "deliveryStatus": "not-requested"
+    },
     {
       "ts": 1774141747456,
       "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
@@ -219,28 +245,6 @@
       "runAtMs": 1774115619406,
       "durationMs": 70644,
       "nextRunAtMs": 1774116519406,
-      "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1774114747727,
-      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
-      "runAtMs": 1774114719384,
-      "durationMs": 28338,
-      "nextRunAtMs": 1774115619384,
-      "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1774112972113,
-      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. Do not check inbox, do not send email, do not send Slack alerts. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Any alerting must follow current AGENTS stop/silence rules.",
-      "runAtMs": 1774112921633,
-      "durationMs": 50476,
-      "nextRunAtMs": 1774113821633,
       "deliveryStatus": "not-requested"
     }
   ],
@@ -2094,7 +2098,7 @@
     "lastCheckedHistoryId": "53976"
   },
   "errors": {
-    "jobs": "gateway connect failed: Error: gateway closed (1000): \nError: gateway closed (1000 normal closure): no close reason\nGateway target: ws://127.0.0.1:18789\nSource: local loopback\nConfig: /home/ubuntu/.openclaw/openclaw.json\nBind: loopback",
+    "jobs": null,
     "runs": null
   }
 }
