@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T06:51:45.558045+00:00",
+  "generatedAt": "2026-03-22T07:21:45.850181+00:00",
   "windowHours": 24,
   "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
   "job": {
@@ -11,22 +11,44 @@
       "anchorMs": 1772425419366
     },
     "lastStatus": "ok",
-    "lastRunAtMs": 1774161521333,
-    "nextRunAtMs": 1774162421333,
+    "lastRunAtMs": 1774163321534,
+    "nextRunAtMs": 1774164221534,
     "consecutiveErrors": 0
   },
   "latestRun": {
-    "ts": 1774161545860,
+    "ts": 1774163354555,
     "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
     "action": "finished",
     "status": "ok",
     "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
-    "runAtMs": 1774161521333,
-    "durationMs": 24504,
-    "nextRunAtMs": 1774162421333,
+    "runAtMs": 1774163321534,
+    "durationMs": 33004,
+    "nextRunAtMs": 1774164221534,
     "deliveryStatus": "not-requested"
   },
   "recentRuns": [
+    {
+      "ts": 1774163354555,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
+      "runAtMs": 1774163321534,
+      "durationMs": 33004,
+      "nextRunAtMs": 1774164221534,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774162452734,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
+      "runAtMs": 1774162421370,
+      "durationMs": 31337,
+      "nextRunAtMs": 1774163321370,
+      "deliveryStatus": "not-requested"
+    },
     {
       "ts": 1774161545860,
       "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
@@ -223,28 +245,6 @@
       "runAtMs": 1774146220369,
       "durationMs": 40061,
       "nextRunAtMs": 1774147120369,
-      "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1774145354250,
-      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
-      "runAtMs": 1774145320361,
-      "durationMs": 33884,
-      "nextRunAtMs": 1774146220361,
-      "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1774144453849,
-      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
-      "runAtMs": 1774144420336,
-      "durationMs": 33508,
-      "nextRunAtMs": 1774145320336,
       "deliveryStatus": "not-requested"
     }
   ],
@@ -1376,350 +1376,6 @@
       "subject": "Re: v1.1 validation shortcut (tiny but strict)",
       "status": "acted",
       "threadId": "19d0f3a30bf538c7"
-    },
-    {
-      "messageId": "19d070a92dc0dd17",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "lyra@micro.blog",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "status": "replied",
-      "threadId": "19d05e1ea0c8f620"
-    },
-    {
-      "messageId": "19d070ab342d3522",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "lyra@micro.blog",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "status": "replied",
-      "threadId": "19d05e1ea0c8f620"
-    },
-    {
-      "messageId": "19d070ad53b0d00f",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "lyra@micro.blog",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "status": "replied",
-      "threadId": "19d05e1ea0c8f620"
-    },
-    {
-      "messageId": "19d070b68515b5ea",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "status": "acted",
-      "threadId": "19d05e1ea0c8f620"
-    },
-    {
-      "messageId": "19d071293081d2f5",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "status": "acted",
-      "threadId": "19d05e1ea0c8f620"
-    },
-    {
-      "messageId": "19d071294d680eb3",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "status": "acted",
-      "threadId": "19d05e1ea0c8f620"
-    },
-    {
-      "messageId": "19d0712997ead6aa",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "status": "acted",
-      "threadId": "19d05e1ea0c8f620"
-    },
-    {
-      "messageId": "19d0720527f59bde",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "status": "acted",
-      "threadId": "19d05e1ea0c8f620"
-    },
-    {
-      "messageId": "19d0720566af407b",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "status": "acted",
-      "threadId": "19d05e1ea0c8f620"
-    },
-    {
-      "messageId": "19d0720585898fd5",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "status": "acted",
-      "threadId": "19d05e1ea0c8f620"
-    },
-    {
-      "messageId": "19d072e15f35ab7f",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "status": "acted",
-      "threadId": "19d05e1ea0c8f620"
-    },
-    {
-      "messageId": "19d07429447ede7a",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "status": "acted",
-      "threadId": "19d05e1ea0c8f620"
-    },
-    {
-      "messageId": "19d07d01c28d08f6",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Decision checkpoint mini-tool (for edge cases)",
-      "status": "acted",
-      "threadId": "19d07d01c28d08f6"
-    },
-    {
-      "messageId": "19d07e6fae95d94c",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
-      "status": "acted",
-      "threadId": "19d07d01c28d08f6"
-    },
-    {
-      "messageId": "19d081de978cf5de",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
-      "status": "acted",
-      "threadId": "19d07d01c28d08f6"
-    },
-    {
-      "messageId": "19d085534cec9276",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
-      "status": "acted",
-      "threadId": "19d07d01c28d08f6"
-    },
-    {
-      "messageId": "19d0858b2444bae3",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Injury Report: PHX @ SAS (T-60m)",
-      "status": "acted",
-      "threadId": "19d0858b2444bae3"
-    },
-    {
-      "messageId": "19d0858bb0362d30",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Injury Report: PHX @ SAS (T-60m)",
-      "status": "acted",
-      "threadId": "19d0858bb0362d30"
-    },
-    {
-      "messageId": "19d08593c9f5fd73",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Injury Report: PHX @ SAS (6:00 PM CDT)",
-      "status": "acted",
-      "threadId": "19d08593c9f5fd73"
-    },
-    {
-      "messageId": "19d085962b534a36",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Injury Report: PHX @ SAS (6:00 PM CDT)",
-      "status": "acted",
-      "threadId": "19d085962b534a36"
-    },
-    {
-      "messageId": "19d08ca56e2f6be8",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
-      "status": "acted",
-      "threadId": "19d07d01c28d08f6"
-    },
-    {
-      "messageId": "19d08f9ab5626188",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
-      "status": "acted",
-      "threadId": "19d07d01c28d08f6"
-    },
-    {
-      "messageId": "19d0a63b71031bc9",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "v1.1 validation shortcut (tiny but strict)",
-      "status": "acted",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0a8fec0b8fad8",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: Decision checkpoint mini-tool (for edge cases)",
-      "status": "acted",
-      "threadId": "19d07d01c28d08f6"
-    },
-    {
-      "messageId": "19d0a900c56fe2d2",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "acted",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0af1175ab0bfe",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "acted",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0b3f8e3421ace",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "acted",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0b70a78cd0bbc",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Hourly Weather - 97212 - 2026-03-20",
-      "status": "acted",
-      "threadId": "19d0b70a78cd0bbc"
-    },
-    {
-      "messageId": "19d0bc2f0740bfdd",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "NBA Games Today - 2026-03-20",
-      "status": "acted",
-      "threadId": "19d0bc2f0740bfdd"
-    },
-    {
-      "messageId": "19d0bc2f817dd555",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "NBA Games Today - 2026-03-20",
-      "status": "acted",
-      "threadId": "19d0bc2f817dd555"
-    },
-    {
-      "messageId": "19d0bda45a7294c5",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "acted",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0c02fe5011712",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "acted",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0c30d2c693447",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "lyra@micro.blog",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "replied",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0c396fbd10c8f",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "acted",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0c526f6a77887",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "acted",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0c67eb46ac25c",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "Lyra <lyra@micro.blog>",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "replied",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0c67fe146b71d",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "Lyra <lyra@micro.blog>",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "replied",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0c708c2df0455",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "acted",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0c9eb42f6ae96",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "Lyra <lyra@micro.blog>",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "replied",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0cf96e80d5e79",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "acted",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0d0c9a11b42fc",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "Lyra <lyra@micro.blog>",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "replied",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0e0945f8e86eb",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "acted",
-      "threadId": "19d0a63b71031bc9"
-    },
-    {
-      "messageId": "19d0e958d812277d",
-      "seenAt": "2026-03-21T06:54:52Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "acted",
-      "threadId": "19d0a63b71031bc9"
     }
   ],
   "repliedLast24h": [
@@ -2044,34 +1700,6 @@
       "from": "Lyra <lyra@micro.blog>",
       "subject": "Re: v1.1 validation shortcut (tiny but strict)",
       "threadId": "19d0efd8f51961b1"
-    },
-    {
-      "messageId": "19d074179f82e18d",
-      "repliedAt": "2026-03-21T06:55:13Z",
-      "from": "lyra@micro.blog",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "threadId": "19d05e1ea0c8f620"
-    },
-    {
-      "messageId": "19d074180ef0cb84",
-      "repliedAt": "2026-03-21T06:55:13Z",
-      "from": "lyra@micro.blog",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "threadId": "19d05e1ea0c8f620"
-    },
-    {
-      "messageId": "19d07418aaf83459",
-      "repliedAt": "2026-03-21T06:55:13Z",
-      "from": "lyra@micro.blog",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "threadId": "19d05e1ea0c8f620"
-    },
-    {
-      "messageId": "19d074197f0f8d90",
-      "repliedAt": "2026-03-21T06:55:13Z",
-      "from": "lyra@micro.blog",
-      "subject": "Re: Decision-point template (ready when needed)",
-      "threadId": "19d05e1ea0c8f620"
     }
   ],
   "emailStateSummary": {
