@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T14:21:54.113647+00:00",
+  "generatedAt": "2026-03-22T14:51:53.994245+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -40,7 +40,7 @@
       "emailSentTotal": 438,
       "emailSentCountSource": "email_state_repliedAt",
       "emailReceivedTotal": 839,
-      "slackSentTotal": 1177,
+      "slackSentTotal": 1178,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -266,8 +266,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774187457112,
-      "nextRunAtMs": 1774189257112
+      "lastRunAtMs": 1774189257130,
+      "nextRunAtMs": 1774191057130
     },
     {
       "name": "email-guardrail-check",
@@ -279,21 +279,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774188522754,
-      "nextRunAtMs": 1774189422754
-    },
-    {
-      "name": "nba-injury-eta-745am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "45 7 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774104300070,
-      "nextRunAtMs": 1774190700000
+      "lastRunAtMs": 1774190322788,
+      "nextRunAtMs": 1774191222788
     },
     {
       "name": "nba-games-daily-8am",
@@ -385,6 +372,19 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774186200119,
       "nextRunAtMs": 1774272600000
+    },
+    {
+      "name": "nba-injury-eta-745am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "45 7 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774190700108,
+      "nextRunAtMs": 1774277100000
     }
   ],
   "errors": {
