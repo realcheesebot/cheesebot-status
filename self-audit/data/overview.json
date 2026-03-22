@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T20:06:13.931601+00:00",
+  "generatedAt": "2026-03-22T20:21:53.816793+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -40,7 +40,7 @@
       "emailSentTotal": 438,
       "emailSentCountSource": "email_state_repliedAt",
       "emailReceivedTotal": 839,
-      "slackSentTotal": 1180,
+      "slackSentTotal": 1181,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -268,32 +268,6 @@
   ],
   "allJobs": [
     {
-      "name": "nba-injury-watch",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "5,35 10-20 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774206300081,
-      "nextRunAtMs": 1774209900000
-    },
-    {
-      "name": "email-guardrail-check",
-      "enabled": true,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 900000,
-        "anchorMs": 1772425419366
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774209223285,
-      "nextRunAtMs": 1774210123285
-    },
-    {
       "name": "status-page-publisher",
       "enabled": true,
       "schedule": {
@@ -305,6 +279,32 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774209057314,
       "nextRunAtMs": 1774210857314
+    },
+    {
+      "name": "email-guardrail-check",
+      "enabled": true,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 900000,
+        "anchorMs": 1772425419366
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774210123303,
+      "nextRunAtMs": 1774211023303
+    },
+    {
+      "name": "nba-injury-watch",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "5,35 10-20 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774209900112,
+      "nextRunAtMs": 1774211700000
     },
     {
       "name": "daily-5pm-activity-summary",
