@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T14:51:53.994245+00:00",
+  "generatedAt": "2026-03-22T15:21:53.222212+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -40,7 +40,7 @@
       "emailSentTotal": 438,
       "emailSentCountSource": "email_state_repliedAt",
       "emailReceivedTotal": 839,
-      "slackSentTotal": 1178,
+      "slackSentTotal": 1179,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -266,8 +266,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774189257130,
-      "nextRunAtMs": 1774191057130
+      "lastRunAtMs": 1774191057153,
+      "nextRunAtMs": 1774192857153
     },
     {
       "name": "email-guardrail-check",
@@ -279,21 +279,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774190322788,
-      "nextRunAtMs": 1774191222788
-    },
-    {
-      "name": "nba-games-daily-8am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 8 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774105200086,
-      "nextRunAtMs": 1774191600000
+      "lastRunAtMs": 1774192122848,
+      "nextRunAtMs": 1774193022848
     },
     {
       "name": "daily-10am-self-audit",
@@ -385,6 +372,19 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774190700108,
       "nextRunAtMs": 1774277100000
+    },
+    {
+      "name": "nba-games-daily-8am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774191600093,
+      "nextRunAtMs": 1774278000000
     }
   ],
   "errors": {
