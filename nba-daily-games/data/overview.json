@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T01:51:24.316433+00:00",
+  "generatedAt": "2026-03-22T02:21:23.009408+00:00",
   "today": "2026-03-22",
   "tomorrow": "2026-03-23",
   "count": 15,
@@ -122,10 +122,10 @@
     {
       "rank": 2.0,
       "team": "San Antonio Spurs",
-      "wins": 52.0,
+      "wins": 53.0,
       "losses": 18.0,
-      "gb": 3.5,
-      "streak": 4.0
+      "gb": 3.0,
+      "streak": 5.0
     },
     {
       "rank": 3.0,
