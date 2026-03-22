@@ -1,34 +1,30 @@
 {
-  "generatedAt": "2026-03-22T05:51:55.694191+00:00",
+  "generatedAt": "2026-03-22T06:21:48.986391+00:00",
   "jobName": "daily-10am-self-audit",
-  "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
+  "jobId": null,
   "job": {
-    "enabled": true,
-    "schedule": {
-      "kind": "cron",
-      "expr": "0 10 * * *",
-      "tz": "America/Los_Angeles"
-    },
-    "lastStatus": "ok",
-    "lastRunAtMs": 1774116743336,
-    "nextRunAtMs": 1774198800000,
+    "enabled": null,
+    "schedule": null,
+    "lastStatus": null,
+    "lastRunAtMs": null,
+    "nextRunAtMs": null,
     "consecutiveErrors": 0
   },
   "health": {
     "overall": "ok",
     "checks": {
-      "pass": 5,
-      "warn": 3,
-      "fail": 0,
+      "pass": 2,
+      "warn": 4,
+      "fail": 2,
       "total": 8
     },
-    "issuesFound": 3,
-    "actionsPending": 3,
+    "issuesFound": 6,
+    "actionsPending": 6,
     "actionsTaken": 0,
     "cron": {
       "overall": "ok",
-      "enabledJobs": 10,
-      "totalJobs": 10,
+      "enabledJobs": 0,
+      "totalJobs": 0,
       "jobsWithConsecutiveErrors": [],
       "jobsWithLastError": []
     },
@@ -47,18 +43,18 @@
   "checksPerformed": [
     {
       "name": "Self-audit job exists",
-      "status": "pass",
-      "detail": "Found by name in cron list"
+      "status": "fail",
+      "detail": "Job not found in cron list"
     },
     {
       "name": "Self-audit job enabled",
-      "status": "pass",
-      "detail": "enabled=True"
+      "status": "fail",
+      "detail": "enabled=None"
     },
     {
       "name": "Last run status",
-      "status": "pass",
-      "detail": "lastStatus=ok"
+      "status": "warn",
+      "detail": "lastStatus=None"
     },
     {
       "name": "Consecutive errors",
@@ -103,6 +99,18 @@
   },
   "driftAndContradictions": [
     {
+      "text": "Self-audit job exists: Job not found in cron list",
+      "severity": "critical"
+    },
+    {
+      "text": "Self-audit job enabled: enabled=None",
+      "severity": "critical"
+    },
+    {
+      "text": "Last run status: lastStatus=None",
+      "severity": "warning"
+    },
+    {
       "text": "Recent run reliability (last 7): okRuns=0/0",
       "severity": "warning"
     },
@@ -118,7 +126,7 @@
   "correctiveActions": [
     {
       "type": "automated",
-      "detail": "Daily self-audit cron job is scheduled and active."
+      "detail": "Self-audit job not enabled."
     },
     {
       "type": "automated",
@@ -129,142 +137,11 @@
       "detail": "Investigate any WARN/FAIL checks listed above and remediate drift."
     }
   ],
-  "allJobs": [
-    {
-      "name": "status-page-publisher",
-      "enabled": true,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 1800000,
-        "anchorMs": 1774120856987
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774156857099,
-      "nextRunAtMs": 1774158657099
-    },
-    {
-      "name": "email-guardrail-check",
-      "enabled": true,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 900000,
-        "anchorMs": 1772425419366
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774157920520,
-      "nextRunAtMs": 1774158820520
-    },
-    {
-      "name": "weather-hourly-630am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "30 6 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774099800091,
-      "nextRunAtMs": 1774186200000
-    },
-    {
-      "name": "nba-injury-eta-745am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "45 7 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774104300070,
-      "nextRunAtMs": 1774190700000
-    },
-    {
-      "name": "nba-games-daily-8am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 8 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774105200086,
-      "nextRunAtMs": 1774191600000
-    },
-    {
-      "name": "daily-10am-self-audit",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 10 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774116743336,
-      "nextRunAtMs": 1774198800000
-    },
-    {
-      "name": "nba-injury-watch",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "5,35 10-20 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774150500108,
-      "nextRunAtMs": 1774199100000
-    },
-    {
-      "name": "daily-5pm-activity-summary",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 17 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774137600085,
-      "nextRunAtMs": 1774224000000
-    },
-    {
-      "name": "stock-morning-445am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 19 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774144800116,
-      "nextRunAtMs": 1774231200000
-    },
-    {
-      "name": "calendar-evening-preview-9pm",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 21 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774152000023,
-      "nextRunAtMs": 1774238400000
-    }
-  ],
+  "allJobs": [],
   "errors": {
-    "jobs": null,
-    "runs": "gateway connect failed: Error: gateway not connected\nError: gateway closed (1008): connect challenge timeout\nGateway target: ws://127.0.0.1:18789\nSource: local loopback\nConfig: /home/ubuntu/.openclaw/openclaw.json\nBind: loopback",
-    "jobNotFound": null,
+    "jobs": "gateway connect failed: Error: gateway not connected\nError: gateway closed (1008): connect challenge timeout\nGateway target: ws://127.0.0.1:18789\nSource: local loopback\nConfig: /home/ubuntu/.openclaw/openclaw.json\nBind: loopback",
+    "runs": null,
+    "jobNotFound": "job not found by name: daily-10am-self-audit",
     "statusJson": null
   }
 }
