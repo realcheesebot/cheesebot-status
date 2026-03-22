@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-21T23:48:32.699671+00:00",
+  "generatedAt": "2026-03-22T00:18:31.864463+00:00",
   "summary": {
     "overall": "ok",
     "enabledJobs": 10,
     "disabledJobs": 0,
     "totalJobs": 10,
-    "emailSentTotal": 432,
+    "emailSentTotal": 433,
     "emailSentCountSource": "email_state_repliedAt",
-    "emailReceivedTotal": 827,
-    "slackSentTotal": 1153,
+    "emailReceivedTotal": 829,
+    "slackSentTotal": 1155,
     "slackSentCountSource": "slack_sdk_dm_history"
   },
   "checks": {
@@ -29,7 +29,7 @@
         "everyMs": 1800000,
         "anchorMs": 1774120856987
       },
-      "nextRunAtMs": 1774136897794,
+      "nextRunAtMs": 1774138697820,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -41,19 +41,7 @@
         "everyMs": 900000,
         "anchorMs": 1772425419366
       },
-      "nextRunAtMs": 1774137220180,
-      "lastStatus": "ok",
-      "consecutiveErrors": 0
-    },
-    {
-      "name": "daily-5pm-activity-summary",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 17 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "nextRunAtMs": 1774137600000,
+      "nextRunAtMs": 1774139020216,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -65,7 +53,7 @@
         "expr": "5,35 10-20 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774137900000,
+      "nextRunAtMs": 1774139700000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -138,6 +126,18 @@
         "tz": "America/Los_Angeles"
       },
       "nextRunAtMs": 1774198800000,
+      "lastStatus": "ok",
+      "consecutiveErrors": 0
+    },
+    {
+      "name": "daily-5pm-activity-summary",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 17 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "nextRunAtMs": 1774224000000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     }
