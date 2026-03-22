@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T07:21:59.782634+00:00",
+  "generatedAt": "2026-03-22T07:51:58.789252+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -266,8 +266,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774162257144,
-      "nextRunAtMs": 1774164057144
+      "lastRunAtMs": 1774164057154,
+      "nextRunAtMs": 1774165857154
     },
     {
       "name": "email-guardrail-check",
@@ -279,8 +279,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774163321534,
-      "nextRunAtMs": 1774164221534
+      "lastRunAtMs": 1774165121679,
+      "nextRunAtMs": 1774166021679
     },
     {
       "name": "weather-hourly-630am",
