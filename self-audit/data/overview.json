@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T19:51:54.243564+00:00",
+  "generatedAt": "2026-03-22T20:06:13.931601+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -268,32 +268,6 @@
   ],
   "allJobs": [
     {
-      "name": "status-page-publisher",
-      "enabled": true,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 1800000,
-        "anchorMs": 1774120856987
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774207257303,
-      "nextRunAtMs": 1774209057303
-    },
-    {
-      "name": "email-guardrail-check",
-      "enabled": true,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 900000,
-        "anchorMs": 1772425419366
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774208323270,
-      "nextRunAtMs": 1774209223270
-    },
-    {
       "name": "nba-injury-watch",
       "enabled": true,
       "schedule": {
@@ -305,6 +279,32 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774206300081,
       "nextRunAtMs": 1774209900000
+    },
+    {
+      "name": "email-guardrail-check",
+      "enabled": true,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 900000,
+        "anchorMs": 1772425419366
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774209223285,
+      "nextRunAtMs": 1774210123285
+    },
+    {
+      "name": "status-page-publisher",
+      "enabled": true,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 1800000,
+        "anchorMs": 1774120856987
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774209057314,
+      "nextRunAtMs": 1774210857314
     },
     {
       "name": "daily-5pm-activity-summary",
