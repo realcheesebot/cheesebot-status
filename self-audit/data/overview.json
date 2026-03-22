@@ -1,34 +1,30 @@
 {
-  "generatedAt": "2026-03-22T11:51:54.456971+00:00",
+  "generatedAt": "2026-03-22T12:21:45.753246+00:00",
   "jobName": "daily-10am-self-audit",
-  "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
+  "jobId": null,
   "job": {
-    "enabled": true,
-    "schedule": {
-      "kind": "cron",
-      "expr": "0 10 * * *",
-      "tz": "America/Los_Angeles"
-    },
-    "lastStatus": "ok",
-    "lastRunAtMs": 1774116743336,
-    "nextRunAtMs": 1774198800000,
+    "enabled": null,
+    "schedule": null,
+    "lastStatus": null,
+    "lastRunAtMs": null,
+    "nextRunAtMs": null,
     "consecutiveErrors": 0
   },
   "health": {
     "overall": "ok",
     "checks": {
-      "pass": 8,
-      "warn": 0,
-      "fail": 0,
+      "pass": 2,
+      "warn": 4,
+      "fail": 2,
       "total": 8
     },
-    "issuesFound": 2,
-    "actionsPending": 0,
-    "actionsTaken": 9,
+    "issuesFound": 6,
+    "actionsPending": 6,
+    "actionsTaken": 0,
     "cron": {
       "overall": "ok",
-      "enabledJobs": 10,
-      "totalJobs": 10,
+      "enabledJobs": 0,
+      "totalJobs": 0,
       "jobsWithConsecutiveErrors": [],
       "jobsWithLastError": []
     },
@@ -40,25 +36,25 @@
       "emailSentTotal": 438,
       "emailSentCountSource": "email_state_repliedAt",
       "emailReceivedTotal": 839,
-      "slackSentTotal": 1171,
+      "slackSentTotal": 1172,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
   "checksPerformed": [
     {
       "name": "Self-audit job exists",
-      "status": "pass",
-      "detail": "Found by name in cron list"
+      "status": "fail",
+      "detail": "Job not found in cron list"
     },
     {
       "name": "Self-audit job enabled",
-      "status": "pass",
-      "detail": "enabled=True"
+      "status": "fail",
+      "detail": "enabled=None"
     },
     {
       "name": "Last run status",
-      "status": "pass",
-      "detail": "lastStatus=ok"
+      "status": "warn",
+      "detail": "lastStatus=None"
     },
     {
       "name": "Consecutive errors",
@@ -67,18 +63,18 @@
     },
     {
       "name": "Recent run reliability (last 7)",
-      "status": "pass",
-      "detail": "okRuns=7/7"
+      "status": "warn",
+      "detail": "okRuns=0/0"
     },
     {
       "name": "Slack-only hard stop present",
-      "status": "pass",
-      "detail": "Latest run summary includes Slack delivery constraint"
+      "status": "warn",
+      "detail": "Latest run summary did not explicitly mention Slack-only delivery"
     },
     {
       "name": "Email blocked in self-audit",
-      "status": "pass",
-      "detail": "Latest run summary contains explicit email prohibition"
+      "status": "warn",
+      "detail": "Latest run summary did not explicitly mention email prohibition"
     },
     {
       "name": "No critical cron degradation",
@@ -86,165 +82,51 @@
       "detail": "No enabled jobs with >=3 consecutive errors"
     }
   ],
-  "latestRun": {
-    "ts": 1774116794407,
-    "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
-    "action": "finished",
-    "status": "ok",
-    "summary": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:\npython3 /home/ubuntu/.openclaw/workspace/scripts/slack_notify.py --title \"Daily self-audit\" --text \"<AUDIT_TEXT>\"\nNever NO_REPLY.",
-    "runAtMs": 1774116743336,
-    "durationMs": 51070,
-    "nextRunAtMs": 1774198800000,
-    "deliveryStatus": "not-requested"
-  },
+  "latestRun": null,
   "latestRunSummary": {
-    "text": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:\npython3 /home/ubuntu/.openclaw/workspace/scripts/slack_notify.py --title \"Daily self-audit\" --text \"<AUDIT_TEXT>\"\nNever NO_REPLY.",
-    "findings": [
-      {
-        "text": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:",
-        "severity": "critical"
-      },
-      {
-        "text": "Never NO_REPLY.",
-        "severity": "info"
-      }
-    ],
-    "checksMentioned": [
-      "cron status",
-      "permanent rules/guardrails",
-      "system health snapshot",
-      "drift/contradictions",
-      "corrective actions",
-      "email blocked in this job"
-    ],
-    "constraints": [
-      "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:"
-    ],
-    "actions": [
-      "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:"
-    ]
+    "text": null,
+    "findings": [],
+    "checksMentioned": [],
+    "constraints": [],
+    "actions": []
   },
-  "recentRuns": [
-    {
-      "ts": 1774116794407,
-      "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:\npython3 /home/ubuntu/.openclaw/workspace/scripts/slack_notify.py --title \"Daily self-audit\" --text \"<AUDIT_TEXT>\"\nNever NO_REPLY.",
-      "runAtMs": 1774116743336,
-      "durationMs": 51070,
-      "nextRunAtMs": 1774198800000,
-      "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1774112518772,
-      "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report and deliver by replying in THIS session (do not use message tool). Include cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Never NO_REPLY.",
-      "runAtMs": 1774112400088,
-      "durationMs": 68022,
-      "nextRunAtMs": 1774198800000,
-      "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1774026058197,
-      "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: Never send email in this job. Produce daily self-audit report and send in Slack only. Include cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. If any email section is relevant, report findings in Slack text only; do not send mail.",
-      "runAtMs": 1774026000043,
-      "durationMs": 36762,
-      "nextRunAtMs": 1774112400000,
-      "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1773939652998,
-      "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: Never send email in this job. Produce daily self-audit report and send in Slack only. Include cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. If any email section is relevant, report findings in Slack text only; do not send mail.",
-      "runAtMs": 1773939600067,
-      "durationMs": 38078,
-      "nextRunAtMs": 1774026000000,
-      "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1773853274021,
-      "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: Never send email in this job. Produce daily self-audit report and send in Slack only. Include cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. If any email section is relevant, report findings in Slack text only; do not send mail.",
-      "runAtMs": 1773853200154,
-      "durationMs": 73861,
-      "nextRunAtMs": 1773939600000,
-      "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1773766854618,
-      "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: Never send email in this job. Produce daily self-audit report and send in Slack only. Include cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. If any email section is relevant, report findings in Slack text only; do not send mail.",
-      "runAtMs": 1773766800090,
-      "durationMs": 54523,
-      "nextRunAtMs": 1773853200000,
-      "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1773680461416,
-      "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: Never send email in this job. Produce daily self-audit report and send in Slack only. Include cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. If any email section is relevant, report findings in Slack text only; do not send mail.",
-      "runAtMs": 1773680400086,
-      "durationMs": 59817,
-      "nextRunAtMs": 1773766800000,
-      "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1773598549347,
-      "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: Never send email in this job. Produce daily self-audit report and send in Slack only. Include cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. If any email section is relevant, report findings in Slack text only; do not send mail.",
-      "runAtMs": 1773598478123,
-      "durationMs": 71207,
-      "nextRunAtMs": 1773680400000,
-      "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1773524614141,
-      "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
-      "action": "finished",
-      "status": "ok",
-      "summary": "Daily self-audit for Jon (permanent, send every run): produce a thorough doctor-style report and EMAIL it to jon@silverpine.com (not Slack). Include: (1) current scheduled cron jobs (name, id, schedule, enabled, next run, last status), (2) permanent rules/guardrails currently in effect, (3) system health snapshot, (4) configuration drift/contradictions, (5) corrective actions in last 24h + recommended fixes. Use allowlisted email sending. If email send fails, immediately notify Jon in Slack with failure reason.",
-      "runAtMs": 1773524481535,
-      "durationMs": 132605,
-      "nextRunAtMs": 1773594000000,
-      "deliveryStatus": "not-requested"
-    }
-  ],
+  "recentRuns": [],
   "runSummary": {
-    "ok": 9,
+    "ok": 0,
     "error": 0,
     "other": 0,
-    "total": 9
+    "total": 0
   },
   "driftAndContradictions": [
     {
-      "text": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:",
+      "text": "Self-audit job exists: Job not found in cron list",
       "severity": "critical"
     },
     {
-      "text": "Never NO_REPLY.",
-      "severity": "info"
+      "text": "Self-audit job enabled: enabled=None",
+      "severity": "critical"
+    },
+    {
+      "text": "Last run status: lastStatus=None",
+      "severity": "warning"
+    },
+    {
+      "text": "Recent run reliability (last 7): okRuns=0/0",
+      "severity": "warning"
+    },
+    {
+      "text": "Slack-only hard stop present: Latest run summary did not explicitly mention Slack-only delivery",
+      "severity": "warning"
+    },
+    {
+      "text": "Email blocked in self-audit: Latest run summary did not explicitly mention email prohibition",
+      "severity": "warning"
     }
   ],
   "correctiveActions": [
     {
       "type": "automated",
-      "detail": "Daily self-audit cron job is scheduled and active."
+      "detail": "Self-audit job not enabled."
     },
     {
       "type": "automated",
@@ -255,142 +137,11 @@
       "detail": "Investigate any WARN/FAIL checks listed above and remediate drift."
     }
   ],
-  "allJobs": [
-    {
-      "name": "status-page-publisher",
-      "enabled": true,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 1800000,
-        "anchorMs": 1774120856987
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774178457025,
-      "nextRunAtMs": 1774180257025
-    },
-    {
-      "name": "email-guardrail-check",
-      "enabled": true,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 900000,
-        "anchorMs": 1772425419366
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774179522620,
-      "nextRunAtMs": 1774180422620
-    },
-    {
-      "name": "weather-hourly-630am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "30 6 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774099800091,
-      "nextRunAtMs": 1774186200000
-    },
-    {
-      "name": "nba-injury-eta-745am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "45 7 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774104300070,
-      "nextRunAtMs": 1774190700000
-    },
-    {
-      "name": "nba-games-daily-8am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 8 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774105200086,
-      "nextRunAtMs": 1774191600000
-    },
-    {
-      "name": "daily-10am-self-audit",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 10 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774116743336,
-      "nextRunAtMs": 1774198800000
-    },
-    {
-      "name": "nba-injury-watch",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "5,35 10-20 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774150500108,
-      "nextRunAtMs": 1774199100000
-    },
-    {
-      "name": "daily-5pm-activity-summary",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 17 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774137600085,
-      "nextRunAtMs": 1774224000000
-    },
-    {
-      "name": "stock-morning-445am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 19 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774144800116,
-      "nextRunAtMs": 1774231200000
-    },
-    {
-      "name": "calendar-evening-preview-9pm",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 21 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774152000023,
-      "nextRunAtMs": 1774238400000
-    }
-  ],
+  "allJobs": [],
   "errors": {
-    "jobs": null,
+    "jobs": "gateway connect failed: Error: gateway not connected\nError: gateway closed (1008): connect challenge timeout\nGateway target: ws://127.0.0.1:18789\nSource: local loopback\nConfig: /home/ubuntu/.openclaw/openclaw.json\nBind: loopback",
     "runs": null,
-    "jobNotFound": null,
+    "jobNotFound": "job not found by name: daily-10am-self-audit",
     "statusJson": null
   }
 }
