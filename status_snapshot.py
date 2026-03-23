@@ -186,8 +186,10 @@ def load_session_metrics():
     today_total = 0
     yesterday_total = 0
     seven_total = 0
-    estimated_cost = 0.0
-    have_cost = False
+    cost_today = 0.0
+    cost_7d = 0.0
+    have_cost_today = False
+    have_cost_7d = False
     active_model = None
     newest_updated = -1
 
@@ -208,8 +210,12 @@ def load_session_metrics():
 
         cost = sess.get('estimatedCostUsd')
         if isinstance(cost, (int, float)):
-            estimated_cost += float(cost)
-            have_cost = True
+            if updated_dt >= seven_ago:
+                cost_7d += float(cost)
+                have_cost_7d = True
+            if updated_dt >= day_ago:
+                cost_today += float(cost)
+                have_cost_today = True
 
         if key == 'agent:main:slack:direct:u03lqqb6l':
             active_model = sess.get('model') or active_model
@@ -226,7 +232,8 @@ def load_session_metrics():
     return {
         "today": today_total,
         "sevenDay": seven_total,
-        "estimatedCostUsd": round(estimated_cost, 4) if have_cost else None,
+        "estimatedCostTodayUsd": round(cost_today, 4) if have_cost_today else None,
+        "estimatedCost7dUsd": round(cost_7d, 4) if have_cost_7d else None,
         "model": active_model,
         "trendVsYesterday": trend,
     }, None
@@ -327,7 +334,8 @@ def main():
             "tokensToday": token_metrics.get('today'),
             "tokens7d": token_metrics.get('sevenDay'),
             "trendVsYesterdayPct": token_metrics.get('trendVsYesterday'),
-            "estimatedCostUsd": token_metrics.get('estimatedCostUsd'),
+            "estimatedCostTodayUsd": token_metrics.get('estimatedCostTodayUsd'),
+            "estimatedCost7dUsd": token_metrics.get('estimatedCost7dUsd'),
             "model": token_metrics.get('model') or status_model,
             "openclawVersion": openclaw_version,
             "latestOpenclawVersion": latest_openclaw_version,

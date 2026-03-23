@@ -79,9 +79,14 @@ async function main(){
         <div class="metric-sub">tokens</div>
       </div>
       <div class="metric">
-        <div class="metric-label">Estimated cost</div>
-        <div class="metric-value">${formatUsd(u.estimatedCostUsd)}</div>
-        <div class="metric-sub">if available</div>
+        <div class="metric-label">Cost today</div>
+        <div class="metric-value">${formatUsd(u.estimatedCostTodayUsd)}</div>
+        <div class="metric-sub">estimated</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Cost 7d</div>
+        <div class="metric-value">${formatUsd(u.estimatedCost7dUsd)}</div>
+        <div class="metric-sub">estimated</div>
       </div>
       <div class="metric">
         <div class="metric-label">OpenClaw</div>
