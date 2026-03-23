@@ -1,44 +1,9 @@
 {
-  "generatedAt": "2026-03-22T23:51:24.917655+00:00",
-  "today": "2026-03-22",
-  "tomorrow": "2026-03-23",
-  "count": 15,
+  "generatedAt": "2026-03-23T00:21:25.693701+00:00",
+  "today": "2026-03-23",
+  "tomorrow": "2026-03-24",
+  "count": 14,
   "games": [
-    {
-      "date": "2026-03-22",
-      "matchup": "POR@DEN",
-      "tipoffUtc": "2026-03-22T21:00:00Z",
-      "gameId": "0022501032",
-      "arena": null
-    },
-    {
-      "date": "2026-03-22",
-      "matchup": "BKN@SAC",
-      "tipoffUtc": "2026-03-22T22:00:00Z",
-      "gameId": "0022501033",
-      "arena": null
-    },
-    {
-      "date": "2026-03-22",
-      "matchup": "WAS@NYK",
-      "tipoffUtc": "2026-03-22T23:30:00Z",
-      "gameId": "0022501034",
-      "arena": null
-    },
-    {
-      "date": "2026-03-22",
-      "matchup": "MIN@BOS",
-      "tipoffUtc": "2026-03-23T00:00:00Z",
-      "gameId": "0022501035",
-      "arena": null
-    },
-    {
-      "date": "2026-03-22",
-      "matchup": "TOR@PHX",
-      "tipoffUtc": "2026-03-23T01:00:00Z",
-      "gameId": "0022501036",
-      "arena": null
-    },
     {
       "date": "2026-03-23",
       "matchup": "LAL@DET",
@@ -107,6 +72,34 @@
       "matchup": "MIL@LAC",
       "tipoffUtc": "2026-03-24T02:30:00Z",
       "gameId": "0022501046",
+      "arena": null
+    },
+    {
+      "date": "2026-03-24",
+      "matchup": "SAC@CHA",
+      "tipoffUtc": "2026-03-24T23:00:00Z",
+      "gameId": "0022501047",
+      "arena": null
+    },
+    {
+      "date": "2026-03-24",
+      "matchup": "NOP@NYK",
+      "tipoffUtc": "2026-03-24T23:30:00Z",
+      "gameId": "0022501048",
+      "arena": null
+    },
+    {
+      "date": "2026-03-24",
+      "matchup": "ORL@CLE",
+      "tipoffUtc": "2026-03-25T00:00:00Z",
+      "gameId": "0022501049",
+      "arena": null
+    },
+    {
+      "date": "2026-03-24",
+      "matchup": "DEN@PHX",
+      "tipoffUtc": "2026-03-25T03:00:00Z",
+      "gameId": "0022501050",
       "arena": null
     }
   ],

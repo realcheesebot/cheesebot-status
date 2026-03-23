@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T23:51:40.465192+00:00",
+  "generatedAt": "2026-03-23T00:21:41.354575+00:00",
   "windowHours": 24,
   "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
   "job": {
@@ -11,22 +11,44 @@
       "anchorMs": 1772425419366
     },
     "lastStatus": "ok",
-    "lastRunAtMs": 1774222723533,
-    "nextRunAtMs": 1774223623533,
+    "lastRunAtMs": 1774224523555,
+    "nextRunAtMs": 1774225423555,
     "consecutiveErrors": 0
   },
   "latestRun": {
-    "ts": 1774222753112,
+    "ts": 1774224546866,
     "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
     "action": "finished",
     "status": "ok",
     "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
-    "runAtMs": 1774222723533,
-    "durationMs": 29558,
-    "nextRunAtMs": 1774223623533,
+    "runAtMs": 1774224523555,
+    "durationMs": 23306,
+    "nextRunAtMs": 1774225423555,
     "deliveryStatus": "not-requested"
   },
   "recentRuns": [
+    {
+      "ts": 1774224546866,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
+      "runAtMs": 1774224523555,
+      "durationMs": 23306,
+      "nextRunAtMs": 1774225423555,
+      "deliveryStatus": "not-requested"
+    },
+    {
+      "ts": 1774223648942,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
+      "runAtMs": 1774223623546,
+      "durationMs": 25292,
+      "nextRunAtMs": 1774224523546,
+      "deliveryStatus": "not-requested"
+    },
     {
       "ts": 1774222753112,
       "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
@@ -224,28 +246,6 @@
       "durationMs": 31005,
       "nextRunAtMs": 1774208323252,
       "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1774206556582,
-      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
-      "runAtMs": 1774206523234,
-      "durationMs": 33332,
-      "nextRunAtMs": 1774207423234,
-      "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1774205650828,
-      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
-      "runAtMs": 1774205623222,
-      "durationMs": 27600,
-      "nextRunAtMs": 1774206523222,
-      "deliveryStatus": "not-requested"
     }
   ],
   "receivedLast24h": [
@@ -328,22 +328,6 @@
       "subject": "Re: v1.1 validation shortcut (tiny but strict)",
       "status": "acted",
       "threadId": "19d10b43f523aaaf"
-    },
-    {
-      "messageId": "19d12d7b5595e5fd",
-      "seenAt": "2026-03-22T00:02:07Z",
-      "from": "lyra@micro.blog",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "replied",
-      "threadId": "19d10b43f523aaaf"
-    },
-    {
-      "messageId": "19d12d923932be86",
-      "seenAt": "2026-03-22T00:02:07Z",
-      "from": "cheese@luggle.com",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "status": "acted",
-      "threadId": "19d10b43f523aaaf"
     }
   ],
   "repliedLast24h": [
@@ -378,13 +362,6 @@
     {
       "messageId": "19d130eae0788a6d",
       "repliedAt": "2026-03-22T01:01:24Z",
-      "from": "lyra@micro.blog",
-      "subject": "Re: v1.1 validation shortcut (tiny but strict)",
-      "threadId": "19d10b43f523aaaf"
-    },
-    {
-      "messageId": "19d12d7b5595e5fd",
-      "repliedAt": "2026-03-22T00:02:07Z",
       "from": "lyra@micro.blog",
       "subject": "Re: v1.1 validation shortcut (tiny but strict)",
       "threadId": "19d10b43f523aaaf"
