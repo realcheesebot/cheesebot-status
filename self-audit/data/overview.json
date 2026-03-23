@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T06:21:53.094247+00:00",
+  "generatedAt": "2026-03-23T18:03:55.051338+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -10,8 +10,8 @@
       "tz": "America/Los_Angeles"
     },
     "lastStatus": "ok",
-    "lastRunAtMs": 1774198800069,
-    "nextRunAtMs": 1774285200000,
+    "lastRunAtMs": 1774285200131,
+    "nextRunAtMs": 1774371600000,
     "consecutiveErrors": 0
   },
   "health": {
@@ -24,7 +24,7 @@
     },
     "issuesFound": 2,
     "actionsPending": 0,
-    "actionsTaken": 10,
+    "actionsTaken": 11,
     "cron": {
       "overall": "ok",
       "enabledJobs": 10,
@@ -40,7 +40,7 @@
       "emailSentTotal": 438,
       "emailSentCountSource": "email_state_repliedAt",
       "emailReceivedTotal": 839,
-      "slackSentTotal": 1189,
+      "slackSentTotal": 1206,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -87,14 +87,14 @@
     }
   ],
   "latestRun": {
-    "ts": 1774198876827,
+    "ts": 1774285219617,
     "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
     "action": "finished",
     "status": "ok",
     "summary": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:\npython3 /home/ubuntu/.openclaw/workspace/scripts/slack_notify.py --title \"Daily self-audit\" --text \"<AUDIT_TEXT>\"\nNever NO_REPLY.",
-    "runAtMs": 1774198800069,
-    "durationMs": 76745,
-    "nextRunAtMs": 1774285200000,
+    "runAtMs": 1774285200131,
+    "durationMs": 19474,
+    "nextRunAtMs": 1774371600000,
     "deliveryStatus": "not-requested"
   },
   "latestRunSummary": {
@@ -125,6 +125,17 @@
     ]
   },
   "recentRuns": [
+    {
+      "ts": 1774285219617,
+      "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:\npython3 /home/ubuntu/.openclaw/workspace/scripts/slack_notify.py --title \"Daily self-audit\" --text \"<AUDIT_TEXT>\"\nNever NO_REPLY.",
+      "runAtMs": 1774285200131,
+      "durationMs": 19474,
+      "nextRunAtMs": 1774371600000,
+      "deliveryStatus": "not-requested"
+    },
     {
       "ts": 1774198876827,
       "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
@@ -237,10 +248,10 @@
     }
   ],
   "runSummary": {
-    "ok": 10,
+    "ok": 11,
     "error": 0,
     "other": 0,
-    "total": 10
+    "total": 11
   },
   "driftAndContradictions": [
     {
@@ -268,82 +279,30 @@
   ],
   "allJobs": [
     {
-      "name": "status-page-publisher",
-      "enabled": true,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 1800000,
-        "anchorMs": 1774120856987
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774245057574,
-      "nextRunAtMs": 1774246857574
-    },
-    {
       "name": "email-guardrail-check",
       "enabled": true,
       "schedule": {
-        "kind": "every",
-        "everyMs": 900000,
-        "anchorMs": 1772425419366
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774246123895,
-      "nextRunAtMs": 1774247023895
-    },
-    {
-      "name": "weather-hourly-630am",
-      "enabled": true,
-      "schedule": {
         "kind": "cron",
-        "expr": "30 6 * * *",
+        "expr": "0 4-23 * * *",
         "tz": "America/Los_Angeles"
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774186200119,
-      "nextRunAtMs": 1774272600000
+      "lastRunAtMs": 1774288424641,
+      "nextRunAtMs": 1774288800000
     },
     {
-      "name": "nba-injury-eta-745am",
+      "name": "status-page-publisher",
       "enabled": true,
       "schedule": {
         "kind": "cron",
-        "expr": "45 7 * * *",
+        "expr": "0 6-23 * * *",
         "tz": "America/Los_Angeles"
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774190700108,
-      "nextRunAtMs": 1774277100000
-    },
-    {
-      "name": "nba-games-daily-8am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 8 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774191600093,
-      "nextRunAtMs": 1774278000000
-    },
-    {
-      "name": "daily-10am-self-audit",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 10 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774198800069,
-      "nextRunAtMs": 1774285200000
+      "lastRunAtMs": 1774288257978,
+      "nextRunAtMs": 1774288800000
     },
     {
       "name": "nba-injury-watch",
@@ -355,15 +314,15 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774236900096,
-      "nextRunAtMs": 1774285500000
+      "lastRunAtMs": 1774287300051,
+      "nextRunAtMs": 1774289100000
     },
     {
       "name": "daily-5pm-activity-summary",
       "enabled": true,
       "schedule": {
         "kind": "cron",
-        "expr": "0 17 * * *",
+        "expr": "0 21 * * *",
         "tz": "America/Los_Angeles"
       },
       "lastStatus": "ok",
@@ -394,8 +353,60 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774152000023,
+      "lastRunAtMs": 1774286940058,
       "nextRunAtMs": 1774324800000
+    },
+    {
+      "name": "weather-hourly-630am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 6 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774272600097,
+      "nextRunAtMs": 1774359000000
+    },
+    {
+      "name": "nba-injury-eta-745am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "45 7 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774277100124,
+      "nextRunAtMs": 1774363500000
+    },
+    {
+      "name": "nba-games-daily-8am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774278000156,
+      "nextRunAtMs": 1774364400000
+    },
+    {
+      "name": "daily-10am-self-audit",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774285200131,
+      "nextRunAtMs": 1774371600000
     }
   ],
   "errors": {

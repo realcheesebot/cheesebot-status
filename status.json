@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T06:21:05.808008+00:00",
+  "generatedAt": "2026-03-23T18:03:32.419687+00:00",
   "summary": {
     "overall": "ok",
     "enabledJobs": 10,
@@ -8,88 +8,50 @@
     "emailSentTotal": 438,
     "emailSentCountSource": "email_state_repliedAt",
     "emailReceivedTotal": 839,
-    "slackSentTotal": 1189,
+    "slackSentTotal": 1206,
     "slackSentCountSource": "slack_sdk_dm_history"
+  },
+  "usage": {
+    "tokensToday": 293527,
+    "tokens7d": 8733616,
+    "trendVsYesterdayPct": -61.9,
+    "estimatedCostUsd": 1.1093,
+    "model": "gpt-5.3-codex",
+    "openclawVersion": "2026.3.22"
   },
   "checks": {
     "cronList": "ok",
-    "openclawStatus": "ok"
+    "openclawStatus": "ok",
+    "tokenMetrics": "ok"
   },
   "errors": {
     "cron": null,
     "openclaw": null,
-    "slackCountApi": null
+    "slackCountApi": null,
+    "tokenMetrics": null
   },
   "jobs": [
-    {
-      "name": "status-page-publisher",
-      "enabled": true,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 1800000,
-        "anchorMs": 1774120856987
-      },
-      "nextRunAtMs": 1774246857574,
-      "lastStatus": "ok",
-      "consecutiveErrors": 0
-    },
     {
       "name": "email-guardrail-check",
       "enabled": true,
       "schedule": {
-        "kind": "every",
-        "everyMs": 900000,
-        "anchorMs": 1772425419366
+        "kind": "cron",
+        "expr": "0 4-23 * * *",
+        "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774247023895,
+      "nextRunAtMs": 1774288800000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
     {
-      "name": "weather-hourly-630am",
+      "name": "status-page-publisher",
       "enabled": true,
       "schedule": {
         "kind": "cron",
-        "expr": "30 6 * * *",
+        "expr": "0 6-23 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774272600000,
-      "lastStatus": "ok",
-      "consecutiveErrors": 0
-    },
-    {
-      "name": "nba-injury-eta-745am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "45 7 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "nextRunAtMs": 1774277100000,
-      "lastStatus": "ok",
-      "consecutiveErrors": 0
-    },
-    {
-      "name": "nba-games-daily-8am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 8 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "nextRunAtMs": 1774278000000,
-      "lastStatus": "ok",
-      "consecutiveErrors": 0
-    },
-    {
-      "name": "daily-10am-self-audit",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 10 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "nextRunAtMs": 1774285200000,
+      "nextRunAtMs": 1774288800000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -101,7 +63,7 @@
         "expr": "5,35 10-20 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774285500000,
+      "nextRunAtMs": 1774289100000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -110,7 +72,7 @@
       "enabled": true,
       "schedule": {
         "kind": "cron",
-        "expr": "0 17 * * *",
+        "expr": "0 21 * * *",
         "tz": "America/Los_Angeles"
       },
       "nextRunAtMs": 1774310400000,
@@ -140,9 +102,57 @@
       "nextRunAtMs": 1774324800000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
+    },
+    {
+      "name": "weather-hourly-630am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 6 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "nextRunAtMs": 1774359000000,
+      "lastStatus": "ok",
+      "consecutiveErrors": 0
+    },
+    {
+      "name": "nba-injury-eta-745am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "45 7 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "nextRunAtMs": 1774363500000,
+      "lastStatus": "ok",
+      "consecutiveErrors": 0
+    },
+    {
+      "name": "nba-games-daily-8am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "nextRunAtMs": 1774364400000,
+      "lastStatus": "ok",
+      "consecutiveErrors": 0
+    },
+    {
+      "name": "daily-10am-self-audit",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "nextRunAtMs": 1774371600000,
+      "lastStatus": "ok",
+      "consecutiveErrors": 0
     }
   ],
   "raw": {
-    "openclawStatusSnippet": "OpenClaw status\n\nOverview\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Item            \u2502 Value                                                                                              \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Dashboard       \u2502 http://127.0.0.1:18789/                                                                            \u2502\n\u2502 OS              \u2502 linux 6.17.0-1007-aws (x64) \u00b7 node 22.22.0                                                         \u2502\n\u2502 Tailscale       \u2502 serve \u00b7 ip-172-26-0-174.taild02309.ts.net \u00b7 https://ip-172-26-0-174.taild02309.ts.net              \u2502\n\u2502 Channel         \u2502 stable (default)                                                                                   \u2502\n\u2502 Update          \u2502 pnpm \u00b7 npm latest 2026.3.13                                                                        \u2502\n\u2502 Gateway         \u2502 local \u00b7 ws://127.0.0.1:18789 (local loopback) \u00b7 unreachable (missing scope: operator.read)         \u2502\n\u2502 Gateway service \u2502 systemd installed \u00b7 enabled \u00b7 running (pid 431397, state active) "
+    "openclawStatusSnippet": "OpenClaw status\n\nOverview\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Item                 \u2502 Value                                                                                         \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Dashboard            \u2502 http://127.0.0.1:18789/                                                                       \u2502\n\u2502 OS                   \u2502 linux 6.17.0-1007-aws (x64) \u00b7 node 22.22.0                                                    \u2502\n\u2502 Tailscale            \u2502 serve \u00b7 ip-172-26-0-174.taild02309.ts.net \u00b7 https://ip-172-26-0-174.taild02309.ts.net         \u2502\n\u2502 Channel              \u2502 stable (default)                                                                              \u2502\n\u2502 Update               \u2502 pnpm \u00b7 up to date \u00b7 npm latest 2026.3.22                                                      \u2502\n\u2502 Gateway              \u2502 local \u00b7 ws://127.0.0.1:18789 (local loopback) \u00b7 reachable 23ms \u00b7 auth token \u00b7 ip-172-26-0-    \u2502\n\u2502                      \u2502 174 (172.26.0.174) app 2026.3.22 linux 6.17.0-1007-aws      "
   }
 }
