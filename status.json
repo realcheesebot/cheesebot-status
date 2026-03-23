@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T03:21:16.812104+00:00",
+  "generatedAt": "2026-03-23T03:51:15.050563+00:00",
   "summary": {
     "overall": "ok",
     "enabledJobs": 10,
@@ -29,7 +29,7 @@
         "everyMs": 1800000,
         "anchorMs": 1774120856987
       },
-      "nextRunAtMs": 1774236057485,
+      "nextRunAtMs": 1774237857496,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -41,19 +41,7 @@
         "everyMs": 900000,
         "anchorMs": 1772425419366
       },
-      "nextRunAtMs": 1774236223706,
-      "lastStatus": "ok",
-      "consecutiveErrors": 0
-    },
-    {
-      "name": "nba-injury-watch",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "5,35 10-20 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "nextRunAtMs": 1774236900000,
+      "nextRunAtMs": 1774238023731,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -114,6 +102,18 @@
         "tz": "America/Los_Angeles"
       },
       "nextRunAtMs": 1774285200000,
+      "lastStatus": "ok",
+      "consecutiveErrors": 0
+    },
+    {
+      "name": "nba-injury-watch",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "5,35 10-20 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "nextRunAtMs": 1774285500000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
