@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T02:21:25.564482+00:00",
+  "generatedAt": "2026-03-23T02:51:30.279803+00:00",
   "today": "2026-03-23",
   "tomorrow": "2026-03-24",
   "count": 14,
@@ -147,10 +147,10 @@
     {
       "rank": 6.0,
       "team": "Minnesota Timberwolves",
-      "wins": 43.0,
+      "wins": 44.0,
       "losses": 28.0,
-      "gb": 13.0,
-      "streak": -1.0
+      "gb": 12.5,
+      "streak": 1.0
     },
     {
       "rank": 7.0,
