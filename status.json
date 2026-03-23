@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T03:51:15.050563+00:00",
+  "generatedAt": "2026-03-23T04:21:05.215501+00:00",
   "summary": {
     "overall": "ok",
     "enabledJobs": 10,
@@ -8,7 +8,7 @@
     "emailSentTotal": 438,
     "emailSentCountSource": "email_state_repliedAt",
     "emailReceivedTotal": 839,
-    "slackSentTotal": 1183,
+    "slackSentTotal": 1185,
     "slackSentCountSource": "slack_sdk_dm_history"
   },
   "checks": {
@@ -29,7 +29,7 @@
         "everyMs": 1800000,
         "anchorMs": 1774120856987
       },
-      "nextRunAtMs": 1774237857496,
+      "nextRunAtMs": 1774239657507,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -41,19 +41,7 @@
         "everyMs": 900000,
         "anchorMs": 1772425419366
       },
-      "nextRunAtMs": 1774238023731,
-      "lastStatus": "ok",
-      "consecutiveErrors": 0
-    },
-    {
-      "name": "calendar-evening-preview-9pm",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 21 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "nextRunAtMs": 1774238400000,
+      "nextRunAtMs": 1774239823771,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -140,9 +128,21 @@
       "nextRunAtMs": 1774317600000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
+    },
+    {
+      "name": "calendar-evening-preview-9pm",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 21 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "nextRunAtMs": 1774324800000,
+      "lastStatus": "ok",
+      "consecutiveErrors": 0
     }
   ],
   "raw": {
-    "openclawStatusSnippet": "OpenClaw status\n\nOverview\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Item            \u2502 Value                                                                                              \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Dashboard       \u2502 http://127.0.0.1:18789/                                                                            \u2502\n\u2502 OS              \u2502 linux 6.17.0-1007-aws (x64) \u00b7 node 22.22.0                                                         \u2502\n\u2502 Tailscale       \u2502 serve \u00b7 ip-172-26-0-174.taild02309.ts.net \u00b7 https://ip-172-26-0-174.taild02309.ts.net              \u2502\n\u2502 Channel         \u2502 stable (default)                                                                                   \u2502\n\u2502 Update          \u2502 pnpm \u00b7 npm latest 2026.3.13                                                                        \u2502\n\u2502 Gateway         \u2502 local \u00b7 ws://127.0.0.1:18789 (local loopback) \u00b7 unreachable (missing scope: operator.read)         \u2502\n\u2502 Gateway service \u2502 systemd installed \u00b7 enabled \u00b7 running (pid 423540, state active) "
+    "openclawStatusSnippet": "OpenClaw status\n\nOverview\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Item            \u2502 Value                                                                                              \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Dashboard       \u2502 http://127.0.0.1:18789/                                                                            \u2502\n\u2502 OS              \u2502 linux 6.17.0-1007-aws (x64) \u00b7 node 22.22.0                                                         \u2502\n\u2502 Tailscale       \u2502 serve \u00b7 ip-172-26-0-174.taild02309.ts.net \u00b7 https://ip-172-26-0-174.taild02309.ts.net              \u2502\n\u2502 Channel         \u2502 stable (default)                                                                                   \u2502\n\u2502 Update          \u2502 pnpm \u00b7 npm latest 2026.3.13                                                                        \u2502\n\u2502 Gateway         \u2502 local \u00b7 ws://127.0.0.1:18789 (local loopback) \u00b7 unreachable (missing scope: operator.read)         \u2502\n\u2502 Gateway service \u2502 systemd installed \u00b7 enabled \u00b7 running (pid 431397, state active) "
   }
 }
