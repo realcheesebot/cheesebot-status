@@ -1,3 +1,29 @@
+function formatNumber(value){
+  if (value === null || value === undefined || Number.isNaN(value)) return '—';
+  return new Intl.NumberFormat().format(value);
+}
+
+function formatUsd(value){
+  if (value === null || value === undefined || Number.isNaN(value)) return '—';
+  return new Intl.NumberFormat(undefined, { style: 'currency', currency: 'USD', maximumFractionDigits: 2 }).format(value);
+}
+
+function trendLabel(value){
+  if (value === null || value === undefined || Number.isNaN(value)) return 'vs yesterday: n/a';
+  const arrow = value > 0 ? '↑' : (value < 0 ? '↓' : '→');
+  const cls = value > 0 ? 'warning' : (value < 0 ? 'ok' : '');
+  return `<span class="${cls}">${arrow} ${Math.abs(value)}%</span> vs yesterday`;
+}
+
+function openclawLabel(u){
+  if (!u.openclawVersion && !u.latestOpenclawVersion) return '—';
+  const base = u.openclawVersion || 'unknown';
+  if (u.updateAvailable && u.latestOpenclawVersion) {
+    return `${base} <span class="warning" style="font-size:12px">(Update available: ${u.latestOpenclawVersion})</span>`;
+  }
+  return base;
+}
+
 async function main(){
   const r = await fetch('status.json?ts='+Date.now());
   const d = await r.json();
@@ -8,6 +34,7 @@ async function main(){
   });
   const generatedLocal = d.generatedAt ? localFmt.format(new Date(d.generatedAt)) : 'unknown';
   const s = d.summary;
+  const u = d.usage || {};
   const selfAuditJob = (d.jobs || []).find(j => j.name === 'daily-10am-self-audit');
   let selfAuditState = 'warn';
   if (selfAuditJob) {
@@ -31,5 +58,46 @@ async function main(){
     </div>
     <div class="tagline" style="margin-top:10px">CheeseBot is here to serve and defend. I will help where I can, and offer witty puns when I can't.</div>
   `;
+
+  document.getElementById('usage').innerHTML = `
+    <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap">
+      <div>
+        <h2 style="margin:0">Token Usage</h2>
+        <div class="metric-sub">Runtime + model metadata</div>
+      </div>
+      <div class="metric-sub">${trendLabel(u.trendVsYesterdayPct)}</div>
+    </div>
+    <div class="metric-grid">
+      <div class="metric">
+        <div class="metric-label">Today</div>
+        <div class="metric-value">${formatNumber(u.tokensToday)}</div>
+        <div class="metric-sub">tokens</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Last 7 days</div>
+        <div class="metric-value">${formatNumber(u.tokens7d)}</div>
+        <div class="metric-sub">tokens</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Estimated cost</div>
+        <div class="metric-value">${formatUsd(u.estimatedCostUsd)}</div>
+        <div class="metric-sub">if available</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">OpenClaw</div>
+        <div class="metric-value" style="font-size:16px">${openclawLabel(u)}</div>
+        <div class="metric-sub">installed version</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">AI model</div>
+        <div class="metric-value" style="font-size:16px">${u.model || '—'}</div>
+        <div class="metric-sub">active session model</div>
+      </div>
+    </div>
+  `;
 }
-main().catch(e=>{document.getElementById('summary').textContent='Failed to load status.json: '+e;});
+main().catch(e=>{
+  document.getElementById('summary').textContent='Failed to load status.json: '+e;
+  const usage = document.getElementById('usage');
+  if (usage) usage.textContent = 'Failed to load usage metrics.';
+});

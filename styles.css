@@ -15,3 +15,8 @@ a:hover,a:active{opacity:.9;text-decoration:none}
 .link-table{border:none;background:transparent}
 .link-table th,.link-table td{border:none;padding:6px 0}
 .ok{color:#22c55e}.warning{color:#f59e0b}.critical{color:#ef4444}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:8px}
+.metric{background:#0b1220;border:1px solid #1f2937;border-radius:10px;padding:10px}
+.metric-label{font-size:12px;color:#94a3b8;margin-bottom:4px}
+.metric-value{font-size:20px;font-weight:700}
+.metric-sub{font-size:12px;color:#94a3b8;margin-top:4px}

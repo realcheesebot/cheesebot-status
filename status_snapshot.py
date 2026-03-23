@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 import json
-import os
 import subprocess
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -14,6 +13,8 @@ EMAIL_STATE = WORKSPACE / "memory" / "email-state.json"
 SLACK_SEND_LOG = WORKSPACE / "memory" / "slack-send-log.jsonl"
 NOTIFIER_CONFIG = WORKSPACE / "config" / "notifier.json"
 OPENCLAW_CFG = Path('/home/ubuntu/.openclaw/openclaw.json')
+UPDATE_CHECK = Path('/home/ubuntu/.openclaw/update-check.json')
+SESSIONS_FILE = Path('/home/ubuntu/.openclaw/agents/main/sessions/sessions.json')
 
 
 def run_json(cmd, retries=3):
@@ -104,7 +105,7 @@ def _slack_bot_token():
     except Exception:
         cfg = {}
     token = (((cfg.get("channels") or {}).get("slack") or {}).get("botToken"))
-    return token or os.environ.get("SLACK_BOT_TOKEN") or os.environ.get("SLACK_TOKEN")
+    return token
 
 
 def _slack_api(token: str, method: str, payload: dict):
@@ -170,6 +171,108 @@ def count_slack_sent_via_sdk(limit=None):
         return None, str(e)
 
 
+def load_session_metrics():
+    if not SESSIONS_FILE.exists():
+        return {"today": None, "sevenDay": None, "estimatedCostUsd": None, "model": None, "trendVsYesterday": None}, "sessions file missing"
+    try:
+        data = json.loads(SESSIONS_FILE.read_text(encoding='utf-8'))
+    except Exception as e:
+        return {"today": None, "sevenDay": None, "estimatedCostUsd": None, "model": None, "trendVsYesterday": None}, str(e)
+
+    now = datetime.now(timezone.utc)
+    day_ago = now - timedelta(days=1)
+    seven_ago = now - timedelta(days=7)
+
+    today_total = 0
+    yesterday_total = 0
+    seven_total = 0
+    estimated_cost = 0.0
+    have_cost = False
+    active_model = None
+    newest_updated = -1
+
+    for key, sess in data.items():
+        updated_at_ms = sess.get('updatedAt')
+        if not isinstance(updated_at_ms, (int, float)):
+            continue
+        updated_dt = datetime.fromtimestamp(updated_at_ms / 1000, tz=timezone.utc)
+        total_tokens = sess.get('totalTokens')
+        if not isinstance(total_tokens, (int, float)):
+            total_tokens = 0
+        if updated_dt >= seven_ago:
+            seven_total += int(total_tokens)
+        if updated_dt >= day_ago:
+            today_total += int(total_tokens)
+        elif day_ago > updated_dt >= now - timedelta(days=2):
+            yesterday_total += int(total_tokens)
+
+        cost = sess.get('estimatedCostUsd')
+        if isinstance(cost, (int, float)):
+            estimated_cost += float(cost)
+            have_cost = True
+
+        if key == 'agent:main:slack:direct:u03lqqb6l':
+            active_model = sess.get('model') or active_model
+        if updated_at_ms > newest_updated:
+            newest_updated = updated_at_ms
+            active_model = active_model or sess.get('model')
+
+    trend = None
+    if yesterday_total > 0:
+        trend = round(((today_total - yesterday_total) / yesterday_total) * 100, 1)
+    elif today_total > 0:
+        trend = 100.0
+
+    return {
+        "today": today_total,
+        "sevenDay": seven_total,
+        "estimatedCostUsd": round(estimated_cost, 4) if have_cost else None,
+        "model": active_model,
+        "trendVsYesterday": trend,
+    }, None
+
+
+def parse_openclaw_status(text: str):
+    version = None
+    latest_version = None
+    model = None
+    for line in text.splitlines():
+        if line.strip().startswith('│ Update'):
+            parts = [p.strip() for p in line.split('│') if p.strip()]
+            if len(parts) >= 2:
+                update_text = parts[1]
+                if 'npm latest' in update_text:
+                    version_part, latest_part = update_text.split('npm latest', 1)
+                    latest_version = latest_part.strip()
+                    if 'up to date' in version_part:
+                        version = latest_version
+                elif 'installed' in update_text and 'latest' in update_text:
+                    import re
+                    m = re.search(r'installed\s+([^·]+?)\s+·\s+.*latest\s+(.+)$', update_text)
+                    if m:
+                        version = m.group(1).strip()
+                        latest_version = m.group(2).strip()
+        if line.strip().startswith('│ agent:main:slack:direct:') or line.strip().startswith('│ agent:main:main'):
+            m = line.split('│')
+            if len(m) >= 5:
+                candidate = m[4].strip()
+                if candidate:
+                    model = candidate
+                    if 'slack:direct' in line:
+                        break
+    return version, latest_version, model
+
+
+def load_openclaw_version_fallback():
+    if not UPDATE_CHECK.exists():
+        return None
+    try:
+        data = json.loads(UPDATE_CHECK.read_text(encoding='utf-8'))
+        return data.get('lastNotifiedVersion')
+    except Exception:
+        return None
+
+
 def main():
     now = datetime.now(timezone.utc).isoformat()
     cron_data, cron_err = run_json(["openclaw", "cron", "list", "--json"])
@@ -179,6 +282,15 @@ def main():
     disabled = [j for j in jobs if not j.get("enabled", True)]
 
     openclaw_out, openclaw_err, openclaw_rc = run_text(["openclaw", "status"])
+    openclaw_version, latest_openclaw_version, status_model = parse_openclaw_status(openclaw_out)
+    if not openclaw_version:
+        openclaw_version = load_openclaw_version_fallback()
+    if not latest_openclaw_version:
+        latest_openclaw_version = load_openclaw_version_fallback()
+
+    token_metrics, token_err = load_session_metrics()
+    if not token_metrics.get('model'):
+        token_metrics['model'] = status_model
 
     email_sent_from_state = count_sent_emails_from_state(EMAIL_STATE)
     if email_sent_from_state is None:
@@ -211,14 +323,26 @@ def main():
             "slackSentTotal": slack_sent_total,
             "slackSentCountSource": slack_count_source,
         },
+        "usage": {
+            "tokensToday": token_metrics.get('today'),
+            "tokens7d": token_metrics.get('sevenDay'),
+            "trendVsYesterdayPct": token_metrics.get('trendVsYesterday'),
+            "estimatedCostUsd": token_metrics.get('estimatedCostUsd'),
+            "model": token_metrics.get('model') or status_model,
+            "openclawVersion": openclaw_version,
+            "latestOpenclawVersion": latest_openclaw_version,
+            "updateAvailable": bool(openclaw_version and latest_openclaw_version and openclaw_version != latest_openclaw_version),
+        },
         "checks": {
             "cronList": "ok" if cron_err is None else "error",
             "openclawStatus": "ok" if openclaw_rc == 0 else "error",
+            "tokenMetrics": "ok" if token_err is None else "error",
         },
         "errors": {
             "cron": cron_err,
             "openclaw": openclaw_err if openclaw_rc != 0 else None,
             "slackCountApi": slack_api_err,
+            "tokenMetrics": token_err,
         },
         "jobs": [
             {
