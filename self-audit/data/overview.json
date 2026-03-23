@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T20:01:34.138137+00:00",
+  "generatedAt": "2026-03-23T21:01:08.363056+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -40,7 +40,7 @@
       "emailSentTotal": 438,
       "emailSentCountSource": "email_state_repliedAt",
       "emailReceivedTotal": 839,
-      "slackSentTotal": 1219,
+      "slackSentTotal": 1230,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -288,8 +288,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774292400047,
-      "nextRunAtMs": 1774296000000
+      "lastRunAtMs": 1774296000098,
+      "nextRunAtMs": 1774299600000
     },
     {
       "name": "status-page-publisher",
@@ -301,8 +301,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774292415117,
-      "nextRunAtMs": 1774296000000
+      "lastRunAtMs": 1774296015792,
+      "nextRunAtMs": 1774299600000
     },
     {
       "name": "nba-injury-watch",
@@ -314,8 +314,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774294500075,
-      "nextRunAtMs": 1774296300000
+      "lastRunAtMs": 1774298100210,
+      "nextRunAtMs": 1774299900000
     },
     {
       "name": "daily-5pm-activity-summary",
