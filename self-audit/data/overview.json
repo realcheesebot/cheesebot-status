@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T05:21:54.674640+00:00",
+  "generatedAt": "2026-03-23T05:52:07.846906+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -40,7 +40,7 @@
       "emailSentTotal": 438,
       "emailSentCountSource": "email_state_repliedAt",
       "emailReceivedTotal": 839,
-      "slackSentTotal": 1187,
+      "slackSentTotal": 1188,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -277,8 +277,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774241457537,
-      "nextRunAtMs": 1774243257537
+      "lastRunAtMs": 1774243257557,
+      "nextRunAtMs": 1774245057557
     },
     {
       "name": "email-guardrail-check",
@@ -290,8 +290,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774242523834,
-      "nextRunAtMs": 1774243423834
+      "lastRunAtMs": 1774244323863,
+      "nextRunAtMs": 1774245223863
     },
     {
       "name": "weather-hourly-630am",
