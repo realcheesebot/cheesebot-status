@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T03:01:18.868230+00:00",
+  "generatedAt": "2026-03-24T04:03:18.114827+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -37,10 +37,10 @@
       "enabledJobs": 10,
       "disabledJobs": 0,
       "totalJobs": 10,
-      "emailSentTotal": 438,
+      "emailSentTotal": 439,
       "emailSentCountSource": "email_state_repliedAt",
-      "emailReceivedTotal": 839,
-      "slackSentTotal": 1233,
+      "emailReceivedTotal": 840,
+      "slackSentTotal": 1235,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -288,8 +288,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774317600150,
-      "nextRunAtMs": 1774321200000
+      "lastRunAtMs": 1774321200182,
+      "nextRunAtMs": 1774324800000
     },
     {
       "name": "status-page-publisher",
@@ -301,21 +301,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774317712415,
-      "nextRunAtMs": 1774321200000
-    },
-    {
-      "name": "nba-injury-watch",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "5,35 10-20 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774319700786,
-      "nextRunAtMs": 1774321500000
+      "lastRunAtMs": 1774321243436,
+      "nextRunAtMs": 1774324800000
     },
     {
       "name": "daily-5pm-activity-summary",
@@ -394,6 +381,19 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774285200131,
       "nextRunAtMs": 1774371600000
+    },
+    {
+      "name": "nba-injury-watch",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "5,35 10-20 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774323300120,
+      "nextRunAtMs": 1774371900000
     },
     {
       "name": "stock-morning-445am",
