@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-03-24T01:01:12.123591+00:00",
-  "totalReports": 18,
+  "generatedAt": "2026-03-24T01:05:36.517711+00:00",
+  "totalReports": 19,
   "teams": [
     {
       "team": "Portland Trail Blazers",
       "slug": "por",
-      "count": 8,
+      "count": 9,
       "latest": {
-        "key": "Portland Trail Blazers|0022501032|2026-03-22T21:00:00+00:00",
+        "key": "Portland Trail Blazers|0022501045|2026-03-24T02:00:00+00:00",
         "team": "Portland Trail Blazers",
-        "gameId": "0022501032",
-        "tipoff": "2026-03-22T21:00:00+00:00",
-        "sentAt": "2026-03-22T20:05:14.299493+00:00",
-        "matchup": "POR@DEN",
+        "gameId": "0022501045",
+        "tipoff": "2026-03-24T02:00:00+00:00",
+        "sentAt": "2026-03-24T01:05:19.119137+00:00",
+        "matchup": "BKN@POR",
         "recipients": [
           "jon@silverpine.com"
         ],
         "emailIds": [
-          "19d1726df7b39640"
+          "19d1d5ff7891b7fe"
         ]
       }
     },
@@ -44,24 +44,24 @@
     }
   ],
   "latest": {
-    "key": "Portland Trail Blazers|0022501032|2026-03-22T21:00:00+00:00",
+    "key": "Portland Trail Blazers|0022501045|2026-03-24T02:00:00+00:00",
     "team": "Portland Trail Blazers",
-    "gameId": "0022501032",
-    "tipoff": "2026-03-22T21:00:00+00:00",
-    "sentAt": "2026-03-22T20:05:14.299493+00:00",
-    "matchup": "POR@DEN",
+    "gameId": "0022501045",
+    "tipoff": "2026-03-24T02:00:00+00:00",
+    "sentAt": "2026-03-24T01:05:19.119137+00:00",
+    "matchup": "BKN@POR",
     "recipients": [
       "jon@silverpine.com"
     ],
     "emailIds": [
-      "19d1726df7b39640"
+      "19d1d5ff7891b7fe"
     ]
   },
   "latestReport": {
-    "sentAt": "2026-03-22T20:05:14.299493+00:00",
-    "matchup": "POR@DEN",
-    "subject": "Injury Report: POR @ DEN (T-60m)",
-    "reportText": "NBA INJURY REPORT WATCH\nMatchup       : POR @ DEN\nTipoff (CDT) : 2026-03-22 04:00 PM CDT\nGenerated (CDT) : 2026-03-22 03:05:14 PM CDT\nReport Time (CDT) : 2026-03-22 03:00 PM CDT\n----------------------------------------------------------------------------------------\nPLAYERS LISTED IN REPORT (TEAM + OPPONENT)\n----------------------------------------------------------------------------------------\n[POR]\n* Jerami Grant - OUT - Injury/Illness-LeftFoot;Soreness\n* Vit Krejci - OUT - Injury/Illness-LeftCalf;Contusion Injury/Illness-LeftAchillesTendon\n* Damian Lillard - OUT - Injury Management\n* Caleb Love - OUT - G League - Two-Way Injury/Illness-LeftFibula;Stress\n* Shaedon Sharpe - OUT - Reaction\n* Hansen Yang - OUT - G League-OnAssignment\n* Chris Youngblood - OUT - G League - Two-Way\n\n[DEN]\n* DaRon Holmes II - Available - G League-OnAssignment\n* Curtis Jones - Available - G League - Two-Way\n* KJ Simpson - Available - G League - Two-Way Injury/Illness-RightHamstring\n* Peyton Watson - Available - Strain\n----------------------------------------------------------------------------------------\nSource: https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-03-22_04_00PM.pdf",
+    "sentAt": "2026-03-24T01:05:19.119137+00:00",
+    "matchup": "BKN@POR",
+    "subject": "Injury Report: BKN @ POR (T-60m)",
+    "reportText": "NBA INJURY REPORT WATCH\nMatchup       : BKN @ POR\nTipoff (PDT) : 2026-03-23 07:00 PM PDT\nGenerated (PDT) : 2026-03-23 06:05:19 PM PDT\nReport Time (PDT) : 2026-03-23 06:00 PM PDT\n----------------------------------------------------------------------------------------\nPLAYERS LISTED IN REPORT (TEAM + OPPONENT)\n----------------------------------------------------------------------------------------\n[BKN]\n* Noah Clowney - OUT - Injury/Illness-RightWrist;Sprain Injury/Illness-LeftPlantarFascia\n* Egor Demin - OUT - Injury Management\n* Terance Mann - OUT - Rest\n* Michael Porter Jr. - OUT - Injury/Illness-LeftHamstring;Strain Injury/Illness-LeftKnee;Injury\n* Drake Powell - OUT - Management\n* Day'Ron Sharpe - OUT - Injury/Illness-LeftThumb;Surgery\n* Danny Wolf - OUT - Injury/Illness-LeftAnkle;Sprain\n\n[POR]\n* Jerami Grant - OUT - Injury/Illness-LeftFoot;Soreness\n* Vit Krejci - OUT - Injury/Illness-LeftCalf;Contusion Injury/Illness-LeftAchillesTendon\n* Damian Lillard - OUT - Injury Management\n* Shaedon Sharpe - OUT - Injury/Illness-LeftFibula;Stress Reaction Injury/Illness-LeftKnee;Injury\n* Robert Williams III - OUT - Management\n----------------------------------------------------------------------------------------\nSource: https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-03-23_09_00PM.pdf",
     "recipients": [
       "jon@silverpine.com"
     ]

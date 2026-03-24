@@ -1,23 +1,37 @@
 {
-  "generatedAt": "2026-03-24T01:01:12.123623+00:00",
+  "generatedAt": "2026-03-24T01:05:36.517740+00:00",
   "team": "Portland Trail Blazers",
   "slug": "por",
-  "count": 8,
+  "count": 9,
   "latest": {
-    "key": "Portland Trail Blazers|0022501032|2026-03-22T21:00:00+00:00",
+    "key": "Portland Trail Blazers|0022501045|2026-03-24T02:00:00+00:00",
     "team": "Portland Trail Blazers",
-    "gameId": "0022501032",
-    "tipoff": "2026-03-22T21:00:00+00:00",
-    "sentAt": "2026-03-22T20:05:14.299493+00:00",
-    "matchup": "POR@DEN",
+    "gameId": "0022501045",
+    "tipoff": "2026-03-24T02:00:00+00:00",
+    "sentAt": "2026-03-24T01:05:19.119137+00:00",
+    "matchup": "BKN@POR",
     "recipients": [
       "jon@silverpine.com"
     ],
     "emailIds": [
-      "19d1726df7b39640"
+      "19d1d5ff7891b7fe"
     ]
   },
   "history": [
+    {
+      "key": "Portland Trail Blazers|0022501045|2026-03-24T02:00:00+00:00",
+      "team": "Portland Trail Blazers",
+      "gameId": "0022501045",
+      "tipoff": "2026-03-24T02:00:00+00:00",
+      "sentAt": "2026-03-24T01:05:19.119137+00:00",
+      "matchup": "BKN@POR",
+      "recipients": [
+        "jon@silverpine.com"
+      ],
+      "emailIds": [
+        "19d1d5ff7891b7fe"
+      ]
+    },
     {
       "key": "Portland Trail Blazers|0022501032|2026-03-22T21:00:00+00:00",
       "team": "Portland Trail Blazers",
