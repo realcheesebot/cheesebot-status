@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T01:05:37.432551+00:00",
+  "generatedAt": "2026-03-24T02:02:16.326588+00:00",
   "today": "2026-03-24",
   "tomorrow": "2026-03-25",
   "count": 16,
@@ -121,33 +121,33 @@
     {
       "rank": 1.0,
       "team": "Oklahoma City Thunder",
-      "wins": 56.0,
+      "wins": 57.0,
       "losses": 15.0,
       "gb": 0.0,
-      "streak": 11.0
+      "streak": 12.0
     },
     {
       "rank": 2.0,
       "team": "San Antonio Spurs",
-      "wins": 53.0,
+      "wins": 54.0,
       "losses": 18.0,
       "gb": 3.0,
-      "streak": 5.0
+      "streak": 6.0
     },
     {
       "rank": 3.0,
       "team": "Los Angeles Lakers",
       "wins": 46.0,
-      "losses": 25.0,
-      "gb": 10.0,
-      "streak": 9.0
+      "losses": 26.0,
+      "gb": 11.0,
+      "streak": -1.0
     },
     {
       "rank": 4.0,
       "team": "Houston Rockets",
       "wins": 43.0,
       "losses": 27.0,
-      "gb": 12.5,
+      "gb": 13.0,
       "streak": 2.0
     },
     {
@@ -155,7 +155,7 @@
       "team": "Denver Nuggets",
       "wins": 44.0,
       "losses": 28.0,
-      "gb": 12.5,
+      "gb": 13.0,
       "streak": 2.0
     },
     {
@@ -163,7 +163,7 @@
       "team": "Minnesota Timberwolves",
       "wins": 44.0,
       "losses": 28.0,
-      "gb": 12.5,
+      "gb": 13.0,
       "streak": 1.0
     },
     {
@@ -171,7 +171,7 @@
       "team": "Phoenix Suns",
       "wins": 40.0,
       "losses": 32.0,
-      "gb": 16.5,
+      "gb": 17.0,
       "streak": 1.0
     },
     {
@@ -179,7 +179,7 @@
       "team": "LA Clippers",
       "wins": 35.0,
       "losses": 36.0,
-      "gb": 21.0,
+      "gb": 21.5,
       "streak": 1.0
     },
     {
@@ -187,7 +187,7 @@
       "team": "Portland Trail Blazers",
       "wins": 35.0,
       "losses": 37.0,
-      "gb": 21.5,
+      "gb": 22.0,
       "streak": -1.0
     },
     {
@@ -195,7 +195,7 @@
       "team": "Golden State Warriors",
       "wins": 33.0,
       "losses": 38.0,
-      "gb": 23.0,
+      "gb": 23.5,
       "streak": -3.0
     },
     {
@@ -203,23 +203,23 @@
       "team": "New Orleans Pelicans",
       "wins": 25.0,
       "losses": 47.0,
-      "gb": 31.5,
+      "gb": 32.0,
       "streak": -1.0
     },
     {
       "rank": 12.0,
       "team": "Memphis Grizzlies",
       "wins": 24.0,
-      "losses": 46.0,
-      "gb": 31.5,
-      "streak": -2.0
+      "losses": 47.0,
+      "gb": 32.5,
+      "streak": -3.0
     },
     {
       "rank": 13.0,
       "team": "Dallas Mavericks",
       "wins": 23.0,
       "losses": 48.0,
-      "gb": 33.0,
+      "gb": 33.5,
       "streak": -3.0
     },
     {
@@ -227,7 +227,7 @@
       "team": "Utah Jazz",
       "wins": 21.0,
       "losses": 50.0,
-      "gb": 35.0,
+      "gb": 35.5,
       "streak": -1.0
     },
     {
@@ -235,7 +235,7 @@
       "team": "Sacramento Kings",
       "wins": 19.0,
       "losses": 53.0,
-      "gb": 37.5,
+      "gb": 38.0,
       "streak": 1.0
     }
   ]
