@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T02:02:26.593348+00:00",
+  "generatedAt": "2026-03-24T03:01:18.868230+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -288,21 +288,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774314000145,
-      "nextRunAtMs": 1774317600000
-    },
-    {
-      "name": "stock-morning-445am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 19 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774231200031,
-      "nextRunAtMs": 1774317600000
+      "lastRunAtMs": 1774317600150,
+      "nextRunAtMs": 1774321200000
     },
     {
       "name": "status-page-publisher",
@@ -314,8 +301,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774314050798,
-      "nextRunAtMs": 1774317600000
+      "lastRunAtMs": 1774317712415,
+      "nextRunAtMs": 1774321200000
     },
     {
       "name": "nba-injury-watch",
@@ -327,8 +314,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774316100670,
-      "nextRunAtMs": 1774317900000
+      "lastRunAtMs": 1774319700786,
+      "nextRunAtMs": 1774321500000
     },
     {
       "name": "daily-5pm-activity-summary",
@@ -407,6 +394,19 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774285200131,
       "nextRunAtMs": 1774371600000
+    },
+    {
+      "name": "stock-morning-445am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 19 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774317646823,
+      "nextRunAtMs": 1774404000000
     }
   ],
   "errors": {

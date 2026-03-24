@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T02:02:16.326588+00:00",
+  "generatedAt": "2026-03-24T03:01:08.779935+00:00",
   "today": "2026-03-24",
   "tomorrow": "2026-03-25",
   "count": 16,
@@ -144,14 +144,6 @@
     },
     {
       "rank": 4.0,
-      "team": "Houston Rockets",
-      "wins": 43.0,
-      "losses": 27.0,
-      "gb": 13.0,
-      "streak": 2.0
-    },
-    {
-      "rank": 5.0,
       "team": "Denver Nuggets",
       "wins": 44.0,
       "losses": 28.0,
@@ -159,12 +151,20 @@
       "streak": 2.0
     },
     {
-      "rank": 6.0,
+      "rank": 5.0,
       "team": "Minnesota Timberwolves",
       "wins": 44.0,
       "losses": 28.0,
       "gb": 13.0,
       "streak": 1.0
+    },
+    {
+      "rank": 6.0,
+      "team": "Houston Rockets",
+      "wins": 43.0,
+      "losses": 28.0,
+      "gb": 13.5,
+      "streak": -1.0
     },
     {
       "rank": 7.0,
