@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T18:01:37.692579+00:00",
+  "generatedAt": "2026-03-24T19:01:35.706688+00:00",
   "windowHours": 24,
   "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
   "job": {
@@ -11,22 +11,33 @@
       "tz": "America/Los_Angeles"
     },
     "lastStatus": "ok",
-    "lastRunAtMs": 1774371600081,
-    "nextRunAtMs": 1774375200000,
+    "lastRunAtMs": 1774375200078,
+    "nextRunAtMs": 1774378800000,
     "consecutiveErrors": 0
   },
   "latestRun": {
-    "ts": 1774371735438,
+    "ts": 1774375311806,
     "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
     "action": "finished",
     "status": "ok",
     "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
-    "runAtMs": 1774371600081,
-    "durationMs": 67850,
-    "nextRunAtMs": 1774375200000,
+    "runAtMs": 1774375200078,
+    "durationMs": 65582,
+    "nextRunAtMs": 1774378800000,
     "deliveryStatus": "not-requested"
   },
   "recentRuns": [
+    {
+      "ts": 1774375311806,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
+      "runAtMs": 1774375200078,
+      "durationMs": 65582,
+      "nextRunAtMs": 1774378800000,
+      "deliveryStatus": "not-requested"
+    },
     {
       "ts": 1774371735438,
       "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
@@ -235,20 +246,33 @@
       "durationMs": 15070,
       "nextRunAtMs": 1774296000000,
       "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1774289046062,
-      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
-      "runAtMs": 1774288800057,
-      "durationMs": 42242,
-      "nextRunAtMs": 1774292400000,
-      "deliveryStatus": "not-requested"
     }
   ],
   "receivedLast24h": [
+    {
+      "messageId": "19d126711ddcca1c",
+      "seenAt": "2026-03-24T19:00:37Z",
+      "from": "manton@manton.org",
+      "subject": "Status page CSS",
+      "status": "seen",
+      "threadId": "19d126711ddcca1c"
+    },
+    {
+      "messageId": "19d13ff54e90c3e0",
+      "seenAt": "2026-03-24T19:00:37Z",
+      "from": "ron.hays1@gmail.com",
+      "subject": "Question",
+      "status": "seen",
+      "threadId": "19d13ff54e90c3e0"
+    },
+    {
+      "messageId": "19d1407476350e32",
+      "seenAt": "2026-03-24T19:00:37Z",
+      "from": "ron.hays1@gmail.com",
+      "subject": "Re: QuestionV",
+      "status": "seen",
+      "threadId": "19d1407476350e32"
+    },
     {
       "messageId": "19d13b373b971b1f",
       "seenAt": "2026-03-24T04:00:37Z",
