@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T16:01:49.660988+00:00",
+  "generatedAt": "2026-03-24T17:02:06.349598+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -40,7 +40,7 @@
       "emailSentTotal": 439,
       "emailSentCountSource": "email_state_repliedAt",
       "emailReceivedTotal": 840,
-      "slackSentTotal": 1260,
+      "slackSentTotal": 1264,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -288,8 +288,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774364400109,
-      "nextRunAtMs": 1774368000000
+      "lastRunAtMs": 1774368000049,
+      "nextRunAtMs": 1774371600000
     },
     {
       "name": "status-page-publisher",
@@ -301,8 +301,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774364492510,
-      "nextRunAtMs": 1774368000000
+      "lastRunAtMs": 1774368073189,
+      "nextRunAtMs": 1774371600000
     },
     {
       "name": "daily-10am-self-audit",
