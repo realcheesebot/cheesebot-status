@@ -1,79 +1,9 @@
 {
-  "generatedAt": "2026-03-23T23:01:09.516685+00:00",
-  "today": "2026-03-23",
-  "tomorrow": "2026-03-24",
-  "count": 14,
+  "generatedAt": "2026-03-24T00:01:24.624099+00:00",
+  "today": "2026-03-24",
+  "tomorrow": "2026-03-25",
+  "count": 16,
   "games": [
-    {
-      "date": "2026-03-23",
-      "matchup": "LAL@DET",
-      "tipoffUtc": "2026-03-23T23:00:00Z",
-      "gameId": "0022501038",
-      "arena": null
-    },
-    {
-      "date": "2026-03-23",
-      "matchup": "IND@ORL",
-      "tipoffUtc": "2026-03-23T23:00:00Z",
-      "gameId": "0022501039",
-      "arena": null
-    },
-    {
-      "date": "2026-03-23",
-      "matchup": "OKC@PHI",
-      "tipoffUtc": "2026-03-23T23:00:00Z",
-      "gameId": "0022501040",
-      "arena": null
-    },
-    {
-      "date": "2026-03-23",
-      "matchup": "SAS@MIA",
-      "tipoffUtc": "2026-03-23T23:00:00Z",
-      "gameId": "0022501041",
-      "arena": null
-    },
-    {
-      "date": "2026-03-23",
-      "matchup": "MEM@ATL",
-      "tipoffUtc": "2026-03-23T23:30:00Z",
-      "gameId": "0022501037",
-      "arena": null
-    },
-    {
-      "date": "2026-03-23",
-      "matchup": "HOU@CHI",
-      "tipoffUtc": "2026-03-24T00:00:00Z",
-      "gameId": "0022501042",
-      "arena": null
-    },
-    {
-      "date": "2026-03-23",
-      "matchup": "TOR@UTA",
-      "tipoffUtc": "2026-03-24T01:00:00Z",
-      "gameId": "0022501043",
-      "arena": null
-    },
-    {
-      "date": "2026-03-23",
-      "matchup": "GSW@DAL",
-      "tipoffUtc": "2026-03-24T01:30:00Z",
-      "gameId": "0022501044",
-      "arena": null
-    },
-    {
-      "date": "2026-03-23",
-      "matchup": "BKN@POR",
-      "tipoffUtc": "2026-03-24T02:00:00Z",
-      "gameId": "0022501045",
-      "arena": null
-    },
-    {
-      "date": "2026-03-23",
-      "matchup": "MIL@LAC",
-      "tipoffUtc": "2026-03-24T02:30:00Z",
-      "gameId": "0022501046",
-      "arena": null
-    },
     {
       "date": "2026-03-24",
       "matchup": "SAC@CHA",
@@ -100,6 +30,90 @@
       "matchup": "DEN@PHX",
       "tipoffUtc": "2026-03-25T03:00:00Z",
       "gameId": "0022501050",
+      "arena": null
+    },
+    {
+      "date": "2026-03-25",
+      "matchup": "ATL@DET",
+      "tipoffUtc": "2026-03-25T23:00:00Z",
+      "gameId": "0022501051",
+      "arena": null
+    },
+    {
+      "date": "2026-03-25",
+      "matchup": "LAL@IND",
+      "tipoffUtc": "2026-03-25T23:00:00Z",
+      "gameId": "0022501052",
+      "arena": null
+    },
+    {
+      "date": "2026-03-25",
+      "matchup": "CHI@PHI",
+      "tipoffUtc": "2026-03-25T23:00:00Z",
+      "gameId": "0022501053",
+      "arena": null
+    },
+    {
+      "date": "2026-03-25",
+      "matchup": "OKC@BOS",
+      "tipoffUtc": "2026-03-25T23:30:00Z",
+      "gameId": "0022501054",
+      "arena": null
+    },
+    {
+      "date": "2026-03-25",
+      "matchup": "MIA@CLE",
+      "tipoffUtc": "2026-03-25T23:30:00Z",
+      "gameId": "0022501055",
+      "arena": null
+    },
+    {
+      "date": "2026-03-25",
+      "matchup": "SAS@MEM",
+      "tipoffUtc": "2026-03-26T00:00:00Z",
+      "gameId": "0022501056",
+      "arena": null
+    },
+    {
+      "date": "2026-03-25",
+      "matchup": "WAS@UTA",
+      "tipoffUtc": "2026-03-26T01:00:00Z",
+      "gameId": "0022501057",
+      "arena": null
+    },
+    {
+      "date": "2026-03-25",
+      "matchup": "HOU@MIN",
+      "tipoffUtc": "2026-03-26T01:30:00Z",
+      "gameId": "0022501058",
+      "arena": null
+    },
+    {
+      "date": "2026-03-25",
+      "matchup": "DAL@DEN",
+      "tipoffUtc": "2026-03-26T02:00:00Z",
+      "gameId": "0022501059",
+      "arena": null
+    },
+    {
+      "date": "2026-03-25",
+      "matchup": "BKN@GSW",
+      "tipoffUtc": "2026-03-26T02:00:00Z",
+      "gameId": "0022501060",
+      "arena": null
+    },
+    {
+      "date": "2026-03-25",
+      "matchup": "MIL@POR",
+      "tipoffUtc": "2026-03-26T02:00:00Z",
+      "gameId": "0022501061",
+      "arena": null
+    },
+    {
+      "date": "2026-03-25",
+      "matchup": "TOR@LAC",
+      "tipoffUtc": "2026-03-26T02:30:00Z",
+      "gameId": "0022501062",
       "arena": null
     }
   ],
