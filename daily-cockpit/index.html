@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CheeseBot Daily Cockpit</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Daily Cockpit</h1>
+    <p class="muted">A compact daily briefing pulled from status snapshots + durable activity logs.</p>
+
+    <section class="card">
+      <h2>Headline</h2>
+      <div id="headline">Loading…</div>
+    </section>
+
+    <section class="card">
+      <h2>Insights</h2>
+      <ul id="insights"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Upcoming Jobs</h2>
+      <ul id="jobs"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Verified Activity</h2>
+      <ul id="activity"></ul>
+    </section>
+  </main>
+  <script src="cockpit.js"></script>
+</body>
+</html>
