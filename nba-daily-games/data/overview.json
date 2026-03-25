@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T05:01:28.827647+00:00",
+  "generatedAt": "2026-03-25T06:01:11.136308+00:00",
   "today": "2026-03-25",
   "tomorrow": "2026-03-26",
   "count": 15,
@@ -138,10 +138,10 @@
     {
       "rank": 4.0,
       "team": "Denver Nuggets",
-      "wins": 44.0,
+      "wins": 45.0,
       "losses": 28.0,
-      "gb": 13.0,
-      "streak": 2.0
+      "gb": 12.5,
+      "streak": 3.0
     },
     {
       "rank": 5.0,
@@ -163,9 +163,9 @@
       "rank": 7.0,
       "team": "Phoenix Suns",
       "wins": 40.0,
-      "losses": 32.0,
-      "gb": 17.0,
-      "streak": 1.0
+      "losses": 33.0,
+      "gb": 17.5,
+      "streak": -1.0
     },
     {
       "rank": 8.0,
