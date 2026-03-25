@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T15:02:03.787488+00:00",
+  "generatedAt": "2026-03-25T16:01:44.542491+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -39,8 +39,8 @@
       "totalJobs": 10,
       "emailSentTotal": 439,
       "emailSentCountSource": "email_state_repliedAt",
-      "emailReceivedTotal": 864,
-      "slackSentTotal": 1286,
+      "emailReceivedTotal": 866,
+      "slackSentTotal": 1287,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -290,19 +290,6 @@
   ],
   "allJobs": [
     {
-      "name": "nba-games-daily-8am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 8 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774364457709,
-      "nextRunAtMs": 1774450800000
-    },
-    {
       "name": "email-guardrail-check",
       "enabled": true,
       "schedule": {
@@ -312,8 +299,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774447200131,
-      "nextRunAtMs": 1774450800000
+      "lastRunAtMs": 1774450800110,
+      "nextRunAtMs": 1774454400000
     },
     {
       "name": "status-page-publisher",
@@ -325,8 +312,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774447262120,
-      "nextRunAtMs": 1774450800000
+      "lastRunAtMs": 1774450889246,
+      "nextRunAtMs": 1774454400000
     },
     {
       "name": "daily-10am-self-audit",
@@ -418,6 +405,19 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774449900058,
       "nextRunAtMs": 1774536300000
+    },
+    {
+      "name": "nba-games-daily-8am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774450850331,
+      "nextRunAtMs": 1774537200000
     }
   ],
   "errors": {

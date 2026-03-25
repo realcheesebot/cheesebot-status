@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-25T15:02:03.882574+00:00",
+  "generatedAt": "2026-03-25T16:01:44.585636+00:00",
   "day": "2026-03-25",
   "headline": {
     "overall": "ok",
     "enabledJobs": 10,
     "emailSentTotal": 439,
-    "emailReceivedTotal": 864,
-    "slackSentTotal": 1286,
-    "tokensToday": 205813,
-    "trendVsYesterdayPct": 85.4
+    "emailReceivedTotal": 866,
+    "slackSentTotal": 1287,
+    "tokensToday": 206992,
+    "trendVsYesterdayPct": 86.4
   },
   "jobCounts": {
     "ok": 10,
@@ -18,20 +18,14 @@
   },
   "nextJobs": [
     {
-      "name": "nba-games-daily-8am",
-      "nextRunAtMs": 1774450800000,
-      "lastStatus": "ok",
-      "status": "ok"
-    },
-    {
       "name": "email-guardrail-check",
-      "nextRunAtMs": 1774450800000,
+      "nextRunAtMs": 1774454400000,
       "lastStatus": "ok",
       "status": "ok"
     },
     {
       "name": "status-page-publisher",
-      "nextRunAtMs": 1774450800000,
+      "nextRunAtMs": 1774454400000,
       "lastStatus": "ok",
       "status": "ok"
     },
@@ -44,6 +38,12 @@
     {
       "name": "nba-injury-watch",
       "nextRunAtMs": 1774458300000,
+      "lastStatus": "ok",
+      "status": "ok"
+    },
+    {
+      "name": "stock-morning-445am",
+      "nextRunAtMs": 1774490400000,
       "lastStatus": "ok",
       "status": "ok"
     }
