@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T14:01:36.759304+00:00",
+  "generatedAt": "2026-03-25T15:02:03.787488+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -39,8 +39,8 @@
       "totalJobs": 10,
       "emailSentTotal": 439,
       "emailSentCountSource": "email_state_repliedAt",
-      "emailReceivedTotal": 862,
-      "slackSentTotal": 1283,
+      "emailReceivedTotal": 864,
+      "slackSentTotal": 1286,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -290,6 +290,19 @@
   ],
   "allJobs": [
     {
+      "name": "nba-games-daily-8am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774364457709,
+      "nextRunAtMs": 1774450800000
+    },
+    {
       "name": "email-guardrail-check",
       "enabled": true,
       "schedule": {
@@ -299,8 +312,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774443600124,
-      "nextRunAtMs": 1774447200000
+      "lastRunAtMs": 1774447200131,
+      "nextRunAtMs": 1774450800000
     },
     {
       "name": "status-page-publisher",
@@ -312,33 +325,7 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774443657135,
-      "nextRunAtMs": 1774447200000
-    },
-    {
-      "name": "nba-injury-eta-745am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "45 7 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774363500089,
-      "nextRunAtMs": 1774449900000
-    },
-    {
-      "name": "nba-games-daily-8am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 8 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774364457709,
+      "lastRunAtMs": 1774447262120,
       "nextRunAtMs": 1774450800000
     },
     {
@@ -418,6 +405,19 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774445400069,
       "nextRunAtMs": 1774531800000
+    },
+    {
+      "name": "nba-injury-eta-745am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "45 7 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774449900058,
+      "nextRunAtMs": 1774536300000
     }
   ],
   "errors": {
