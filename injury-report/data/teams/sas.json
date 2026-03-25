@@ -1,25 +1,41 @@
 {
-  "generatedAt": "2026-03-25T23:01:00.986900+00:00",
+  "generatedAt": "2026-03-25T23:05:37.775298+00:00",
   "team": "San Antonio Spurs",
   "slug": "sas",
-  "count": 10,
+  "count": 11,
   "latest": {
-    "key": "San Antonio Spurs|0022501028|2026-03-22T00:00:00+00:00",
+    "key": "San Antonio Spurs|0022501056|2026-03-26T00:00:00+00:00",
     "team": "San Antonio Spurs",
-    "gameId": "0022501028",
-    "tipoff": "2026-03-22T00:00:00+00:00",
-    "sentAt": "2026-03-21T23:05:23.812523+00:00",
-    "matchup": "IND@SAS",
+    "gameId": "0022501056",
+    "tipoff": "2026-03-26T00:00:00+00:00",
+    "sentAt": "2026-03-25T23:05:14.922592+00:00",
+    "matchup": "SAS@MEM",
     "recipients": [
       "jon@silverpine.com",
       "manton@manton.org"
     ],
     "emailIds": [
-      "19d12a57503c19bf",
-      "19d12a57e11e5769"
+      "19d273ec296c911a",
+      "19d273ece0e16d14"
     ]
   },
   "history": [
+    {
+      "key": "San Antonio Spurs|0022501056|2026-03-26T00:00:00+00:00",
+      "team": "San Antonio Spurs",
+      "gameId": "0022501056",
+      "tipoff": "2026-03-26T00:00:00+00:00",
+      "sentAt": "2026-03-25T23:05:14.922592+00:00",
+      "matchup": "SAS@MEM",
+      "recipients": [
+        "jon@silverpine.com",
+        "manton@manton.org"
+      ],
+      "emailIds": [
+        "19d273ec296c911a",
+        "19d273ece0e16d14"
+      ]
+    },
     {
       "key": "San Antonio Spurs|0022501028|2026-03-22T00:00:00+00:00",
       "team": "San Antonio Spurs",

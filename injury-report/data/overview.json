@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-25T23:01:00.986562+00:00",
-  "totalReports": 19,
+  "generatedAt": "2026-03-25T23:05:37.774894+00:00",
+  "totalReports": 20,
   "teams": [
     {
       "team": "Portland Trail Blazers",
@@ -24,46 +24,49 @@
     {
       "team": "San Antonio Spurs",
       "slug": "sas",
-      "count": 10,
+      "count": 11,
       "latest": {
-        "key": "San Antonio Spurs|0022501028|2026-03-22T00:00:00+00:00",
+        "key": "San Antonio Spurs|0022501056|2026-03-26T00:00:00+00:00",
         "team": "San Antonio Spurs",
-        "gameId": "0022501028",
-        "tipoff": "2026-03-22T00:00:00+00:00",
-        "sentAt": "2026-03-21T23:05:23.812523+00:00",
-        "matchup": "IND@SAS",
+        "gameId": "0022501056",
+        "tipoff": "2026-03-26T00:00:00+00:00",
+        "sentAt": "2026-03-25T23:05:14.922592+00:00",
+        "matchup": "SAS@MEM",
         "recipients": [
           "jon@silverpine.com",
           "manton@manton.org"
         ],
         "emailIds": [
-          "19d12a57503c19bf",
-          "19d12a57e11e5769"
+          "19d273ec296c911a",
+          "19d273ece0e16d14"
         ]
       }
     }
   ],
   "latest": {
-    "key": "Portland Trail Blazers|0022501045|2026-03-24T02:00:00+00:00",
-    "team": "Portland Trail Blazers",
-    "gameId": "0022501045",
-    "tipoff": "2026-03-24T02:00:00+00:00",
-    "sentAt": "2026-03-24T01:05:19.119137+00:00",
-    "matchup": "BKN@POR",
+    "key": "San Antonio Spurs|0022501056|2026-03-26T00:00:00+00:00",
+    "team": "San Antonio Spurs",
+    "gameId": "0022501056",
+    "tipoff": "2026-03-26T00:00:00+00:00",
+    "sentAt": "2026-03-25T23:05:14.922592+00:00",
+    "matchup": "SAS@MEM",
     "recipients": [
-      "jon@silverpine.com"
+      "jon@silverpine.com",
+      "manton@manton.org"
     ],
     "emailIds": [
-      "19d1d5ff7891b7fe"
+      "19d273ec296c911a",
+      "19d273ece0e16d14"
     ]
   },
   "latestReport": {
-    "sentAt": "2026-03-24T01:05:19.119137+00:00",
-    "matchup": "BKN@POR",
-    "subject": "Injury Report: BKN @ POR (T-60m)",
-    "reportText": "NBA INJURY REPORT WATCH\nMatchup       : BKN @ POR\nTipoff (PDT) : 2026-03-23 07:00 PM PDT\nGenerated (PDT) : 2026-03-23 06:05:19 PM PDT\nReport Time (PDT) : 2026-03-23 06:00 PM PDT\n----------------------------------------------------------------------------------------\nPLAYERS LISTED IN REPORT (TEAM + OPPONENT)\n----------------------------------------------------------------------------------------\n[BKN]\n* Noah Clowney - OUT - Injury/Illness-RightWrist;Sprain Injury/Illness-LeftPlantarFascia\n* Egor Demin - OUT - Injury Management\n* Terance Mann - OUT - Rest\n* Michael Porter Jr. - OUT - Injury/Illness-LeftHamstring;Strain Injury/Illness-LeftKnee;Injury\n* Drake Powell - OUT - Management\n* Day'Ron Sharpe - OUT - Injury/Illness-LeftThumb;Surgery\n* Danny Wolf - OUT - Injury/Illness-LeftAnkle;Sprain\n\n[POR]\n* Jerami Grant - OUT - Injury/Illness-LeftFoot;Soreness\n* Vit Krejci - OUT - Injury/Illness-LeftCalf;Contusion Injury/Illness-LeftAchillesTendon\n* Damian Lillard - OUT - Injury Management\n* Shaedon Sharpe - OUT - Injury/Illness-LeftFibula;Stress Reaction Injury/Illness-LeftKnee;Injury\n* Robert Williams III - OUT - Management\n----------------------------------------------------------------------------------------\nSource: https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-03-23_09_00PM.pdf",
+    "sentAt": "2026-03-25T23:05:14.922592+00:00",
+    "matchup": "SAS@MEM",
+    "subject": "Injury Report: SAS @ MEM (T-60m)",
+    "reportText": "NBA INJURY REPORT WATCH\nMatchup       : SAS @ MEM\nTipoff (CDT) : 2026-03-25 07:00 PM CDT\nGenerated (CDT) : 2026-03-25 06:05:15 PM CDT\nReport Time (CDT) : 2026-03-25 06:00 PM CDT\n----------------------------------------------------------------------------------------\nPLAYERS LISTED IN REPORT (TEAM + OPPONENT)\n----------------------------------------------------------------------------------------\n[SAS]\n* De'Aaron Fox - OUT - Injury/Illness-Low Back;Tightness\n* Harrison Ingram - OUT - G League - Two-Way\n* David Jones Garcia - OUT - G League - Two-Way Injury/Illness-RightKnee;Injury\n* Luke Kornet - OUT - Management\n* Emanuel Miller - OUT - G League - Two-Way Injury/Illness-RightKnee;Surgery\n\n[MEM]\n* Santi Aldama - OUT - Recovery Injury/Illness-Right5thFinger\n* Kentavious Caldwell-Pope - OUT - SurgeryRecovery\n* Brandon Clarke - OUT - Injury/Illness-RightCalf;Strain\n* Zach Edey - OUT - Injury/Illness-LeftAnkle;Surgery Recovery\n* Ty Jerome - OUT - Injury/Illness-LeftAnkle;Sprain\n* Jahmai Mashack - Doubtful - Injury/Illness-LeftAnkle;Sprain\n* Ja Morant - OUT - Injury/Illness-LeftElbow;UCLSprain Injury/Illness-RightGreatToe\n* Scotty Pippen Jr. - OUT - SurgeryRecovery\n* Javon Small - Questionable - Injury/Illness-Low Back;Soreness Injury/Illness-RightGreatToe\n* Jaylen Wells - OUT - Soreness Injury/Illness-RightRetrocalcaneal\n----------------------------------------------------------------------------------------\nSource: https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-03-25_07_00PM.pdf",
     "recipients": [
-      "jon@silverpine.com"
+      "jon@silverpine.com",
+      "manton@manton.org"
     ]
   }
 }

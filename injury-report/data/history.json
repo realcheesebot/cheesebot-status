@@ -1,6 +1,22 @@
 {
-  "generatedAt": "2026-03-25T23:01:00.987304+00:00",
+  "generatedAt": "2026-03-25T23:05:37.775682+00:00",
   "rows": [
+    {
+      "key": "San Antonio Spurs|0022501056|2026-03-26T00:00:00+00:00",
+      "team": "San Antonio Spurs",
+      "gameId": "0022501056",
+      "tipoff": "2026-03-26T00:00:00+00:00",
+      "sentAt": "2026-03-25T23:05:14.922592+00:00",
+      "matchup": "SAS@MEM",
+      "recipients": [
+        "jon@silverpine.com",
+        "manton@manton.org"
+      ],
+      "emailIds": [
+        "19d273ec296c911a",
+        "19d273ece0e16d14"
+      ]
+    },
     {
       "key": "Portland Trail Blazers|0022501045|2026-03-24T02:00:00+00:00",
       "team": "Portland Trail Blazers",
