@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T04:03:27.559393+00:00",
+  "generatedAt": "2026-03-25T05:01:17.315131+00:00",
   "summary": {
     "overall": "ok",
     "enabledJobs": 10,
@@ -8,15 +8,15 @@
     "emailSentTotal": 439,
     "emailSentCountSource": "email_state_repliedAt",
     "emailReceivedTotal": 862,
-    "slackSentTotal": 1278,
+    "slackSentTotal": 1279,
     "slackSentCountSource": "slack_sdk_dm_history"
   },
   "usage": {
-    "tokensToday": 200514,
-    "tokens7d": 7013202,
-    "trendVsYesterdayPct": 321.5,
-    "estimatedCostTodayUsd": 0.7572,
-    "estimatedCost7dUsd": 0.7572,
+    "tokensToday": 218718,
+    "tokens7d": 6661888,
+    "trendVsYesterdayPct": 359.7,
+    "estimatedCostTodayUsd": 1.1971,
+    "estimatedCost7dUsd": 1.1971,
     "model": "gpt-5.4",
     "openclawVersion": "2026.3.23-2",
     "latestOpenclawVersion": "2026.3.23-2",
@@ -42,7 +42,7 @@
         "expr": "0 4-23 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774411200000,
+      "nextRunAtMs": 1774414800000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -54,31 +54,7 @@
         "expr": "0 6-23 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774411200000,
-      "lastStatus": "ok",
-      "consecutiveErrors": 0
-    },
-    {
-      "name": "daily-5pm-activity-summary",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 21 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "nextRunAtMs": 1774411200000,
-      "lastStatus": "ok",
-      "consecutiveErrors": 0
-    },
-    {
-      "name": "calendar-evening-preview-9pm",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 21 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "nextRunAtMs": 1774411200000,
+      "nextRunAtMs": 1774414800000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -151,6 +127,30 @@
         "tz": "America/Los_Angeles"
       },
       "nextRunAtMs": 1774490400000,
+      "lastStatus": "ok",
+      "consecutiveErrors": 0
+    },
+    {
+      "name": "daily-5pm-activity-summary",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 21 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "nextRunAtMs": 1774497600000,
+      "lastStatus": "ok",
+      "consecutiveErrors": 0
+    },
+    {
+      "name": "calendar-evening-preview-9pm",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 21 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "nextRunAtMs": 1774497600000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     }
