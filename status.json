@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T01:01:06.604557+00:00",
+  "generatedAt": "2026-03-25T02:02:11.605849+00:00",
   "summary": {
     "overall": "ok",
     "enabledJobs": 10,
@@ -8,15 +8,15 @@
     "emailSentTotal": 439,
     "emailSentCountSource": "email_state_repliedAt",
     "emailReceivedTotal": 840,
-    "slackSentTotal": 1272,
+    "slackSentTotal": 1274,
     "slackSentCountSource": "slack_sdk_dm_history"
   },
   "usage": {
-    "tokensToday": 298555,
-    "tokens7d": 7277716,
-    "trendVsYesterdayPct": 1798.4,
-    "estimatedCostTodayUsd": 4.1251,
-    "estimatedCost7dUsd": 4.1251,
+    "tokensToday": 280433,
+    "tokens7d": 7245617,
+    "trendVsYesterdayPct": 489.5,
+    "estimatedCostTodayUsd": 5.3664,
+    "estimatedCost7dUsd": 5.3664,
     "model": "gpt-5.4",
     "openclawVersion": "2026.3.23-2",
     "latestOpenclawVersion": "2026.3.23-2",
@@ -42,31 +42,7 @@
         "expr": "0 4-23 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774400400000,
-      "lastStatus": "ok",
-      "consecutiveErrors": 0
-    },
-    {
-      "name": "status-page-publisher",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 6-23 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "nextRunAtMs": 1774400400000,
-      "lastStatus": "ok",
-      "consecutiveErrors": 0
-    },
-    {
-      "name": "nba-injury-watch",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "5,35 10-20 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "nextRunAtMs": 1774400700000,
+      "nextRunAtMs": 1774404000000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -79,6 +55,30 @@
         "tz": "America/Los_Angeles"
       },
       "nextRunAtMs": 1774404000000,
+      "lastStatus": "ok",
+      "consecutiveErrors": 0
+    },
+    {
+      "name": "status-page-publisher",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6-23 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "nextRunAtMs": 1774404000000,
+      "lastStatus": "ok",
+      "consecutiveErrors": 0
+    },
+    {
+      "name": "nba-injury-watch",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "5,35 10-20 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "nextRunAtMs": 1774404300000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },

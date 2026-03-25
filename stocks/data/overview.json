@@ -1,23 +1,53 @@
 {
-  "generatedAt": "2026-03-25T01:01:20.021029+00:00",
-  "count": 8,
+  "generatedAt": "2026-03-25T02:02:26.850832+00:00",
+  "count": 10,
   "latest": {
-    "ts": 1774317696,
+    "ts": 1774404104,
     "recipients": [
       "ron.hays1@gmail.com"
     ],
-    "subject": "Stock Market Morning Brief - 2026-03-23",
+    "subject": "Stock Market Morning Brief - 2026-03-24",
     "dry_run": false,
     "result": "sent",
     "sent": [
       {
         "to": "ron.hays1@gmail.com",
-        "id": "19d1d937e6ef85f2"
+        "id": "19d22b9f79249615"
       }
     ]
   },
-  "latestReportText": "STOCK MARKET MORNING BRIEF\nGenerated (PT): 2026-03-23 07:00:57 PM PDT\n------------------------------------------------------------------------------------------------\nMARKET SNAPSHOT (1D / 1W / 1M)\n------------------------------------------------------------------------------------------------\n* S&P 500             6581.00   1D  +0.09%   1W  -1.77%   1M  -4.75%\n* Nasdaq 100         21946.76   1D  -0.22%   1W  -1.91%   1M  -4.10%\n* Dow Jones          46208.47   1D  +0.88%   1W  -1.57%   1M  -6.89%\n* Russell 2000      N/A\n* VIX               N/A\n\nWATCHLIST (1D / 1W / 1M)\n------------------------------------------------------------------------------------------------\n* AAPL                 251.49   1D  -1.05%   1W  -0.53%   1M  -4.95%\n* MSFT                 383.00   1D  -0.28%   1W  -4.24%   1M  -3.58%\n* NVDA                 175.64   1D  -0.89%   1W  -4.14%   1M  -7.47%\n* TSLA                 380.85   1D  +2.06%   1W  -3.72%   1M  -7.52%\n* AMZN                 210.14   1D  +0.12%   1W  -0.76%   1M  +0.01%\n* META                 604.06   1D  -0.29%   1W  -3.73%   1M  -7.87%\n\nMACRO PROXIES (1D / 1W / 1M)\n------------------------------------------------------------------------------------------------\n* WTI Crude             91.62   1D  +2.68%   1W     N/A   1M     N/A\n* Gold (XAUUSD)       4315.03   1D  -2.52%   1W -13.75%   1M -17.46%\n* Bitcoin            70444.41   1D  -0.43%   1W  +0.35%   1M  +3.08%\n\nSource: stooq.com quote feed",
+  "latestReportText": "STOCK MARKET MORNING BRIEF\nGenerated (PT): 2026-03-24 07:01:04 PM PDT\n------------------------------------------------------------------------------------------------\nMARKET SNAPSHOT (1D / 1W / 1M)\n------------------------------------------------------------------------------------------------\n* S&P 500             6556.37   1D  +0.07%   1W  -2.38%   1M  -4.12%\n* Nasdaq 100         21761.89   1D  -0.21%   1W  -3.19%   1M  -3.82%\n* Dow Jones          46124.06   1D  +0.05%   1W  -1.85%   1M  -5.49%\n* Russell 2000      N/A\n* VIX               N/A\n\nWATCHLIST (1D / 1W / 1M)\n------------------------------------------------------------------------------------------------\n* AAPL                 251.64   1D  +0.52%   1W  -1.02%   1M  -5.46%\n* MSFT                 372.74   1D  -2.52%   1W  -6.68%   1M  -3.05%\n* NVDA                 175.20   1D  +0.21%   1W  -3.70%   1M  -8.54%\n* TSLA                 383.03   1D  +1.68%   1W  -4.07%   1M  -4.20%\n* AMZN                 207.24   1D  -0.34%   1W  -3.70%   1M  +0.96%\n* META                 592.92   1D  -1.03%   1W  -4.78%   1M  -6.96%\n\nMACRO PROXIES (1D / 1W / 1M)\n------------------------------------------------------------------------------------------------\n* WTI Crude             87.60   1D  -1.46%   1W     N/A   1M     N/A\n* Gold (XAUUSD)       4592.22   1D  +2.40%   1W  -5.06%   1M -10.73%\n* Bitcoin            70619.58   1D  +0.45%   1W  -0.18%   1M  -2.89%\n\nSource: stooq.com quote feed",
   "recent": [
+    {
+      "ts": 1774404104,
+      "recipients": [
+        "ron.hays1@gmail.com"
+      ],
+      "subject": "Stock Market Morning Brief - 2026-03-24",
+      "dry_run": false,
+      "result": "sent",
+      "sent": [
+        {
+          "to": "ron.hays1@gmail.com",
+          "id": "19d22b9f79249615"
+        }
+      ]
+    },
+    {
+      "ts": 1774404102,
+      "recipients": [
+        "jon@silverpine.com"
+      ],
+      "subject": "Stock Market Morning Brief - 2026-03-24",
+      "dry_run": false,
+      "result": "sent",
+      "sent": [
+        {
+          "to": "jon@silverpine.com",
+          "id": "19d22b9ef877e7e6"
+        }
+      ]
+    },
     {
       "ts": 1774317696,
       "recipients": [
