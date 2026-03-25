@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T17:01:59.914183+00:00",
+  "generatedAt": "2026-03-25T18:01:00.676937+00:00",
   "summary": {
     "overall": "ok",
     "enabledJobs": 10,
@@ -8,15 +8,15 @@
     "emailSentTotal": 439,
     "emailSentCountSource": "email_state_repliedAt",
     "emailReceivedTotal": 866,
-    "slackSentTotal": 1296,
+    "slackSentTotal": 1297,
     "slackSentCountSource": "slack_sdk_dm_history"
   },
   "usage": {
-    "tokensToday": 213353,
-    "tokens7d": 5803538,
-    "trendVsYesterdayPct": 92.1,
-    "estimatedCostTodayUsd": 7.52,
-    "estimatedCost7dUsd": 7.52,
+    "tokensToday": 217053,
+    "tokens7d": 5746433,
+    "trendVsYesterdayPct": 95.5,
+    "estimatedCostTodayUsd": 8.9023,
+    "estimatedCost7dUsd": 8.9023,
     "model": "gpt-5.4",
     "openclawVersion": "2026.3.23-2",
     "latestOpenclawVersion": "2026.3.23-2",
@@ -42,7 +42,7 @@
         "expr": "0 4-23 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774458000000,
+      "nextRunAtMs": 1774461600000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -54,19 +54,7 @@
         "expr": "0 6-23 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774458000000,
-      "lastStatus": "ok",
-      "consecutiveErrors": 0
-    },
-    {
-      "name": "daily-10am-self-audit",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 10 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "nextRunAtMs": 1774458000000,
+      "nextRunAtMs": 1774461600000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -78,7 +66,7 @@
         "expr": "5,35 10-20 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774458300000,
+      "nextRunAtMs": 1774461900000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -153,9 +141,21 @@
       "nextRunAtMs": 1774537200000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
+    },
+    {
+      "name": "daily-10am-self-audit",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "nextRunAtMs": 1774544400000,
+      "lastStatus": "ok",
+      "consecutiveErrors": 0
     }
   ],
   "raw": {
-    "openclawStatusSnippet": "OpenClaw status\n\nOverview\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Item                 \u2502 Value                                                                                         \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Dashboard            \u2502 http://127.0.0.1:18789/                                                                       \u2502\n\u2502 OS                   \u2502 linux 6.17.0-1007-aws (x64) \u00b7 node 22.22.0                                                    \u2502\n\u2502 Tailscale            \u2502 serve \u00b7 ip-172-26-0-174.taild02309.ts.net \u00b7 https://ip-172-26-0-174.taild02309.ts.net         \u2502\n\u2502 Channel              \u2502 stable (default)                                                                              \u2502\n\u2502 Update               \u2502 available \u00b7 pnpm \u00b7 npm update 2026.3.24                                                       \u2502\n\u2502 Gateway              \u2502 local \u00b7 ws://127.0.0.1:18789 (local loopback) \u00b7 reachable 112ms \u00b7 auth token \u00b7 ip-172-26-0-   \u2502\n\u2502                      \u2502 174 (172.26.0.174) app 2026.3.22 linux 6.17.0-1007-aws      "
+    "openclawStatusSnippet": "OpenClaw status\n\nOverview\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Item                 \u2502 Value                                                                                         \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Dashboard            \u2502 http://127.0.0.1:18789/                                                                       \u2502\n\u2502 OS                   \u2502 linux 6.17.0-1007-aws (x64) \u00b7 node 22.22.0                                                    \u2502\n\u2502 Tailscale            \u2502 serve \u00b7 ip-172-26-0-174.taild02309.ts.net \u00b7 https://ip-172-26-0-174.taild02309.ts.net         \u2502\n\u2502 Channel              \u2502 stable (default)                                                                              \u2502\n\u2502 Update               \u2502 available \u00b7 pnpm \u00b7 npm update 2026.3.24                                                       \u2502\n\u2502 Gateway              \u2502 local \u00b7 ws://127.0.0.1:18789 (local loopback) \u00b7 reachable 21ms \u00b7 auth token \u00b7 ip-172-26-0-    \u2502\n\u2502                      \u2502 174 (172.26.0.174) app 2026.3.22 linux 6.17.0-1007-aws      "
   }
 }

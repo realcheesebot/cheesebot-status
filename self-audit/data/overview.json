@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T17:02:23.414024+00:00",
+  "generatedAt": "2026-03-25T18:01:24.845616+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -10,8 +10,8 @@
       "tz": "America/Los_Angeles"
     },
     "lastStatus": "ok",
-    "lastRunAtMs": 1774371667931,
-    "nextRunAtMs": 1774458000000,
+    "lastRunAtMs": 1774458064386,
+    "nextRunAtMs": 1774544400000,
     "consecutiveErrors": 0
   },
   "health": {
@@ -24,7 +24,7 @@
     },
     "issuesFound": 2,
     "actionsPending": 0,
-    "actionsTaken": 12,
+    "actionsTaken": 13,
     "cron": {
       "overall": "ok",
       "enabledJobs": 10,
@@ -40,7 +40,7 @@
       "emailSentTotal": 439,
       "emailSentCountSource": "email_state_repliedAt",
       "emailReceivedTotal": 866,
-      "slackSentTotal": 1296,
+      "slackSentTotal": 1297,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -87,14 +87,14 @@
     }
   ],
   "latestRun": {
-    "ts": 1774371735439,
+    "ts": 1774458157298,
     "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
     "action": "finished",
     "status": "ok",
     "summary": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:\npython3 /home/ubuntu/.openclaw/workspace/scripts/slack_notify.py --title \"Daily self-audit\" --text \"<AUDIT_TEXT>\"\nNever NO_REPLY.",
-    "runAtMs": 1774371667931,
-    "durationMs": 22037,
-    "nextRunAtMs": 1774458000000,
+    "runAtMs": 1774458064386,
+    "durationMs": 48921,
+    "nextRunAtMs": 1774544400000,
     "deliveryStatus": "not-requested"
   },
   "latestRunSummary": {
@@ -125,6 +125,17 @@
     ]
   },
   "recentRuns": [
+    {
+      "ts": 1774458157298,
+      "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:\npython3 /home/ubuntu/.openclaw/workspace/scripts/slack_notify.py --title \"Daily self-audit\" --text \"<AUDIT_TEXT>\"\nNever NO_REPLY.",
+      "runAtMs": 1774458064386,
+      "durationMs": 48921,
+      "nextRunAtMs": 1774544400000,
+      "deliveryStatus": "not-requested"
+    },
     {
       "ts": 1774371735439,
       "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
@@ -259,10 +270,10 @@
     }
   ],
   "runSummary": {
-    "ok": 12,
+    "ok": 13,
     "error": 0,
     "other": 0,
-    "total": 12
+    "total": 13
   },
   "driftAndContradictions": [
     {
@@ -299,8 +310,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774454400022,
-      "nextRunAtMs": 1774458000000
+      "lastRunAtMs": 1774458000049,
+      "nextRunAtMs": 1774461600000
     },
     {
       "name": "status-page-publisher",
@@ -312,21 +323,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774454475708,
-      "nextRunAtMs": 1774458000000
-    },
-    {
-      "name": "daily-10am-self-audit",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 10 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774371667931,
-      "nextRunAtMs": 1774458000000
+      "lastRunAtMs": 1774458113307,
+      "nextRunAtMs": 1774461600000
     },
     {
       "name": "nba-injury-watch",
@@ -338,8 +336,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774409700111,
-      "nextRunAtMs": 1774458300000
+      "lastRunAtMs": 1774460100082,
+      "nextRunAtMs": 1774461900000
     },
     {
       "name": "stock-morning-445am",
@@ -418,6 +416,19 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774450850331,
       "nextRunAtMs": 1774537200000
+    },
+    {
+      "name": "daily-10am-self-audit",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774458064386,
+      "nextRunAtMs": 1774544400000
     }
   ],
   "errors": {
