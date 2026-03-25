@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T02:02:35.852082+00:00",
+  "generatedAt": "2026-03-25T03:01:35.968737+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -40,7 +40,7 @@
       "emailSentTotal": 439,
       "emailSentCountSource": "email_state_repliedAt",
       "emailReceivedTotal": 840,
-      "slackSentTotal": 1274,
+      "slackSentTotal": 1275,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -299,21 +299,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774400400119,
-      "nextRunAtMs": 1774404000000
-    },
-    {
-      "name": "stock-morning-445am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 19 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774317646823,
-      "nextRunAtMs": 1774404000000
+      "lastRunAtMs": 1774404000122,
+      "nextRunAtMs": 1774407600000
     },
     {
       "name": "status-page-publisher",
@@ -325,8 +312,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774400459027,
-      "nextRunAtMs": 1774404000000
+      "lastRunAtMs": 1774404120040,
+      "nextRunAtMs": 1774407600000
     },
     {
       "name": "nba-injury-watch",
@@ -338,8 +325,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774402500028,
-      "nextRunAtMs": 1774404300000
+      "lastRunAtMs": 1774406100121,
+      "nextRunAtMs": 1774407900000
     },
     {
       "name": "daily-5pm-activity-summary",
@@ -418,6 +405,19 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774371667931,
       "nextRunAtMs": 1774458000000
+    },
+    {
+      "name": "stock-morning-445am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 19 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774404058144,
+      "nextRunAtMs": 1774490400000
     }
   ],
   "errors": {
