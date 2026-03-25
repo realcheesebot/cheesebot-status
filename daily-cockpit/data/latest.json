@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-25T13:01:29.923252+00:00",
+  "generatedAt": "2026-03-25T14:01:36.945157+00:00",
   "day": "2026-03-25",
   "headline": {
     "overall": "ok",
     "enabledJobs": 10,
     "emailSentTotal": 439,
     "emailReceivedTotal": 862,
-    "slackSentTotal": 1281,
-    "tokensToday": 220049,
-    "trendVsYesterdayPct": 362.5
+    "slackSentTotal": 1283,
+    "tokensToday": 220611,
+    "trendVsYesterdayPct": 247.7
   },
   "jobCounts": {
     "ok": 10,
@@ -19,19 +19,13 @@
   "nextJobs": [
     {
       "name": "email-guardrail-check",
-      "nextRunAtMs": 1774443600000,
+      "nextRunAtMs": 1774447200000,
       "lastStatus": "ok",
       "status": "ok"
     },
     {
       "name": "status-page-publisher",
-      "nextRunAtMs": 1774443600000,
-      "lastStatus": "ok",
-      "status": "ok"
-    },
-    {
-      "name": "weather-hourly-630am",
-      "nextRunAtMs": 1774445400000,
+      "nextRunAtMs": 1774447200000,
       "lastStatus": "ok",
       "status": "ok"
     },
@@ -44,6 +38,12 @@
     {
       "name": "nba-games-daily-8am",
       "nextRunAtMs": 1774450800000,
+      "lastStatus": "ok",
+      "status": "ok"
+    },
+    {
+      "name": "daily-10am-self-audit",
+      "nextRunAtMs": 1774458000000,
       "lastStatus": "ok",
       "status": "ok"
     }
