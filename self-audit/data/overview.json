@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T06:01:41.339614+00:00",
+  "generatedAt": "2026-03-26T13:01:25.558318+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -310,8 +310,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774501200046,
-      "nextRunAtMs": 1774504800000
+      "lastRunAtMs": 1774526400165,
+      "nextRunAtMs": 1774530000000
     },
     {
       "name": "status-page-publisher",
@@ -323,8 +323,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774501248756,
-      "nextRunAtMs": 1774504800000
+      "lastRunAtMs": 1774504870748,
+      "nextRunAtMs": 1774530000000
     },
     {
       "name": "weather-hourly-630am",
