@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T05:01:20.511054+00:00",
+  "generatedAt": "2026-03-26T06:01:41.379455+00:00",
   "day": "2026-03-25",
   "headline": {
     "overall": "ok",
@@ -7,8 +7,8 @@
     "emailSentTotal": 439,
     "emailReceivedTotal": 871,
     "slackSentTotal": 1321,
-    "tokensToday": 243914,
-    "trendVsYesterdayPct": 155.5
+    "tokensToday": 244442,
+    "trendVsYesterdayPct": 156.1
   },
   "jobCounts": {
     "ok": 10,
@@ -19,13 +19,13 @@
   "nextJobs": [
     {
       "name": "email-guardrail-check",
-      "nextRunAtMs": 1774501200000,
+      "nextRunAtMs": 1774504800000,
       "lastStatus": "ok",
       "status": "ok"
     },
     {
       "name": "status-page-publisher",
-      "nextRunAtMs": 1774501200000,
+      "nextRunAtMs": 1774504800000,
       "lastStatus": "ok",
       "status": "ok"
     },
