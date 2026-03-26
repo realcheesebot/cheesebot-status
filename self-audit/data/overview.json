@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T17:02:22.702265+00:00",
+  "generatedAt": "2026-03-26T18:01:18.999491+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -10,8 +10,8 @@
       "tz": "America/Los_Angeles"
     },
     "lastStatus": "ok",
-    "lastRunAtMs": 1774458064386,
-    "nextRunAtMs": 1774544400000,
+    "lastRunAtMs": 1774544465109,
+    "nextRunAtMs": 1774630800000,
     "consecutiveErrors": 0
   },
   "health": {
@@ -24,7 +24,7 @@
     },
     "issuesFound": 2,
     "actionsPending": 0,
-    "actionsTaken": 13,
+    "actionsTaken": 14,
     "cron": {
       "overall": "ok",
       "enabledJobs": 10,
@@ -87,14 +87,14 @@
     }
   ],
   "latestRun": {
-    "ts": 1774458157298,
+    "ts": 1774544548103,
     "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
     "action": "finished",
     "status": "ok",
     "summary": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:\npython3 /home/ubuntu/.openclaw/workspace/scripts/slack_notify.py --title \"Daily self-audit\" --text \"<AUDIT_TEXT>\"\nNever NO_REPLY.",
-    "runAtMs": 1774458064386,
-    "durationMs": 48921,
-    "nextRunAtMs": 1774544400000,
+    "runAtMs": 1774544465109,
+    "durationMs": 46308,
+    "nextRunAtMs": 1774630800000,
     "deliveryStatus": "not-requested"
   },
   "latestRunSummary": {
@@ -125,6 +125,17 @@
     ]
   },
   "recentRuns": [
+    {
+      "ts": 1774544548103,
+      "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: self_audit_slack_only. HARD STOP FOR EMAIL: never send email in this job. Produce daily self-audit report including cron status, permanent rules/guardrails, health snapshot, drift/contradictions, and corrective actions. Send it via centralized notifier API:\npython3 /home/ubuntu/.openclaw/workspace/scripts/slack_notify.py --title \"Daily self-audit\" --text \"<AUDIT_TEXT>\"\nNever NO_REPLY.",
+      "runAtMs": 1774544465109,
+      "durationMs": 46308,
+      "nextRunAtMs": 1774630800000,
+      "deliveryStatus": "not-requested"
+    },
     {
       "ts": 1774458157298,
       "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
@@ -270,10 +281,10 @@
     }
   ],
   "runSummary": {
-    "ok": 13,
+    "ok": 14,
     "error": 0,
     "other": 0,
-    "total": 13
+    "total": 14
   },
   "driftAndContradictions": [
     {
@@ -310,8 +321,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774540800098,
-      "nextRunAtMs": 1774544400000
+      "lastRunAtMs": 1774544400059,
+      "nextRunAtMs": 1774548000000
     },
     {
       "name": "status-page-publisher",
@@ -323,21 +334,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774540868173,
-      "nextRunAtMs": 1774544400000
-    },
-    {
-      "name": "daily-10am-self-audit",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 10 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774458064386,
-      "nextRunAtMs": 1774544400000
+      "lastRunAtMs": 1774544511417,
+      "nextRunAtMs": 1774548000000
     },
     {
       "name": "nba-injury-watch",
@@ -349,8 +347,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774496100026,
-      "nextRunAtMs": 1774544700000
+      "lastRunAtMs": 1774546500078,
+      "nextRunAtMs": 1774548300000
     },
     {
       "name": "stock-morning-445am",
@@ -429,6 +427,19 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774537256910,
       "nextRunAtMs": 1774623600000
+    },
+    {
+      "name": "daily-10am-self-audit",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774544465109,
+      "nextRunAtMs": 1774630800000
     }
   ],
   "errors": {
