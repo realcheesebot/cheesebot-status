@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-26T04:04:37.081798+00:00",
+  "generatedAt": "2026-03-26T05:01:20.511054+00:00",
   "day": "2026-03-25",
   "headline": {
     "overall": "ok",
     "enabledJobs": 10,
     "emailSentTotal": 439,
     "emailReceivedTotal": 871,
-    "slackSentTotal": 1320,
-    "tokensToday": 224647,
-    "trendVsYesterdayPct": 135.4
+    "slackSentTotal": 1321,
+    "tokensToday": 243914,
+    "trendVsYesterdayPct": 155.5
   },
   "jobCounts": {
     "ok": 10,
@@ -19,31 +19,31 @@
   "nextJobs": [
     {
       "name": "email-guardrail-check",
-      "nextRunAtMs": 1774497600000,
+      "nextRunAtMs": 1774501200000,
       "lastStatus": "ok",
       "status": "ok"
     },
     {
       "name": "status-page-publisher",
-      "nextRunAtMs": 1774497600000,
-      "lastStatus": "ok",
-      "status": "ok"
-    },
-    {
-      "name": "daily-5pm-activity-summary",
-      "nextRunAtMs": 1774497600000,
-      "lastStatus": "ok",
-      "status": "ok"
-    },
-    {
-      "name": "calendar-evening-preview-9pm",
-      "nextRunAtMs": 1774497600000,
+      "nextRunAtMs": 1774501200000,
       "lastStatus": "ok",
       "status": "ok"
     },
     {
       "name": "weather-hourly-630am",
       "nextRunAtMs": 1774531800000,
+      "lastStatus": "ok",
+      "status": "ok"
+    },
+    {
+      "name": "nba-injury-eta-745am",
+      "nextRunAtMs": 1774536300000,
+      "lastStatus": "ok",
+      "status": "ok"
+    },
+    {
+      "name": "nba-games-daily-8am",
+      "nextRunAtMs": 1774537200000,
       "lastStatus": "ok",
       "status": "ok"
     }

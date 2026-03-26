@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T04:04:25.945483+00:00",
+  "generatedAt": "2026-03-26T05:01:09.219812+00:00",
   "today": "2026-03-26",
   "tomorrow": "2026-03-27",
   "count": 13,
@@ -124,26 +124,26 @@
     {
       "rank": 4.0,
       "team": "Denver Nuggets",
-      "wins": 45.0,
+      "wins": 46.0,
       "losses": 28.0,
-      "gb": 12.0,
-      "streak": 3.0
+      "gb": 11.5,
+      "streak": 4.0
     },
     {
       "rank": 5.0,
       "team": "Minnesota Timberwolves",
-      "wins": 44.0,
+      "wins": 45.0,
       "losses": 28.0,
-      "gb": 12.5,
-      "streak": 1.0
+      "gb": 12.0,
+      "streak": 2.0
     },
     {
       "rank": 6.0,
       "team": "Houston Rockets",
       "wins": 43.0,
-      "losses": 28.0,
-      "gb": 13.0,
-      "streak": -1.0
+      "losses": 29.0,
+      "gb": 13.5,
+      "streak": -2.0
     },
     {
       "rank": 7.0,
@@ -156,26 +156,26 @@
     {
       "rank": 8.0,
       "team": "LA Clippers",
-      "wins": 36.0,
+      "wins": 37.0,
       "losses": 36.0,
-      "gb": 20.5,
-      "streak": 2.0
+      "gb": 20.0,
+      "streak": 3.0
     },
     {
       "rank": 9.0,
       "team": "Portland Trail Blazers",
-      "wins": 36.0,
+      "wins": 37.0,
       "losses": 37.0,
-      "gb": 21.0,
-      "streak": 1.0
+      "gb": 20.5,
+      "streak": 2.0
     },
     {
       "rank": 10.0,
       "team": "Golden State Warriors",
-      "wins": 34.0,
+      "wins": 35.0,
       "losses": 38.0,
-      "gb": 22.5,
-      "streak": 1.0
+      "gb": 22.0,
+      "streak": 2.0
     },
     {
       "rank": 11.0,
@@ -197,9 +197,9 @@
       "rank": 13.0,
       "team": "Dallas Mavericks",
       "wins": 23.0,
-      "losses": 49.0,
-      "gb": 33.5,
-      "streak": -4.0
+      "losses": 50.0,
+      "gb": 34.0,
+      "streak": -5.0
     },
     {
       "rank": 14.0,
