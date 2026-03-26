@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T02:02:26.993831+00:00",
+  "generatedAt": "2026-03-26T03:01:11.877751+00:00",
   "today": "2026-03-26",
   "tomorrow": "2026-03-27",
   "count": 13,
@@ -108,10 +108,10 @@
     {
       "rank": 2.0,
       "team": "San Antonio Spurs",
-      "wins": 54.0,
+      "wins": 55.0,
       "losses": 18.0,
-      "gb": 2.5,
-      "streak": 6.0
+      "gb": 2.0,
+      "streak": 7.0
     },
     {
       "rank": 3.0,
@@ -189,9 +189,9 @@
       "rank": 12.0,
       "team": "Memphis Grizzlies",
       "wins": 24.0,
-      "losses": 47.0,
-      "gb": 32.0,
-      "streak": -3.0
+      "losses": 48.0,
+      "gb": 32.5,
+      "streak": -4.0
     },
     {
       "rank": 13.0,

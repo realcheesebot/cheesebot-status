@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T02:02:38.089424+00:00",
+  "generatedAt": "2026-03-26T03:01:22.743440+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -39,8 +39,8 @@
       "totalJobs": 10,
       "emailSentTotal": 439,
       "emailSentCountSource": "email_state_repliedAt",
-      "emailReceivedTotal": 869,
-      "slackSentTotal": 1313,
+      "emailReceivedTotal": 871,
+      "slackSentTotal": 1314,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -310,21 +310,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774486800023,
-      "nextRunAtMs": 1774490400000
-    },
-    {
-      "name": "stock-morning-445am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 19 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774404058144,
-      "nextRunAtMs": 1774490400000
+      "lastRunAtMs": 1774490400065,
+      "nextRunAtMs": 1774494000000
     },
     {
       "name": "status-page-publisher",
@@ -336,8 +323,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774486845550,
-      "nextRunAtMs": 1774490400000
+      "lastRunAtMs": 1774490526287,
+      "nextRunAtMs": 1774494000000
     },
     {
       "name": "nba-injury-watch",
@@ -349,8 +336,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774488900047,
-      "nextRunAtMs": 1774490700000
+      "lastRunAtMs": 1774492500115,
+      "nextRunAtMs": 1774494300000
     },
     {
       "name": "daily-5pm-activity-summary",
@@ -429,6 +416,19 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774458064386,
       "nextRunAtMs": 1774544400000
+    },
+    {
+      "name": "stock-morning-445am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 19 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774490459299,
+      "nextRunAtMs": 1774576800000
     }
   ],
   "errors": {
