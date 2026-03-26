@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T23:05:47.143219+00:00",
+  "generatedAt": "2026-03-26T00:01:21.614121+00:00",
   "windowHours": 24,
   "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
   "job": {
@@ -249,6 +249,22 @@
     }
   ],
   "receivedLast24h": [
+    {
+      "messageId": "19d273ec296c911a",
+      "seenAt": "2026-03-26T00:00:41Z",
+      "from": "cheese@luggle.com",
+      "subject": "Injury Report: SAS @ MEM (T-60m)",
+      "status": "acted",
+      "threadId": "19d273ec296c911a"
+    },
+    {
+      "messageId": "19d273ece0e16d14",
+      "seenAt": "2026-03-26T00:00:41Z",
+      "from": "cheese@luggle.com",
+      "subject": "Injury Report: SAS @ MEM (T-60m)",
+      "status": "acted",
+      "threadId": "19d273ece0e16d14"
+    },
     {
       "messageId": "19d258379b36f108",
       "seenAt": "2026-03-25T16:00:42Z",
@@ -860,10 +876,10 @@
   ],
   "repliedLast24h": [],
   "emailStateSummary": {
-    "messagesTracked": 866,
+    "messagesTracked": 868,
     "threadsTracked": 222,
-    "seenCount": 840,
-    "actedCount": 830,
+    "seenCount": 842,
+    "actedCount": 832,
     "repliedCount": 439,
     "lastCheckedHistoryId": "53976"
   },
