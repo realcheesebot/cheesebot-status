@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T15:02:13.811450+00:00",
+  "generatedAt": "2026-03-26T16:01:39.861444+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -301,19 +301,6 @@
   ],
   "allJobs": [
     {
-      "name": "nba-games-daily-8am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 8 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774450850331,
-      "nextRunAtMs": 1774537200000
-    },
-    {
       "name": "email-guardrail-check",
       "enabled": true,
       "schedule": {
@@ -323,8 +310,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774533600114,
-      "nextRunAtMs": 1774537200000
+      "lastRunAtMs": 1774537200120,
+      "nextRunAtMs": 1774540800000
     },
     {
       "name": "status-page-publisher",
@@ -336,8 +323,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774533645124,
-      "nextRunAtMs": 1774537200000
+      "lastRunAtMs": 1774537298089,
+      "nextRunAtMs": 1774540800000
     },
     {
       "name": "daily-10am-self-audit",
@@ -429,6 +416,19 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774536300050,
       "nextRunAtMs": 1774622700000
+    },
+    {
+      "name": "nba-games-daily-8am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774537256910,
+      "nextRunAtMs": 1774623600000
     }
   ],
   "errors": {
