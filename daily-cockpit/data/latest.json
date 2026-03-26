@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T18:01:19.040453+00:00",
+  "generatedAt": "2026-03-26T19:01:30.650893+00:00",
   "day": "2026-03-26",
   "headline": {
     "overall": "ok",
@@ -19,19 +19,19 @@
   "nextJobs": [
     {
       "name": "email-guardrail-check",
-      "nextRunAtMs": 1774548000000,
+      "nextRunAtMs": 1774551600000,
       "lastStatus": "ok",
       "status": "ok"
     },
     {
       "name": "status-page-publisher",
-      "nextRunAtMs": 1774548000000,
+      "nextRunAtMs": 1774551600000,
       "lastStatus": "ok",
       "status": "ok"
     },
     {
       "name": "nba-injury-watch",
-      "nextRunAtMs": 1774548300000,
+      "nextRunAtMs": 1774551900000,
       "lastStatus": "ok",
       "status": "ok"
     },
