@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-26T01:05:40.305613+00:00",
+  "generatedAt": "2026-03-26T02:02:38.128590+00:00",
   "day": "2026-03-25",
   "headline": {
     "overall": "ok",
     "enabledJobs": 10,
     "emailSentTotal": 439,
-    "emailReceivedTotal": 868,
-    "slackSentTotal": 1311,
+    "emailReceivedTotal": 869,
+    "slackSentTotal": 1313,
     "tokensToday": 255226,
-    "trendVsYesterdayPct": 129.9
+    "trendVsYesterdayPct": 167.4
   },
   "jobCounts": {
     "ok": 10,
@@ -17,12 +17,6 @@
     "disabled": 0
   },
   "nextJobs": [
-    {
-      "name": "nba-injury-watch",
-      "nextRunAtMs": 1774487100000,
-      "lastStatus": "ok",
-      "status": "ok"
-    },
     {
       "name": "email-guardrail-check",
       "nextRunAtMs": 1774490400000,
@@ -38,6 +32,12 @@
     {
       "name": "status-page-publisher",
       "nextRunAtMs": 1774490400000,
+      "lastStatus": "ok",
+      "status": "ok"
+    },
+    {
+      "name": "nba-injury-watch",
+      "nextRunAtMs": 1774490700000,
       "lastStatus": "ok",
       "status": "ok"
     },

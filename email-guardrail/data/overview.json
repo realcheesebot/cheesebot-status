@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T01:05:37.205205+00:00",
+  "generatedAt": "2026-03-26T02:02:34.869028+00:00",
   "windowHours": 24,
   "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
   "job": {
@@ -249,6 +249,14 @@
     }
   ],
   "receivedLast24h": [
+    {
+      "messageId": "19d27ac99fc1a492",
+      "seenAt": "2026-03-26T02:00:42Z",
+      "from": "cheese@luggle.com",
+      "subject": "Injury Report: MIL @ POR (T-60m)",
+      "status": "acted",
+      "threadId": "19d27ac99fc1a492"
+    },
     {
       "messageId": "19d273ec296c911a",
       "seenAt": "2026-03-26T00:00:41Z",
@@ -876,10 +884,10 @@
   ],
   "repliedLast24h": [],
   "emailStateSummary": {
-    "messagesTracked": 868,
-    "threadsTracked": 222,
-    "seenCount": 842,
-    "actedCount": 832,
+    "messagesTracked": 869,
+    "threadsTracked": 225,
+    "seenCount": 843,
+    "actedCount": 833,
     "repliedCount": 439,
     "lastCheckedHistoryId": "53976"
   },

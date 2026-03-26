@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T01:05:40.265826+00:00",
+  "generatedAt": "2026-03-26T02:02:38.089424+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -39,8 +39,8 @@
       "totalJobs": 10,
       "emailSentTotal": 439,
       "emailSentCountSource": "email_state_repliedAt",
-      "emailReceivedTotal": 868,
-      "slackSentTotal": 1311,
+      "emailReceivedTotal": 869,
+      "slackSentTotal": 1313,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -301,19 +301,6 @@
   ],
   "allJobs": [
     {
-      "name": "nba-injury-watch",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "5,35 10-20 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774485300090,
-      "nextRunAtMs": 1774487100000
-    },
-    {
       "name": "email-guardrail-check",
       "enabled": true,
       "schedule": {
@@ -351,6 +338,19 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774486845550,
       "nextRunAtMs": 1774490400000
+    },
+    {
+      "name": "nba-injury-watch",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "5,35 10-20 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774488900047,
+      "nextRunAtMs": 1774490700000
     },
     {
       "name": "daily-5pm-activity-summary",
