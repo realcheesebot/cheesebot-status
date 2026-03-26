@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-26T03:01:22.783177+00:00",
+  "generatedAt": "2026-03-26T04:04:37.081798+00:00",
   "day": "2026-03-25",
   "headline": {
     "overall": "ok",
     "enabledJobs": 10,
     "emailSentTotal": 439,
     "emailReceivedTotal": 871,
-    "slackSentTotal": 1314,
-    "tokensToday": 257585,
-    "trendVsYesterdayPct": 169.9
+    "slackSentTotal": 1320,
+    "tokensToday": 224647,
+    "trendVsYesterdayPct": 135.4
   },
   "jobCounts": {
     "ok": 10,
@@ -19,19 +19,13 @@
   "nextJobs": [
     {
       "name": "email-guardrail-check",
-      "nextRunAtMs": 1774494000000,
+      "nextRunAtMs": 1774497600000,
       "lastStatus": "ok",
       "status": "ok"
     },
     {
       "name": "status-page-publisher",
-      "nextRunAtMs": 1774494000000,
-      "lastStatus": "ok",
-      "status": "ok"
-    },
-    {
-      "name": "nba-injury-watch",
-      "nextRunAtMs": 1774494300000,
+      "nextRunAtMs": 1774497600000,
       "lastStatus": "ok",
       "status": "ok"
     },
@@ -46,14 +40,29 @@
       "nextRunAtMs": 1774497600000,
       "lastStatus": "ok",
       "status": "ok"
+    },
+    {
+      "name": "weather-hourly-630am",
+      "nextRunAtMs": 1774531800000,
+      "lastStatus": "ok",
+      "status": "ok"
     }
   ],
   "activity": {
-    "count": 0,
-    "items": []
+    "count": 8,
+    "items": [
+      "Resumed scheduled email guardrail work after confirming `memory/email-actions-paused.json` had `paused: false`.",
+      "Read and enforced `config/email_guardrail_policy.json` as the source of truth for allowlist / Lyra invariants.",
+      "Ran mailbox-pinned Gmail inbox scan through `scripts/gmail-safe.sh` so all checks stayed on `cheese@luggle.com`.",
+      "Updated durable state in `memory/email-state.json` with the latest guardrail run metadata (`lastGuardrailCheckAt`, pinned account, policy version, scan counts).",
+      "Completed a guardrail sweep over 174 inbox messages.",
+      "Found 0 new non-allowlist alerts requiring escalation.",
+      "Identified pending allowlist items still needing action, including Ron threads and multiple unreplied Lyra messages preserved by durable state.",
+      "Suppressed routine/no-noise output after the guardrail run because nothing required immediate intervention."
+    ]
   },
   "insights": [
-    "No verified activity items logged yet today.",
+    "8 verified activity item(s) logged today.",
     "0 critical + 0 warning job state(s)."
   ]
 }
