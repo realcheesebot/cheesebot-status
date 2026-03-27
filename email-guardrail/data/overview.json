@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T16:01:40.310001+00:00",
+  "generatedAt": "2026-03-27T17:02:45.231075+00:00",
   "windowHours": 24,
   "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
   "job": {
@@ -11,22 +11,33 @@
       "tz": "America/Los_Angeles"
     },
     "lastStatus": "ok",
-    "lastRunAtMs": 1774623600051,
-    "nextRunAtMs": 1774627200000,
+    "lastRunAtMs": 1774627200143,
+    "nextRunAtMs": 1774630800000,
     "consecutiveErrors": 0
   },
   "latestRun": {
-    "ts": 1774623740477,
+    "ts": 1774627311997,
     "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
     "action": "finished",
     "status": "ok",
     "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
-    "runAtMs": 1774623600051,
-    "durationMs": 47814,
-    "nextRunAtMs": 1774627200000,
+    "runAtMs": 1774627200143,
+    "durationMs": 69919,
+    "nextRunAtMs": 1774630800000,
     "deliveryStatus": "not-requested"
   },
   "recentRuns": [
+    {
+      "ts": 1774627311997,
+      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
+      "action": "finished",
+      "status": "ok",
+      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
+      "runAtMs": 1774627200143,
+      "durationMs": 69919,
+      "nextRunAtMs": 1774630800000,
+      "deliveryStatus": "not-requested"
+    },
     {
       "ts": 1774623740477,
       "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
@@ -234,17 +245,6 @@
       "runAtMs": 1774544400059,
       "durationMs": 65050,
       "nextRunAtMs": 1774548000000,
-      "deliveryStatus": "not-requested"
-    },
-    {
-      "ts": 1774540905346,
-      "jobId": "3fee9884-7211-4630-b49c-d8c9b8129b87",
-      "action": "finished",
-      "status": "ok",
-      "summary": "MODE: email_automation_guardrail. HARD STOP: First read /home/ubuntu/.openclaw/workspace/memory/email-actions-paused.json. If file missing OR paused != false, do NOTHING and reply exactly NO_REPLY. If and only if paused==false, run periodic email guardrail check using mailbox/account cheese@luggle.com only (never infer mailbox from message metadata). Use policy file /home/ubuntu/.openclaw/workspace/config/email_guardrail_policy.json as source of truth. Maintain durable state in memory/email-state.json with per-message/thread seen/acted/replied timestamps. Decisioning uses durable state, not unread. Lyra invariant enforced (always allowlisted + reply required). Do NOT send Slack status messages for routine checks; only surface actionable failures requiring intervention.",
-      "runAtMs": 1774540800098,
-      "durationMs": 68075,
-      "nextRunAtMs": 1774544400000,
       "deliveryStatus": "not-requested"
     }
   ],
