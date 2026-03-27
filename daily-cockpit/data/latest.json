@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-27T03:01:42.117269+00:00",
+  "generatedAt": "2026-03-27T04:02:52.363402+00:00",
   "day": "2026-03-26",
   "headline": {
     "overall": "ok",
     "enabledJobs": 10,
     "emailSentTotal": 439,
     "emailReceivedTotal": 871,
-    "slackSentTotal": 1355,
-    "tokensToday": 292704,
-    "trendVsYesterdayPct": 161.9
+    "slackSentTotal": 1360,
+    "tokensToday": 196429,
+    "trendVsYesterdayPct": 75.8
   },
   "jobCounts": {
     "ok": 10,
@@ -19,19 +19,13 @@
   "nextJobs": [
     {
       "name": "email-guardrail-check",
-      "nextRunAtMs": 1774580400000,
+      "nextRunAtMs": 1774584000000,
       "lastStatus": "ok",
       "status": "ok"
     },
     {
       "name": "status-page-publisher",
-      "nextRunAtMs": 1774580400000,
-      "lastStatus": "ok",
-      "status": "ok"
-    },
-    {
-      "name": "nba-injury-watch",
-      "nextRunAtMs": 1774580700000,
+      "nextRunAtMs": 1774584000000,
       "lastStatus": "ok",
       "status": "ok"
     },
@@ -46,14 +40,29 @@
       "nextRunAtMs": 1774584000000,
       "lastStatus": "ok",
       "status": "ok"
+    },
+    {
+      "name": "weather-hourly-630am",
+      "nextRunAtMs": 1774618200000,
+      "lastStatus": "ok",
+      "status": "ok"
     }
   ],
   "activity": {
-    "count": 0,
-    "items": []
+    "count": 8,
+    "items": [
+      "Improved durable memory workflow after a recall failure: adopted immediate logging for user choices, preferences, standing asks, fixes, and process changes.",
+      "Added/confirmed use of active-context tracking so future sessions can recover current priorities quickly.",
+      "Confirmed and documented a persistent outstanding-items/task-list requirement instead of relying on chat history.",
+      "Recovered Jon\u2019s previously chosen surprise project and restored it to durable memory.",
+      "Updated the project\u2019s canonical name from **Link Valet** to **Memory Palace**.",
+      "Captured the canonical scope for **Memory Palace**: low-friction link saving with title/summary capture, tagging/classification, browsing, and fuzzy resurfacing.",
+      "Logged a new long-running project request: a public web page that extracts article body text from a news URL, with a path to improve extraction reliability over time.",
+      "Documented a failure lesson: check memory first, admit gaps plainly, and fix the memory system instead of bluffing."
+    ]
   },
   "insights": [
-    "No verified activity items logged yet today.",
+    "8 verified activity item(s) logged today.",
     "0 critical + 0 warning job state(s)."
   ]
 }
