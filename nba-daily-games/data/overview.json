@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T01:01:25.735017+00:00",
+  "generatedAt": "2026-03-27T02:02:27.941566+00:00",
   "today": "2026-03-27",
   "tomorrow": "2026-03-28",
   "count": 16,
@@ -202,9 +202,9 @@
       "rank": 11.0,
       "team": "New Orleans Pelicans",
       "wins": 25.0,
-      "losses": 48.0,
-      "gb": 32.0,
-      "streak": -2.0
+      "losses": 49.0,
+      "gb": 32.5,
+      "streak": -3.0
     },
     {
       "rank": 12.0,
@@ -234,9 +234,9 @@
       "rank": 15.0,
       "team": "Sacramento Kings",
       "wins": 19.0,
-      "losses": 54.0,
-      "gb": 38.0,
-      "streak": -1.0
+      "losses": 55.0,
+      "gb": 38.5,
+      "streak": -2.0
     }
   ]
 }

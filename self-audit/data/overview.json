@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T01:01:36.733431+00:00",
+  "generatedAt": "2026-03-27T02:02:38.475378+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -40,7 +40,7 @@
       "emailSentTotal": 439,
       "emailSentCountSource": "email_state_repliedAt",
       "emailReceivedTotal": 871,
-      "slackSentTotal": 1354,
+      "slackSentTotal": 1355,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -321,34 +321,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774569600027,
-      "nextRunAtMs": 1774573200000
-    },
-    {
-      "name": "status-page-publisher",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 6-23 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774569690175,
-      "nextRunAtMs": 1774573200000
-    },
-    {
-      "name": "nba-injury-watch",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "5,35 10-20 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774571700135,
-      "nextRunAtMs": 1774573500000
+      "lastRunAtMs": 1774573200068,
+      "nextRunAtMs": 1774576800000
     },
     {
       "name": "stock-morning-445am",
@@ -362,6 +336,32 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774490459299,
       "nextRunAtMs": 1774576800000
+    },
+    {
+      "name": "status-page-publisher",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6-23 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774573265667,
+      "nextRunAtMs": 1774576800000
+    },
+    {
+      "name": "nba-injury-watch",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "5,35 10-20 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774575300117,
+      "nextRunAtMs": 1774577100000
     },
     {
       "name": "daily-5pm-activity-summary",
