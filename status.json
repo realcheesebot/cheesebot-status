@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T18:01:02.126197+00:00",
+  "generatedAt": "2026-03-27T19:00:38.405141+00:00",
   "summary": {
     "overall": "ok",
     "enabledJobs": 10,
@@ -8,15 +8,15 @@
     "emailSentTotal": 439,
     "emailSentCountSource": "email_state_repliedAt",
     "emailReceivedTotal": 871,
-    "slackSentTotal": 1420,
+    "slackSentTotal": 1421,
     "slackSentCountSource": "slack_sdk_dm_history"
   },
   "usage": {
-    "tokensToday": 238712,
-    "tokens7d": 2682658,
-    "trendVsYesterdayPct": 86.9,
-    "estimatedCostTodayUsd": 10.0841,
-    "estimatedCost7dUsd": 10.599,
+    "tokensToday": 241809,
+    "tokens7d": 2654917,
+    "trendVsYesterdayPct": 89.3,
+    "estimatedCostTodayUsd": 11.2821,
+    "estimatedCost7dUsd": 11.797,
     "model": "gpt-5.4",
     "openclawVersion": "2026.3.24",
     "latestOpenclawVersion": "2026.3.24",
@@ -42,7 +42,7 @@
         "expr": "0 4-23 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774634400000,
+      "nextRunAtMs": 1774638000000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -54,7 +54,7 @@
         "expr": "0 6-23 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774634400000,
+      "nextRunAtMs": 1774638000000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -66,7 +66,7 @@
         "expr": "5,35 10-20 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774634700000,
+      "nextRunAtMs": 1774638300000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
