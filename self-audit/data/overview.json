@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T13:01:37.465396+00:00",
+  "generatedAt": "2026-03-27T14:01:26.463493+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -40,7 +40,7 @@
       "emailSentTotal": 439,
       "emailSentCountSource": "email_state_repliedAt",
       "emailReceivedTotal": 871,
-      "slackSentTotal": 1365,
+      "slackSentTotal": 1366,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -321,8 +321,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774612800041,
-      "nextRunAtMs": 1774616400000
+      "lastRunAtMs": 1774616400098,
+      "nextRunAtMs": 1774620000000
     },
     {
       "name": "status-page-publisher",
@@ -334,21 +334,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774591243695,
-      "nextRunAtMs": 1774616400000
-    },
-    {
-      "name": "weather-hourly-630am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "30 6 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774531800055,
-      "nextRunAtMs": 1774618200000
+      "lastRunAtMs": 1774616460684,
+      "nextRunAtMs": 1774620000000
     },
     {
       "name": "nba-injury-eta-745am",
@@ -440,6 +427,19 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774584052977,
       "nextRunAtMs": 1774670400000
+    },
+    {
+      "name": "weather-hourly-630am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 6 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774618200068,
+      "nextRunAtMs": 1774704600000
     }
   ],
   "errors": {
