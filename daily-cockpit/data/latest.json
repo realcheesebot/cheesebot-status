@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-27T06:01:15.196123+00:00",
-  "day": "2026-03-26",
+  "generatedAt": "2026-03-27T13:01:37.507685+00:00",
+  "day": "2026-03-27",
   "headline": {
     "overall": "ok",
     "enabledJobs": 10,
     "emailSentTotal": 439,
     "emailReceivedTotal": 871,
     "slackSentTotal": 1365,
-    "tokensToday": 215497,
-    "trendVsYesterdayPct": 92.8
+    "tokensToday": 216604,
+    "trendVsYesterdayPct": 93.8
   },
   "jobCounts": {
     "ok": 10,
@@ -19,13 +19,13 @@
   "nextJobs": [
     {
       "name": "email-guardrail-check",
-      "nextRunAtMs": 1774591200000,
+      "nextRunAtMs": 1774616400000,
       "lastStatus": "ok",
       "status": "ok"
     },
     {
       "name": "status-page-publisher",
-      "nextRunAtMs": 1774591200000,
+      "nextRunAtMs": 1774616400000,
       "lastStatus": "ok",
       "status": "ok"
     },
@@ -49,20 +49,11 @@
     }
   ],
   "activity": {
-    "count": 8,
-    "items": [
-      "Improved durable memory workflow after a recall failure: adopted immediate logging for user choices, preferences, standing asks, fixes, and process changes.",
-      "Added/confirmed use of active-context tracking so future sessions can recover current priorities quickly.",
-      "Confirmed and documented a persistent outstanding-items/task-list requirement instead of relying on chat history.",
-      "Recovered Jon\u2019s previously chosen surprise project and restored it to durable memory.",
-      "Updated the project\u2019s canonical name from **Link Valet** to **Memory Palace**.",
-      "Captured the canonical scope for **Memory Palace**: low-friction link saving with title/summary capture, tagging/classification, browsing, and fuzzy resurfacing.",
-      "Logged a new long-running project request: a public web page that extracts article body text from a news URL, with a path to improve extraction reliability over time.",
-      "Documented a failure lesson: check memory first, admit gaps plainly, and fix the memory system instead of bluffing."
-    ]
+    "count": 0,
+    "items": []
   },
   "insights": [
-    "8 verified activity item(s) logged today.",
+    "No verified activity items logged yet today.",
     "0 critical + 0 warning job state(s)."
   ]
 }

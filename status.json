@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T06:00:50.421891+00:00",
+  "generatedAt": "2026-03-27T13:01:11.649628+00:00",
   "summary": {
     "overall": "ok",
     "enabledJobs": 10,
@@ -12,11 +12,11 @@
     "slackSentCountSource": "slack_sdk_dm_history"
   },
   "usage": {
-    "tokensToday": 215497,
-    "tokens7d": 3156103,
-    "trendVsYesterdayPct": 92.8,
-    "estimatedCostTodayUsd": 1.9729,
-    "estimatedCost7dUsd": 2.3425,
+    "tokensToday": 216604,
+    "tokens7d": 2828311,
+    "trendVsYesterdayPct": 93.8,
+    "estimatedCostTodayUsd": 3.3275,
+    "estimatedCost7dUsd": 3.6971,
     "model": "gpt-5.4",
     "openclawVersion": "2026.3.24",
     "latestOpenclawVersion": "2026.3.24",
@@ -42,7 +42,7 @@
         "expr": "0 4-23 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774591200000,
+      "nextRunAtMs": 1774616400000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -54,7 +54,7 @@
         "expr": "0 6-23 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774591200000,
+      "nextRunAtMs": 1774616400000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
