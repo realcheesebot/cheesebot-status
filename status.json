@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T15:01:40.583703+00:00",
+  "generatedAt": "2026-03-27T16:01:18.789568+00:00",
   "summary": {
     "overall": "ok",
     "enabledJobs": 10,
@@ -8,15 +8,15 @@
     "emailSentTotal": 439,
     "emailSentCountSource": "email_state_repliedAt",
     "emailReceivedTotal": 871,
-    "slackSentTotal": 1368,
+    "slackSentTotal": 1378,
     "slackSentCountSource": "slack_sdk_dm_history"
   },
   "usage": {
-    "tokensToday": 199114,
-    "tokens7d": 2766343,
-    "trendVsYesterdayPct": 55.9,
-    "estimatedCostTodayUsd": 6.0241,
-    "estimatedCost7dUsd": 6.5391,
+    "tokensToday": 213987,
+    "tokens7d": 2750232,
+    "trendVsYesterdayPct": 67.6,
+    "estimatedCostTodayUsd": 7.1512,
+    "estimatedCost7dUsd": 7.6662,
     "model": "gpt-5.4",
     "openclawVersion": "2026.3.24",
     "latestOpenclawVersion": "2026.3.24",
@@ -35,18 +35,6 @@
   },
   "jobs": [
     {
-      "name": "nba-games-daily-8am",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 8 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "nextRunAtMs": 1774623600000,
-      "lastStatus": "ok",
-      "consecutiveErrors": 0
-    },
-    {
       "name": "email-guardrail-check",
       "enabled": true,
       "schedule": {
@@ -54,7 +42,7 @@
         "expr": "0 4-23 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774623600000,
+      "nextRunAtMs": 1774627200000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -66,7 +54,7 @@
         "expr": "0 6-23 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774623600000,
+      "nextRunAtMs": 1774627200000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -151,6 +139,18 @@
         "tz": "America/Los_Angeles"
       },
       "nextRunAtMs": 1774709100000,
+      "lastStatus": "ok",
+      "consecutiveErrors": 0
+    },
+    {
+      "name": "nba-games-daily-8am",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "nextRunAtMs": 1774710000000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     }
