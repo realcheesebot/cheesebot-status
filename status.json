@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T21:00:51.111831+00:00",
+  "generatedAt": "2026-03-27T22:01:17.609018+00:00",
   "summary": {
     "overall": "ok",
     "enabledJobs": 10,
@@ -8,15 +8,15 @@
     "emailSentTotal": 439,
     "emailSentCountSource": "email_state_repliedAt",
     "emailReceivedTotal": 871,
-    "slackSentTotal": 1423,
+    "slackSentTotal": 1433,
     "slackSentCountSource": "slack_sdk_dm_history"
   },
   "usage": {
-    "tokensToday": 241281,
-    "tokens7d": 2639164,
-    "trendVsYesterdayPct": 88.9,
-    "estimatedCostTodayUsd": 13.5903,
-    "estimatedCost7dUsd": 14.1053,
+    "tokensToday": 246412,
+    "tokens7d": 2644295,
+    "trendVsYesterdayPct": 92.9,
+    "estimatedCostTodayUsd": 15.0835,
+    "estimatedCost7dUsd": 15.5984,
     "model": "gpt-5.4",
     "openclawVersion": "2026.3.24",
     "latestOpenclawVersion": "2026.3.24",
@@ -42,7 +42,7 @@
         "expr": "0 4-23 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774645200000,
+      "nextRunAtMs": 1774648800000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -54,7 +54,7 @@
         "expr": "0 6-23 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774645200000,
+      "nextRunAtMs": 1774648800000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -66,7 +66,7 @@
         "expr": "5,35 10-20 * * *",
         "tz": "America/Los_Angeles"
       },
-      "nextRunAtMs": 1774645500000,
+      "nextRunAtMs": 1774649100000,
       "lastStatus": "ok",
       "consecutiveErrors": 0
     },
@@ -156,6 +156,6 @@
     }
   ],
   "raw": {
-    "openclawStatusSnippet": "OpenClaw status\n\nOverview\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Item                 \u2502 Value                                                                                         \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Dashboard            \u2502 http://127.0.0.1:18789/                                                                       \u2502\n\u2502 OS                   \u2502 linux 6.17.0-1007-aws (x64) \u00b7 node 22.22.0                                                    \u2502\n\u2502 Tailscale            \u2502 serve \u00b7 ip-172-26-0-174.taild02309.ts.net \u00b7 https://ip-172-26-0-174.taild02309.ts.net         \u2502\n\u2502 Channel              \u2502 stable (default)                                                                              \u2502\n\u2502 Update               \u2502 pnpm \u00b7 up to date \u00b7 npm latest 2026.3.24                                                      \u2502\n\u2502 Gateway              \u2502 local \u00b7 ws://127.0.0.1:18789 (local loopback) \u00b7 reachable 27ms \u00b7 auth token \u00b7 ip-172-26-0-    \u2502\n\u2502                      \u2502 174 (172.26.0.174) app 2026.3.24 linux 6.17.0-1007-aws      "
+    "openclawStatusSnippet": "OpenClaw status\n\nOverview\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Item                 \u2502 Value                                                                                         \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Dashboard            \u2502 http://127.0.0.1:18789/                                                                       \u2502\n\u2502 OS                   \u2502 linux 6.17.0-1007-aws (x64) \u00b7 node 22.22.0                                                    \u2502\n\u2502 Tailscale            \u2502 serve \u00b7 ip-172-26-0-174.taild02309.ts.net \u00b7 https://ip-172-26-0-174.taild02309.ts.net         \u2502\n\u2502 Channel              \u2502 stable (default)                                                                              \u2502\n\u2502 Update               \u2502 pnpm \u00b7 up to date \u00b7 npm latest 2026.3.24                                                      \u2502\n\u2502 Gateway              \u2502 local \u00b7 ws://127.0.0.1:18789 (local loopback) \u00b7 reachable 25ms \u00b7 auth token \u00b7 ip-172-26-0-    \u2502\n\u2502                      \u2502 174 (172.26.0.174) app 2026.3.24 linux 6.17.0-1007-aws      "
   }
 }
