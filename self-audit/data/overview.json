@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T04:02:52.321774+00:00",
+  "generatedAt": "2026-03-27T05:01:27.435352+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -40,7 +40,7 @@
       "emailSentTotal": 439,
       "emailSentCountSource": "email_state_repliedAt",
       "emailReceivedTotal": 871,
-      "slackSentTotal": 1360,
+      "slackSentTotal": 1362,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -321,8 +321,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774580400084,
-      "nextRunAtMs": 1774584000000
+      "lastRunAtMs": 1774584000095,
+      "nextRunAtMs": 1774587600000
     },
     {
       "name": "status-page-publisher",
@@ -334,34 +334,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774580470517,
-      "nextRunAtMs": 1774584000000
-    },
-    {
-      "name": "daily-5pm-activity-summary",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 21 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774497786809,
-      "nextRunAtMs": 1774584000000
-    },
-    {
-      "name": "calendar-evening-preview-9pm",
-      "enabled": true,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 21 * * *",
-        "tz": "America/Los_Angeles"
-      },
-      "lastStatus": "ok",
-      "consecutiveErrors": 0,
-      "lastRunAtMs": 1774497700945,
-      "nextRunAtMs": 1774584000000
+      "lastRunAtMs": 1774584135678,
+      "nextRunAtMs": 1774587600000
     },
     {
       "name": "weather-hourly-630am",
@@ -440,6 +414,32 @@
       "consecutiveErrors": 0,
       "lastRunAtMs": 1774576850751,
       "nextRunAtMs": 1774663200000
+    },
+    {
+      "name": "daily-5pm-activity-summary",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 21 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774584097377,
+      "nextRunAtMs": 1774670400000
+    },
+    {
+      "name": "calendar-evening-preview-9pm",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 21 * * *",
+        "tz": "America/Los_Angeles"
+      },
+      "lastStatus": "ok",
+      "consecutiveErrors": 0,
+      "lastRunAtMs": 1774584052977,
+      "nextRunAtMs": 1774670400000
     }
   ],
   "errors": {
