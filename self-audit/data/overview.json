@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T05:01:27.435352+00:00",
+  "generatedAt": "2026-03-27T06:01:15.157290+00:00",
   "jobName": "daily-10am-self-audit",
   "jobId": "b2b88463-cbff-4c8b-8f65-8ab6ddcd1c67",
   "job": {
@@ -40,7 +40,7 @@
       "emailSentTotal": 439,
       "emailSentCountSource": "email_state_repliedAt",
       "emailReceivedTotal": 871,
-      "slackSentTotal": 1362,
+      "slackSentTotal": 1365,
       "slackSentCountSource": "slack_sdk_dm_history"
     }
   },
@@ -321,8 +321,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774584000095,
-      "nextRunAtMs": 1774587600000
+      "lastRunAtMs": 1774587600055,
+      "nextRunAtMs": 1774591200000
     },
     {
       "name": "status-page-publisher",
@@ -334,8 +334,8 @@
       },
       "lastStatus": "ok",
       "consecutiveErrors": 0,
-      "lastRunAtMs": 1774584135678,
-      "nextRunAtMs": 1774587600000
+      "lastRunAtMs": 1774587656090,
+      "nextRunAtMs": 1774591200000
     },
     {
       "name": "weather-hourly-630am",
