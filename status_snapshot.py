@@ -17,10 +17,14 @@ UPDATE_CHECK = Path('/home/ubuntu/.openclaw/update-check.json')
 SESSIONS_FILE = Path('/home/ubuntu/.openclaw/agents/main/sessions/sessions.json')
 
 
-def run_json(cmd, retries=3):
+def run_json(cmd, retries=3, timeout=20):
     last_err = None
     for _ in range(max(1, retries)):
-        p = subprocess.run(cmd, capture_output=True, text=True)
+        try:
+            p = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+        except subprocess.TimeoutExpired:
+            last_err = f"timeout after {timeout}s"
+            continue
         if p.returncode == 0:
             try:
                 return json.loads(p.stdout), None
@@ -31,9 +35,12 @@ def run_json(cmd, retries=3):
     return None, last_err
 
 
-def run_text(cmd):
-    p = subprocess.run(cmd, capture_output=True, text=True)
-    return (p.stdout or "").strip(), (p.stderr or "").strip(), p.returncode
+def run_text(cmd, timeout=20):
+    try:
+        p = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+        return (p.stdout or "").strip(), (p.stderr or "").strip(), p.returncode
+    except subprocess.TimeoutExpired:
+        return "", f"timeout after {timeout}s", 124
 
 
 def health_from_jobs(jobs):
@@ -41,7 +48,8 @@ def health_from_jobs(jobs):
     warn = 0
     for j in jobs:
         st = (j.get("state") or {})
-        if st.get("lastStatus") == "error":
+        effective_status = st.get("effectiveStatus") or st.get("lastStatus")
+        if effective_status == "error":
             if (st.get("consecutiveErrors") or 0) >= 3:
                 crit += 1
             else:
@@ -108,7 +116,7 @@ def _slack_bot_token():
     return token
 
 
-def _slack_api(token: str, method: str, payload: dict):
+def _slack_api(token: str, method: str, payload: dict, timeout=10):
     req = urllib.request.Request(
         url=f"https://slack.com/api/{method}",
         data=json.dumps(payload).encode("utf-8"),
@@ -118,12 +126,12 @@ def _slack_api(token: str, method: str, payload: dict):
         },
         method="POST",
     )
-    with urllib.request.urlopen(req, timeout=20) as resp:
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
         body = resp.read().decode("utf-8")
     return json.loads(body)
 
 
-def count_slack_sent_via_sdk(limit=None):
+def count_slack_sent_via_sdk(limit=200):
     token = _slack_bot_token()
     if not token:
         return None, "missing Slack bot token"
@@ -133,12 +141,12 @@ def count_slack_sent_via_sdk(limit=None):
         return None, "missing slack.target_user_id in config/notifier.json"
 
     try:
-        auth = _slack_api(token, "auth.test", {})
+        auth = _slack_api(token, "auth.test", {}, timeout=8)
         if not auth.get("ok"):
             return None, f"auth.test failed: {auth.get('error')}"
         bot_user_id = auth.get("user_id")
 
-        opened = _slack_api(token, "conversations.open", {"users": target_user})
+        opened = _slack_api(token, "conversations.open", {"users": target_user}, timeout=8)
         if not opened.get("ok"):
             return None, f"conversations.open failed: {opened.get('error')}"
         channel_id = ((opened.get("channel") or {}).get("id"))
@@ -152,7 +160,7 @@ def count_slack_sent_via_sdk(limit=None):
             payload = {"channel": channel_id, "limit": page_size}
             if cursor:
                 payload["cursor"] = cursor
-            hist = _slack_api(token, "conversations.history", payload)
+            hist = _slack_api(token, "conversations.history", payload, timeout=8)
             if not hist.get("ok"):
                 return None, f"conversations.history failed: {hist.get('error')}"
             messages = hist.get("messages") or []
@@ -240,6 +248,8 @@ def load_session_metrics():
 
 
 def parse_openclaw_status(text: str):
+    import re
+
     version = None
     latest_version = None
     model = None
@@ -254,11 +264,14 @@ def parse_openclaw_status(text: str):
                     if 'up to date' in version_part:
                         version = latest_version
                 elif 'installed' in update_text and 'latest' in update_text:
-                    import re
                     m = re.search(r'installed\s+([^·]+?)\s+·\s+.*latest\s+(.+)$', update_text)
                     if m:
                         version = m.group(1).strip()
                         latest_version = m.group(2).strip()
+                else:
+                    m = re.search(r'available\s+·\s+\S+\s+·\s+(?:npm\s+update|pnpm\s+update|update)\s+([0-9][0-9A-Za-z._-]*)', update_text)
+                    if m:
+                        latest_version = m.group(1).strip()
         if line.strip().startswith('│ agent:main:slack:direct:') or line.strip().startswith('│ agent:main:main'):
             m = line.split('│')
             if len(m) >= 5:
@@ -280,15 +293,33 @@ def load_openclaw_version_fallback():
         return None
 
 
+def load_all_jobs_with_fallback():
+    cron_data, cron_err = run_json(["openclaw", "cron", "list", "--all", "--json"])
+    cli_jobs = (cron_data or {}).get("jobs", [])
+
+    file_jobs = []
+    file_err = None
+    cron_jobs_path = Path('/home/ubuntu/.openclaw/cron/jobs.json')
+    try:
+        if cron_jobs_path.exists():
+            raw = json.loads(cron_jobs_path.read_text(encoding='utf-8'))
+            file_jobs = (raw or {}).get('jobs') or []
+    except Exception as e:
+        file_err = str(e)
+
+    if file_jobs and len(file_jobs) >= len(cli_jobs):
+        return file_jobs, cron_err, file_err, 'disk_fallback'
+    return cli_jobs, cron_err, file_err, 'cli'
+
+
 def main():
     now = datetime.now(timezone.utc).isoformat()
-    cron_data, cron_err = run_json(["openclaw", "cron", "list", "--json"])
-    jobs = (cron_data or {}).get("jobs", [])
+    jobs, cron_err, cron_file_err, cron_source = load_all_jobs_with_fallback()
 
     enabled = [j for j in jobs if j.get("enabled", True)]
     disabled = [j for j in jobs if not j.get("enabled", True)]
 
-    openclaw_out, openclaw_err, openclaw_rc = run_text(["openclaw", "status"])
+    openclaw_out, openclaw_err, openclaw_rc = run_text(["openclaw", "status"], timeout=15)
     openclaw_version, latest_openclaw_version, status_model = parse_openclaw_status(openclaw_out)
     if not openclaw_version:
         openclaw_version = load_openclaw_version_fallback()
@@ -317,16 +348,40 @@ def main():
         slack_sent_total = slack_sent_api_total
         slack_count_source = "slack_sdk_dm_history"
 
+    email_compliance_error = None
+    email_pending_required = 0
+    try:
+        if EMAIL_STATE.exists():
+            email_state = json.loads(EMAIL_STATE.read_text(encoding='utf-8'))
+            pending = email_state.get('lastGuardrailPending') or []
+            if isinstance(pending, list):
+                email_pending_required = len(pending)
+                if email_pending_required > 0:
+                    email_compliance_error = f'{email_pending_required} unresolved required replies'
+    except Exception as e:
+        email_compliance_error = f'email compliance read error: {e}'
+
+    effective_enabled = []
+    for j in enabled:
+        clone = dict(j)
+        state = dict((j.get('state') or {}))
+        if j.get('name') == 'email-guardrail-check' and email_compliance_error:
+            state['effectiveStatus'] = 'error'
+            state['complianceError'] = email_compliance_error
+            clone['state'] = state
+        effective_enabled.append(clone)
+
     report = {
         "generatedAt": now,
         "summary": {
-            "overall": health_from_jobs(enabled),
+            "overall": health_from_jobs(effective_enabled),
             "enabledJobs": len(enabled),
             "disabledJobs": len(disabled),
             "totalJobs": len(jobs),
             "emailSentTotal": email_sent_total,
             "emailSentCountSource": email_sent_source,
             "emailReceivedTotal": email_received_total,
+            "emailPendingRequiredReplies": email_pending_required,
             "slackSentTotal": slack_sent_total,
             "slackSentCountSource": slack_count_source,
         },
@@ -345,12 +400,15 @@ def main():
             "cronList": "ok" if cron_err is None else "error",
             "openclawStatus": "ok" if openclaw_rc == 0 else "error",
             "tokenMetrics": "ok" if token_err is None else "error",
+            "emailCompliance": "error" if email_compliance_error else "ok",
         },
         "errors": {
             "cron": cron_err,
+            "cronFile": cron_file_err,
             "openclaw": openclaw_err if openclaw_rc != 0 else None,
             "slackCountApi": slack_api_err,
             "tokenMetrics": token_err,
+            "emailCompliance": email_compliance_error,
         },
         "jobs": [
             {
@@ -358,13 +416,16 @@ def main():
                 "enabled": j.get("enabled"),
                 "schedule": j.get("schedule"),
                 "nextRunAtMs": (j.get("state") or {}).get("nextRunAtMs"),
-                "lastStatus": (j.get("state") or {}).get("lastStatus"),
+                "lastStatus": ((j.get("state") or {}).get("effectiveStatus") or (j.get("state") or {}).get("lastStatus")),
+                "rawLastStatus": (j.get("state") or {}).get("lastStatus"),
                 "consecutiveErrors": (j.get("state") or {}).get("consecutiveErrors", 0),
+                "complianceError": (j.get("state") or {}).get("complianceError"),
             }
-            for j in jobs
+            for j in (effective_enabled + disabled)
         ],
         "raw": {
             "openclawStatusSnippet": openclaw_out[:1200],
+            "cronSource": cron_source,
         },
     }
 

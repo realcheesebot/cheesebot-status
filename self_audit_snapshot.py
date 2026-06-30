@@ -42,6 +42,14 @@ def summarize_runs(entries):
 
 def classify_issue_severity(text):
     t = (text or '').lower()
+    if (
+        'self_audit_email_only' in t
+        or '--no-slack-notify' in t
+        or 'do not send the report to slack' in t
+        or 'do not call slack_notify.py' in t
+        or 'email_notify.py' in t
+    ):
+        return 'info'
     if any(k in t for k in ['critical', 'failed', 'failure', 'error', 'hard stop']):
         return 'critical'
     if any(k in t for k in ['warn', 'drift', 'mismatch', 'contradiction', 'disabled']):
@@ -72,8 +80,9 @@ def parse_latest_summary(summary_text):
         ('drift', 'drift/contradictions'),
         ('contradiction', 'drift/contradictions'),
         ('corrective action', 'corrective actions'),
-        ('slack only', 'slack-only delivery'),
-        ('never send email', 'email blocked in this job'),
+        ('email only', 'email-only delivery'),
+        ('email_notify.py', 'email notifier delivery'),
+        ('no slack', 'slack report disabled'),
     ]
 
     for ln in lines:
@@ -85,10 +94,10 @@ def parse_latest_summary(summary_text):
             if needle in low and label not in checks:
                 checks.append(label)
 
-        if 'never send email' in low or 'slack only' in low or 'do not send mail' in low:
+        if 'email only' in low or 'do not send the report to slack' in low or 'do not call slack_notify.py' in low:
             constraints.append(ln)
 
-        if 'send it via' in low or 'deliver by' in low or 'corrective' in low:
+        if 'send it via' in low or 'deliver by' in low or 'corrective' in low or 'email_notify.py' in low:
             actions.append(ln)
 
     return {
@@ -133,6 +142,8 @@ def build_global_health(jobs):
 
 def build_checks(job, entries, jobs, latest_summary):
     state = (job or {}).get('state') or {}
+    job_text = (((job or {}).get('payload') or {}).get('text') or '')
+    job_text_lower = job_text.lower()
     checks = []
 
     checks.append({
@@ -164,16 +175,37 @@ def build_checks(job, entries, jobs, latest_summary):
         'detail': f"okRuns={recent_ok}/{len(recent)}",
     })
 
-    summary_text = (latest_summary or {}).get('text') or ''
     checks.append({
-        'name': 'Slack-only hard stop present',
-        'status': 'pass' if 'slack' in summary_text.lower() else 'warn',
-        'detail': 'Latest run summary includes Slack delivery constraint' if 'slack' in summary_text.lower() else 'Latest run summary did not explicitly mention Slack-only delivery',
+        'name': 'Email-only delivery configured',
+        'status': 'pass' if (
+            'self_audit_email_only' in job_text_lower
+            and 'email_notify.py' in job_text_lower
+            and '--no-slack-notify' in job_text_lower
+            and 'jon@silverpine.com' in job_text_lower
+        ) else 'fail',
+        'detail': 'Cron payload sends the audit by email only to Jon' if (
+            'self_audit_email_only' in job_text_lower
+            and 'email_notify.py' in job_text_lower
+            and '--no-slack-notify' in job_text_lower
+            and 'jon@silverpine.com' in job_text_lower
+        ) else 'Cron payload is missing the expected email-only delivery instructions',
     })
     checks.append({
-        'name': 'Email blocked in self-audit',
-        'status': 'pass' if 'never send email' in summary_text.lower() or 'do not send mail' in summary_text.lower() else 'warn',
-        'detail': 'Latest run summary contains explicit email prohibition' if ('never send email' in summary_text.lower() or 'do not send mail' in summary_text.lower()) else 'Latest run summary did not explicitly mention email prohibition',
+        'name': 'Slack report disabled',
+        'status': 'pass' if (
+            'scripts/slack_notify.py' not in job_text_lower
+            and (
+                'do not send the report to slack' in job_text_lower
+                or 'do not call slack_notify.py' in job_text_lower
+            )
+        ) else 'fail',
+        'detail': 'Cron payload disables Slack report delivery' if (
+            'scripts/slack_notify.py' not in job_text_lower
+            and (
+                'do not send the report to slack' in job_text_lower
+                or 'do not call slack_notify.py' in job_text_lower
+            )
+        ) else 'Cron payload still allows or references Slack report delivery',
     })
 
     critical_job_errors = []
@@ -188,13 +220,21 @@ def build_checks(job, entries, jobs, latest_summary):
         'detail': 'No enabled jobs with >=3 consecutive errors' if not critical_job_errors else f"Critical jobs: {', '.join(critical_job_errors)}",
     })
 
+    status_summary = (((latest_summary or {}).get('statusSnapshotSummary')) or {}) if isinstance(latest_summary, dict) else {}
+    pending_required = status_summary.get('emailPendingRequiredReplies')
+    checks.append({
+        'name': 'No unresolved required email replies',
+        'status': 'pass' if not pending_required else 'fail',
+        'detail': 'No unresolved required replies in compliance state' if not pending_required else f'unresolved required replies={pending_required}',
+    })
+
     return checks
 
 
 def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
 
-    jobs_data, jobs_err = run_json(['openclaw', 'cron', 'list', '--json'])
+    jobs_data, jobs_err = run_json(['openclaw', 'cron', 'list', '--all', '--json'])
     jobs = (jobs_data or {}).get('jobs', [])
     job = next((j for j in jobs if j.get('name') == JOB_NAME), None)
 
@@ -218,6 +258,7 @@ def main():
     state = (job or {}).get('state') or {}
     latest_run = entries[0] if entries else None
     latest_summary = parse_latest_summary((latest_run or {}).get('summary'))
+    latest_summary['statusSnapshotSummary'] = (status_json or {}).get('summary') or {}
     run_summary = summarize_runs(entries[:30])
     checks = build_checks(job, entries, jobs, latest_summary)
 
