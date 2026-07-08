@@ -283,6 +283,35 @@ def parse_openclaw_status(text: str):
     return version, latest_version, model
 
 
+def parse_openclaw_status_json(data):
+    if not isinstance(data, dict):
+        return None, None, None
+
+    version = data.get('runtimeVersion')
+    latest_version = None
+    update = data.get('update') if isinstance(data.get('update'), dict) else {}
+    if isinstance(update, dict):
+        latest_version = update.get('latestVersion') or update.get('lastAvailableVersion')
+
+    model = None
+    sessions = data.get('sessions') if isinstance(data.get('sessions'), dict) else {}
+    recent = sessions.get('recent') if isinstance(sessions, dict) else []
+    if isinstance(recent, list):
+        for session in recent:
+            if not isinstance(session, dict):
+                continue
+            if session.get('kind') == 'direct' and session.get('model'):
+                model = session.get('model')
+                break
+        if not model:
+            for session in recent:
+                if isinstance(session, dict) and session.get('model'):
+                    model = session.get('model')
+                    break
+
+    return version, latest_version, model
+
+
 def load_openclaw_version_fallback():
     if not UPDATE_CHECK.exists():
         return None
@@ -319,8 +348,19 @@ def main():
     enabled = [j for j in jobs if j.get("enabled", True)]
     disabled = [j for j in jobs if not j.get("enabled", True)]
 
-    openclaw_out, openclaw_err, openclaw_rc = run_text(["openclaw", "status"], timeout=15)
-    openclaw_version, latest_openclaw_version, status_model = parse_openclaw_status(openclaw_out)
+    openclaw_json, openclaw_json_err = run_json(["openclaw", "status", "--json"], retries=1, timeout=35)
+    if openclaw_json is not None:
+        openclaw_out = json.dumps(openclaw_json)
+        openclaw_err = None
+        openclaw_rc = 0
+        openclaw_version, latest_openclaw_version, status_model = parse_openclaw_status_json(openclaw_json)
+    else:
+        openclaw_out, openclaw_err, openclaw_rc = run_text(["openclaw", "status"], timeout=35)
+        if openclaw_rc == 0:
+            openclaw_version, latest_openclaw_version, status_model = parse_openclaw_status(openclaw_out)
+        else:
+            openclaw_err = openclaw_err or openclaw_json_err
+            openclaw_version, latest_openclaw_version, status_model = None, None, None
     if not openclaw_version:
         openclaw_version = load_openclaw_version_fallback()
     if not latest_openclaw_version:
